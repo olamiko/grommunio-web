@@ -73421,7 +73421,7 @@ viewConfig: {
      * if the sorting has changed since this function was last run.
      */
     updateHeaderSortState : function() {
-        var state = this.ds.getSortState();
+        var state = this.ds?.getSortState();
         if (!state) {
             return;
         }
