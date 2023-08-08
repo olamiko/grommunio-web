@@ -50781,6 +50781,7 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
             this.items.push(this.displayItem = new T.TextItem({}));
         }
         Ext.PagingToolbar.superclass.initComponent.call(this);
+        this.store = Ext.StoreMgr.lookup(this.store);
         this.addEvents(
             /**
              * @event change
