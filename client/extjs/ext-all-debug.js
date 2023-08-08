@@ -71994,7 +71994,7 @@ viewConfig: {
            // Create an instance of Ext.PagingToolbar
         var pagingToolbar = new Ext.PagingToolbar({
                 store: this.store, // Assuming this.store is already defined
-                pageSize: 20 // Set your preferred pageSize here
+                pageSize: 1 // Set your preferred pageSize here
                 // ... (other configuration options)
             });
 
