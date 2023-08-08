@@ -50690,6 +50690,7 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
      */
     refreshText : 'Refresh',
 
+
     /**
      * <p><b>Deprecated</b>. <code>paramNames</code> should be set in the <b>data store</b>
      * (see {@link Ext.data.Store#paramNames}).</p>
@@ -50768,7 +50769,7 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
             scope: this
         })];
 
-
+        console.log("df");
         var userItems = this.items || this.buttons || [];
         if (this.prependButtons) {
             this.items = userItems.concat(pagingItems);
