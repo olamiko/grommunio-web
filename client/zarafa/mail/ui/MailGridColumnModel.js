@@ -75,7 +75,7 @@ Zarafa.mail.ui.MailGridColumnModel = Ext.extend(Zarafa.common.ui.grid.ColumnMode
 			renderer: Zarafa.common.ui.grid.Renderers.icon,
 			fixed: true,
 			preventColSwitch: container.isEnabledConversation(),
-			tooltip: _('Sort by: Icon'),
+			tooltip: _('Sort by: Icons'),
 			preventRowSelection: true
 		},{
 			header: '<p class="icon_importance">&nbsp;<span class="title">' + _('Importance') + '</span></p>',
@@ -182,7 +182,7 @@ Zarafa.mail.ui.MailGridColumnModel = Ext.extend(Zarafa.common.ui.grid.ColumnMode
 			fixed: true,
 			hideable: !container.isEnabledConversation(),
 			preventColSwitch: container.isEnabledConversation(),
-			tooltip: _('Sort by: Icon'),
+			tooltip: _('Sort by: Icons'),
 			preventRowSelection: true
 		},{
 			header: _('From'),
