@@ -679,7 +679,8 @@ div.x-btn-group-bc {
 
 /* Remove some borders for specific panels so we don't get double borders */
 #zarafa-mainpanel-contentpanel-mail .zarafa-context-mainpanel > .x-panel-bwrap > .x-panel-body {
-  border: none; }
+  /* border: none;  */
+}
 #zarafa-mainpanel-contentpanel-mail #zarafa-main-content-mail-preview {
   border: none; }
 
