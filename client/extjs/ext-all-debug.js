@@ -50777,7 +50777,7 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
         //     this.items = userItems.concat(pagingItems);
         // }else{
             this.items = pagingItems.concat(userItems);
-            console.log(this.items);
+            // console.log(this.items);
         // }
         // delete this.buttons;
         if(this.displayInfo){
@@ -50786,6 +50786,7 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
         }
         Ext.PagingToolbar.superclass.initComponent.call(this);
         this.store = Ext.StoreMgr.lookup(this.store);
+        console.log(this.store);
         this.addEvents(
             /**
              * @event change
