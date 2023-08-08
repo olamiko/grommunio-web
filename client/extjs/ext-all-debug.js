@@ -50718,7 +50718,8 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
      */
 
     initComponent : function(){
-        var pagingItems = [this.first = new T.Button({
+        var pagingItems = [
+        this.first = new T.Button({
             tooltip: this.firstText,
             overflowText: this.firstText,
             iconCls: 'x-tbar-page-first',
@@ -50771,13 +50772,14 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
 
         console.log("df");
         var userItems = this.items || this.buttons || [];
-        console.log(userItems);
-        if (this.prependButtons) {
-            this.items = userItems.concat(pagingItems);
-        }else{
+
+        // if (this.prependButtons) {
+        //     this.items = userItems.concat(pagingItems);
+        // }else{
             this.items = pagingItems.concat(userItems);
-        }
-        delete this.buttons;
+            console.log(this.items);
+        // }
+        // delete this.buttons;
         if(this.displayInfo){
             this.items.push('->');
             this.items.push(this.displayItem = new T.TextItem({}));
@@ -71991,11 +71993,7 @@ viewConfig: {
                      '</tbody>',
                 '</table>'
             ].join("");
-            var pagingToolbar = new Ext.PagingToolbar({
-                // store: this.store, // Assuming this.store is already defined
-                // pageSize: 20 // Set your preferred pageSize here
-                // ... (other configuration options)
-            });
+            var pagingToolbar = new Ext.PagingToolbar({});
         
         Ext.applyIf(templates, {
             hcell   : headerCellTpl,
