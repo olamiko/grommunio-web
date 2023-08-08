@@ -204,7 +204,7 @@ Zarafa.core.ui.MainViewport = Ext.extend(Ext.Viewport, {
 						display: 'none'
 					}
 				}),
-				new Zarafa.core.ui.MailPanel({
+				new Zarafa.mail.ui.MailPanel({
 					name: 'main.mailPanel',
 					region: 'south',
 					height: 54,
