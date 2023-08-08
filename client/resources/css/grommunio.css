@@ -1520,7 +1520,9 @@ ul.x-tab-strip-bottom li {
   /* Move the border from the tab-strip to the panels below it so we can have 'seperated' grid panel and preview panel */
   border-bottom: none;
   padding-top: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  display: none;
+ }
   #zarafa-mainpanel > .x-tab-panel-header ul.x-tab-strip-top li .x-tab-right {
     padding-right: 12px; }
     #zarafa-mainpanel > .x-tab-panel-header ul.x-tab-strip-top li .x-tab-right .x-tab-strip-text {
