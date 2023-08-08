@@ -199,7 +199,7 @@ Zarafa.core.ui.MainViewport = Ext.extend(Ext.Viewport, {
 					height: 0,
 					boxMinHeight: 0,
 					boxMaxHeight: 0,
-					// ref: '../../mainToolbar',
+					ref: '../../mainToolbar',
 					// style: {
 					// 	display: 'none'
 					// }
