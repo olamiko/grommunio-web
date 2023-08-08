@@ -71950,7 +71950,7 @@ viewConfig: {
     headerTpl: new Ext.Template(
         '<table border="0" cellspacing="0" cellpadding="0" style="{tstyle}">',
             '<thead>',
-                '<tr class="x-grid3-hd-row">{cells}</tr>',
+                '<tr class="x-grid3-hd-row x-grid3-hd-over">{cells}</tr>',
             '</thead>',
         '</table>'
     ),
