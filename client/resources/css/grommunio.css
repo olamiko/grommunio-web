@@ -1570,10 +1570,12 @@ ul.x-tab-strip-bottom li {
     border-bottom: none; }
     #zarafa-mainpanel > .x-tab-panel-bwrap > .x-tab-panel-body > div > .x-panel {
       border: 1px solid #e6e6e6; }
+      /* border: none } */
     #zarafa-mainpanel > .x-tab-panel-bwrap > .x-tab-panel-body > div > div#zarafa-mainpanel-contentpanel-mail {
       border: none; }
       #zarafa-mainpanel > .x-tab-panel-bwrap > .x-tab-panel-body > div > div#zarafa-mainpanel-contentpanel-mail > .x-panel-bwrap > .x-panel-body > .x-panel {
-        border: 1px solid #e6e6e6; }
+        /* border: 1px solid #e6e6e6; } */
+      border: none }
 
 /************************************************************
  * Icons
