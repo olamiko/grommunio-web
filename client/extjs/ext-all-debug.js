@@ -71960,120 +71960,77 @@ viewConfig: {
      * Provides default templates if they are not given for this particular instance. Most of the templates are defined on
      * the prototype, the ones defined inside this function are done so because they are based on Grid or GridView configuration
      */
-    // initTemplates : function() {
-    //     var templates = this.templates || {},
-    //         template, name,
-            
-    //         headerCellTpl = new Ext.Template(
-    //             '<td class="x-grid3-hd x-grid3-cell x-grid3-hd-over x-grid3-td-{id} {css}" style="{style}">',
-    //                 '<div {tooltip} {attr} class="x-grid3-hd-inner x-grid3-hd-{id}" unselectable="on" style="{istyle}">', 
-    //                     this.grid.enableHdMenu ? '<a class="x-grid3-hd-btn" href="#"></a>' : '',
-    //                     '{value}',
-    //                     '<img alt="" class="x-grid3-sort-icon" src="', Ext.BLANK_IMAGE_URL, '" />',
-    //                 '</div>',
-    //             '</td>'
-    //         ),
-        
-    //         rowBodyText = [
-    //             '<tr class="x-grid3-row-body-tr" style="{bodyStyle}">',
-    //                 '<td colspan="{cols}" class="x-grid3-body-cell" tabIndex="0" hidefocus="on">',
-    //                     '<div class="x-grid3-row-body">{body}</div>',
-    //                 '</td>',
-    //             '</tr>'
-    //         ].join(""),
-        
-    //         innerText = [
-    //             '<table class="x-grid3-row-table" border="0" cellspacing="0" cellpadding="0" style="{tstyle}">',
-    //                  '<tbody>',
-    //                     '<tr>{cells}</tr>',
-    //                     this.enableRowBody ? rowBodyText : '',
-    //                  '</tbody>',
-    //             '</table>'
-    //         ].join("");
-        
-    //     Ext.applyIf(templates, {
-    //         hcell   : headerCellTpl,
-    //         cell    : this.cellTpl,
-    //         body    : this.bodyTpl,
-    //         header  : this.headerTpl,
-    //         master  : this.masterTpl,
-    //         row     : new Ext.Template('<div class="x-grid3-row {alt}" style="{tstyle}">' + innerText + '</div>'),
-    //         rowInner: new Ext.Template(innerText)
-    //     });
-
-    //     for (name in templates) {
-    //         template = templates[name];
-            
-    //         if (template && Ext.isFunction(template.compile) && !template.compiled) {
-    //             template.disableFormats = true;
-    //             template.compile();
-    //         }
-    //     }
-
-    //     this.templates = templates;
-    //     this.colRe = new RegExp('x-grid3-td-([^\\s]+)', '');
-    // },
-    initTemplates: function() {
+    initTemplates : function() {
         var templates = this.templates || {},
             template, name,
-    
+            
             headerCellTpl = new Ext.Template(
                 '<td class="x-grid3-hd x-grid3-cell x-grid3-hd-over x-grid3-td-{id} {css}" style="{style}">',
-                '<div {tooltip} {attr} class="x-grid3-hd-inner x-grid3-hd-{id}" unselectable="on" style="{istyle}">',
-                this.grid.enableHdMenu ? '<a class="x-grid3-hd-btn" href="#"></a>' : '',
-                '{value}',
-                '<img alt="" class="x-grid3-sort-icon" src="', Ext.BLANK_IMAGE_URL, '" />',
-                '</div>',
+                    '<div {tooltip} {attr} class="x-grid3-hd-inner x-grid3-hd-{id}" unselectable="on" style="{istyle}">', 
+                        this.grid.enableHdMenu ? '<a class="x-grid3-hd-btn" href="#"></a>' : '',
+                        '{value}',
+                        '<img alt="" class="x-grid3-sort-icon" src="', Ext.BLANK_IMAGE_URL, '" />',
+                    '</div>',
                 '</td>'
             ),
-    
+        
             rowBodyText = [
                 '<tr class="x-grid3-row-body-tr" style="{bodyStyle}">',
-                '<td colspan="{cols}" class="x-grid3-body-cell" tabIndex="0" hidefocus="on">',
-                '<div class="x-grid3-row-body">{body}</div>',
-                '</td>',
+                    '<td colspan="{cols}" class="x-grid3-body-cell" tabIndex="0" hidefocus="on">',
+                        '<div class="x-grid3-row-body">{body}</div>',
+                    '</td>',
                 '</tr>'
             ].join(""),
-    
+        
             innerText = [
                 '<table class="x-grid3-row-table" border="0" cellspacing="0" cellpadding="0" style="{tstyle}">',
-                '<tbody>',
-                '<tr>{cells}</tr>',
-                this.enableRowBody ? rowBodyText : '',
-                '</tbody>',
+                     '<tbody>',
+                        '<tr>{cells}</tr>',
+                        this.enableRowBody ? rowBodyText : '',
+                     '</tbody>',
                 '</table>'
             ].join("");
-    
-        Ext.applyIf(templates, {
-            hcell: headerCellTpl,
-            cell: this.cellTpl,
-            body: this.bodyTpl,
-            header: this.headerTpl,
-            master: this.masterTpl,
-            row: new Ext.Template('<div class="x-grid3-row {alt}" style="{tstyle}">' + innerText + '</div>'),
-            rowInner: new Ext.Template(innerText),
-            pagingToolbar: new Ext.Template( // Added template for PagingToolbar
-                '<div class="x-toolbar x-small-editor x-toolbar-layout-ct">',
-                '<div class="x-toolbar-body x-toolbar-body-ct">',
-                '{items}', // This is where the PagingToolbar items will be inserted
-                '</div>',
-                '</div>'
-            )
+
+           // Create an instance of Ext.PagingToolbar
+        var pagingToolbar = new Ext.PagingToolbar({
+                store: this.store, // Assuming this.store is already defined
+                pageSize: 20 // Set your preferred pageSize here
+                // ... (other configuration options)
+            });
+
+            // Add the paging toolbar's items to the existing array of userItems
+            var userItems = this.items || this.buttons || [];
+            userItems = userItems.concat(pagingToolbar.items);
+
+            // Continue with the existing code to update items and call superclass initComponent
+            if (this.prependButtons) {
+                this.items = userItems.concat(pagingItems);
+            } else {
+                this.items = pagingItems.concat(userItems);
+            }
+        
+            Ext.applyIf(templates, {
+            hcell   : headerCellTpl,
+            cell    : this.cellTpl,
+            body    : this.bodyTpl,
+            header  : this.headerTpl,
+            master  : this.masterTpl,
+            row     : new Ext.Template('<div class="x-grid3-row {alt}" style="{tstyle}">' + innerText + '</div>'),
+            rowInner: new Ext.Template(innerText)
         });
-    
+
         for (name in templates) {
             template = templates[name];
-    
+            
             if (template && Ext.isFunction(template.compile) && !template.compiled) {
                 template.disableFormats = true;
                 template.compile();
             }
         }
-    
+
         this.templates = templates;
         this.colRe = new RegExp('x-grid3-td-([^\\s]+)', '');
     },
-    
 
     /**
      * @private
