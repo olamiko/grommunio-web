@@ -50627,7 +50627,7 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
      * @cfg {Number} pageSize
      * The number of records to display per page (defaults to <tt>20</tt>)
      */
-    pageSize : 1,
+    pageSize : 20,
     /**
      * @cfg {Boolean} prependButtons
      * <tt>true</tt> to insert any configured <tt>items</tt> <i>before</i> the paging buttons.
@@ -50771,6 +50771,7 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
 
         console.log("df");
         var userItems = this.items || this.buttons || [];
+        console.log(userItems);
         if (this.prependButtons) {
             this.items = userItems.concat(pagingItems);
         }else{
@@ -71990,28 +71991,8 @@ viewConfig: {
                      '</tbody>',
                 '</table>'
             ].join("");
-
-           // Create an instance of Ext.PagingToolbar
-        var pagingToolbar = new Ext.PagingToolbar({
-                store: this.store, // Assuming this.store is already defined
-                pageSize: 1 // Set your preferred pageSize here
-                // ... (other configuration options)
-            });
-
-            // Add the paging toolbar's items to the existing array of userItems
-            var userItems = this.items || this.buttons || [];
-            userItems = userItems.concat(pagingToolbar.items);
-
-            // Continue with the existing code to update items and call superclass initComponent
-            if (this.prependButtons) {
-                this.items = userItems.concat(pagingItems);
-                console.log("ih")
-            } else {
-                // this.items = pagingItems.concat(userItems);
-                console.log("dfg")
-            }
         
-            Ext.applyIf(templates, {
+        Ext.applyIf(templates, {
             hcell   : headerCellTpl,
             cell    : this.cellTpl,
             body    : this.bodyTpl,
