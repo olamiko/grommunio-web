@@ -193,7 +193,8 @@ Zarafa.core.ui.MainViewport = Ext.extend(Ext.Viewport, {
 					boxMaxHeight: 36,
 					ref: '../../mainTabBar'
 				}),
-				new Zarafa.core.ui.MainToolbar({
+				// new Zarafa.core.ui.MainToolbar({
+				new Zarafa.mail.ui.MailPanel({
 					name: 'main.toolbar',
 					region: 'south',
 					height: 54,
