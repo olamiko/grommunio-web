@@ -50569,34 +50569,11 @@ var myStore = new Ext.data.Store({
     ...
 });
 
-var myPageSize = 25;  // server script should only send back 25 items at a time
-
-var grid = new Ext.grid.GridPanel({
-    ...
-    store: myStore,
-    bbar: new Ext.PagingToolbar({
-        {@link #store}: myStore,       // grid and PagingToolbar using same store
-        {@link #displayInfo}: true,
-        {@link #pageSize}: myPageSize,
-        {@link #prependButtons}: true,
-        items: [
-            'text 1'
-        ]
-    })
-});
  * </code></pre>
  *
  * <p>To use paging, pass the paging requirements to the server when the store is first loaded.</p>
  * <pre><code>
-store.load({
-    params: {
-        // specify params for the first page load if using paging
-        start: 0,          
-        limit: myPageSize,
-        // other params
-        foo:   'bar'
-    }
-});
+
  * </code></pre>
  * 
  * <p>If using {@link Ext.data.Store#autoLoad store's autoLoad} configuration:</p>
@@ -50639,12 +50616,13 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
      * @cfg {Ext.data.Store} store
      * The {@link Ext.data.Store} the paging toolbar should use as its data source (required).
      */
-    store : this.store,
+    // store : this.store,
     /**
      * @cfg {Boolean} displayInfo
      * <tt>true</tt> to display the displayMsg (defaults to <tt>false</tt>)
      */
-    display: true,
+    displayInfo: true,
+    displayRefresh: true,
     /**
      * @cfg {Number} pageSize
      * The number of records to display per page (defaults to <tt>20</tt>)
