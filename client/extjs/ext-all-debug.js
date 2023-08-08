@@ -50786,7 +50786,6 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
         }
         Ext.PagingToolbar.superclass.initComponent.call(this);
         this.store = Ext.StoreMgr.lookup(this.store);
-        console.log(this.store);
         this.addEvents(
             /**
              * @event change
@@ -72748,6 +72747,8 @@ viewConfig: {
         this.grid = grid;
 
         this.initTemplates();
+        console.log(this.store);
+        console.log(this.grid);
         this.initData(grid.store, grid.colModel);
         this.initUI(grid);
     },
