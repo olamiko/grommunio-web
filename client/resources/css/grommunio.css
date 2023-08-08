@@ -889,7 +889,8 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
       max-width: 100%;
       box-sizing: border-box; }
       .x-grid3-hd-row td .x-grid3-hd-inner .zarafa-x-grid3-hd-title {
-        overflow: hidden;
+        /* overflow: hidden; */
+        overflow: visible;
         text-overflow: ellipsis; }
         .x-grid3-hd-row td .x-grid3-hd-inner .zarafa-x-grid3-hd-title .x-grid3-hd-checker {
           width: 15px; }
