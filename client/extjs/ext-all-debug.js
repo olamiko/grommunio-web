@@ -50627,7 +50627,7 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
      * @cfg {Number} pageSize
      * The number of records to display per page (defaults to <tt>20</tt>)
      */
-    pageSize : 20,
+    pageSize : 1,
     /**
      * @cfg {Boolean} prependButtons
      * <tt>true</tt> to insert any configured <tt>items</tt> <i>before</i> the paging buttons.
