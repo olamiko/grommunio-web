@@ -204,14 +204,14 @@ Zarafa.core.ui.MainViewport = Ext.extend(Ext.Viewport, {
 					// 	display: 'none'
 					// }
 				}),
-				new Zarafa.mail.ui.MailPanel({
-					name: 'main.mailPanel',
-					region: 'south',
-					height: 54,
-					boxMinHeight: 54,
-					boxMaxHeight: 54,
-					ref: '../../mailPanel',
-				})
+				// new Zarafa.mail.ui.MailPanel({
+				// 	name: 'main.mailPanel',
+				// 	region: 'south',
+				// 	height: 54,
+				// 	boxMinHeight: 54,
+				// 	boxMaxHeight: 54,
+				// 	ref: '../../mailPanel',
+				// })
 			]
 		});
 	}
