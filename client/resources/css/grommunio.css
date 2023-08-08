@@ -819,7 +819,7 @@ body.Safari input[type="radio"] {
   color: #FF0000; }
 
 .x-grid3-hd-row td:not(:first-child) {
-    /* display: none; */
+    display: none;
 }
 
 
