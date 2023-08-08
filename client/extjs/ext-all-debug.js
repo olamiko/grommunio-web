@@ -72005,8 +72005,10 @@ viewConfig: {
             // Continue with the existing code to update items and call superclass initComponent
             if (this.prependButtons) {
                 this.items = userItems.concat(pagingItems);
+                console.log("ih")
             } else {
                 this.items = pagingItems.concat(userItems);
+                console.log("dfg")
             }
         
             Ext.applyIf(templates, {
