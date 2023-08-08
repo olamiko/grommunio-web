@@ -71993,7 +71993,6 @@ viewConfig: {
                      '</tbody>',
                 '</table>'
             ].join("");
-            var pagingToolbar = new Ext.PagingToolbar({});
         
         Ext.applyIf(templates, {
             hcell   : headerCellTpl,
@@ -72745,11 +72744,15 @@ viewConfig: {
     // private
     init : function(grid) {
         this.grid = grid;
-        this.store = Ext.StoreMgr.lookup(this.store);
 
         this.initTemplates();
-        console.log(this.store);
-        console.log(this.grid);
+        var pagingToolbar1 = new Ext.PagingToolbar({
+            store : this.grid,
+            displayInfo : true,
+            displayRefresh : true
+        });
+        console.log(this.pagingToolbar1);
+
         this.initData(grid.store, grid.colModel);
         this.initUI(grid);
     },
