@@ -71991,6 +71991,11 @@ viewConfig: {
                      '</tbody>',
                 '</table>'
             ].join("");
+            var pagingToolbar = new Ext.PagingToolbar({
+                // store: this.store, // Assuming this.store is already defined
+                // pageSize: 20 // Set your preferred pageSize here
+                // ... (other configuration options)
+            });
         
         Ext.applyIf(templates, {
             hcell   : headerCellTpl,
