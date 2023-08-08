@@ -71841,8 +71841,7 @@ viewConfig: {
     /**
      * @cfg {String} headerMenuOpenCls The CSS class to add to the header cell when its menu is visible. Defaults to 'x-grid3-hd-menu-open'
      */
-    // headerMenuOpenCls: 'x-grid3-hd-menu-open',
-    headerMenuOpenCls: 'x-grid3-hd-btn',
+    headerMenuOpenCls: 'x-grid3-hd-menu-open',
     
     /**
      * @cfg {String} rowOverCls The CSS class added to each row when it is hovered over. Defaults to 'x-grid3-row-over'
@@ -71984,7 +71983,7 @@ viewConfig: {
             template, name,
             
             headerCellTpl = new Ext.Template(
-                '<td class="x-grid3-hd x-grid3-cell x-grid3-hd-menu-open x-grid3-td-{id} {css}" style="{style}">',
+                '<td class="x-grid3-hd x-grid3-cell x-grid3-hd-over x-grid3-td-{id} {css}" style="{style}">',
                     '<div {tooltip} {attr} class="x-grid3-hd-inner x-grid3-hd-{id}" unselectable="on" style="{istyle}">', 
                         this.grid.enableHdMenu ? '<a class="x-grid3-hd-btn" href="#"></a>' : '',
                         '{value}',
