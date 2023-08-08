@@ -50639,10 +50639,12 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
      * @cfg {Ext.data.Store} store
      * The {@link Ext.data.Store} the paging toolbar should use as its data source (required).
      */
+    store : this.store,
     /**
      * @cfg {Boolean} displayInfo
      * <tt>true</tt> to display the displayMsg (defaults to <tt>false</tt>)
      */
+    display: true,
     /**
      * @cfg {Number} pageSize
      * The number of records to display per page (defaults to <tt>20</tt>)
