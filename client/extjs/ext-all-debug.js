@@ -74016,7 +74016,7 @@ viewConfig: {
         
         if (header && (!Ext.isIE9m || !e.within(header, true))) {
             this.activeHdRef = null;
-            this.fly(header).removeClass('x-grid3-hd-over');
+            // this.fly(header).removeClass('x-grid3-hd-over');
             header.style.cursor = '';
         }
     },
