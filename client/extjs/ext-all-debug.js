@@ -71841,7 +71841,8 @@ viewConfig: {
     /**
      * @cfg {String} headerMenuOpenCls The CSS class to add to the header cell when its menu is visible. Defaults to 'x-grid3-hd-menu-open'
      */
-    headerMenuOpenCls: 'x-grid3-hd-menu-open',
+    // headerMenuOpenCls: 'x-grid3-hd-menu-open',
+    headerMenuOpenCls: 'x-grid3-hd-btn',
     
     /**
      * @cfg {String} rowOverCls The CSS class added to each row when it is hovered over. Defaults to 'x-grid3-row-over'
