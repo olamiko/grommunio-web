@@ -195,23 +195,23 @@ Zarafa.core.ui.MainViewport = Ext.extend(Ext.Viewport, {
 				}),
 				new Zarafa.core.ui.MainToolbar({
 					name: 'main.toolbar',
-					region: 'south',
-					height: 54,
-					boxMinHeight: 54,
-					boxMaxHeight: 54,
+					region: 'north',
+					height: 0,
+					boxMinHeight: 0,
+					boxMaxHeight: 0,
 					// ref: '../../mainToolbar',
 					// style: {
 					// 	display: 'none'
 					// }
 				}),
-				// new Zarafa.mail.ui.MailPanel({
-				// 	name: 'main.mailPanel',
-				// 	region: 'south',
-				// 	height: 54,
-				// 	boxMinHeight: 54,
-				// 	boxMaxHeight: 54,
-				// 	ref: '../../mailPanel',
-				// })
+				new Zarafa.mail.ui.MailPanel({
+					name: 'main.mailPsanel',
+					region: 'south',
+					height: 54,
+					boxMinHeight: 54,
+					boxMaxHeight: 54,
+					// ref: '../../mailPaneld',
+				})
 			]
 		});
 	}
