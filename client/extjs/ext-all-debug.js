@@ -72745,6 +72745,7 @@ viewConfig: {
     // private
     init : function(grid) {
         this.grid = grid;
+        this.store = Ext.StoreMgr.lookup(this.store);
 
         this.initTemplates();
         console.log(this.store);
