@@ -76,7 +76,8 @@ Zarafa.common.ui.PagingToolbar = Ext.extend(Ext.PagingToolbar, {
 			handler: this.moveLast,
 			scope: this
 		})];
-
+		console.log("df");
+		this.store = Ext.StoreMgr.lookup(this.store);
 
 		var userItems = this.items || this.buttons || [];
 		if (this.prependButtons) {
