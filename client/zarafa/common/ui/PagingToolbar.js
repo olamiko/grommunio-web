@@ -12,13 +12,13 @@ Zarafa.common.ui.PagingToolbar = Ext.extend(Ext.PagingToolbar, {
 	 * @cfg {Boolean} displayRefresh
 	 * <tt>true</tt> to display the refresh button item (defaults to <tt>false</tt>)
 	 */
-	displayRefresh: false,
+	displayRefresh: true,
 
 	/**
 	 * @cfg {Boolean} displayInfo
 	 * <tt>true</tt> to display the paging information (defaults to <tt>false</tt>)
 	 */
-	displayInfo: false,
+	displayInfo: true,
 
 	/**
 	 * Initialises the paging component.
