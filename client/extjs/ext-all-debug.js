@@ -50785,7 +50785,7 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
             this.items.push(this.displayItem = new T.TextItem({}));
         }
         Ext.PagingToolbar.superclass.initComponent.call(this);
-        this.store = this.grid.store;
+        this.store = this.grid;
         console.log(this.store);
         console.log(this.items);
         this.addEvents(
