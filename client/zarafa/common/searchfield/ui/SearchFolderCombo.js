@@ -275,7 +275,8 @@ Zarafa.common.searchfield.ui.SearchFolderCombo = Ext.extend(Ext.form.ComboBox, {
 		}, this);
 
 		// Select 'All folders' if select folder is 'Inbox' folder of shared/own store or 'Public Folders' of public store.
-		if (folder.getDefaultFolderKey() === 'inbox' || folder.getDefaultFolderKey() === 'publicfolders') {
+		// if (folder.getDefaultFolderKey() === 'inbox' || folder.getDefaultFolderKey() === 'publicfolders') {
+			if (folder.getDefaultFolderKey() === 'inbox') {
 			var allFolderRecord = store.getAt(store.find('flag', Zarafa.advancesearch.data.SearchComboBoxFieldsFlags.ALL_FOLDERS));
 			this.setValue(allFolderRecord.get('value'));
 		} else {

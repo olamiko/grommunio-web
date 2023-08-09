@@ -111,13 +111,13 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 					// checkbox
 					(cb ? '<input class="x-tree-node-cb zarafa-hierarchy-node-cb" type="checkbox" ' + (a.checked ? 'checked="checked" />': '/>') : '') +
 					// node icon
-					console.log(node.tpl) +
+					(isCalenderNode ? calendarSVGIcon : icon) +
 					// node element (this.elNode)
 					'<a hidefocus="on" class="x-tree-node-anchor zarafa-hierarchy-node-anchor" ' +
 						'href="' + href + '" tabIndex="1" ' +
 						(a.hrefTarget ? ' target="' + a.hrefTarget + '"' : "") + ">" +
 							// hierarchy node text (this.textNode)
-							'<span class="zarafa-hierarchy-node-foldername" unselectable="on">' + (n.text) + '</span>' +
+							'<span class="zarafa-hierarchy-node-foldername" unselectable="on">' + (n.tpl ? n.tpl.apply(a) : n.text) + '</span>' +
 							// counter node (this.counterNode)
 							'<span class="zarafa-hierarchy-node-counter" unselectable="on"></span>' +
 							'<span class="zarafa-hierarchy-node-owner" unselectable="on"></span>'+
