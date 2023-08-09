@@ -57,11 +57,12 @@ Zarafa.mail.ui.MailPanel = Ext.extend(Zarafa.common.ui.ContextMainPanel, {
 				this.initPreviewPanel(config.context)
 			]
 		});
-		console.log(container.populateInsertionPoint('context', this));
-		console.log(container.populateInsertionPoint('context.mail.toolbar.item', this));
+		//console.log(container.populateInsertionPoint('context', this));
+		//console.log(container.populateInsertionPoint('context.mail.toolbar.item', this));
 		Zarafa.mail.ui.MailPanel.superclass.constructor.call(this, config);
-		var ourMailContext = container.getContextByName('mail');
+		var ourMailContext = container.getContextByName('mail').getModel;
 		console.log(ourMailContext);
+		console.log(ourMailContext.populateInsertionPoint('context', this));
 	},
 
 	/**
