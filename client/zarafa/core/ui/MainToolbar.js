@@ -46,7 +46,8 @@ Zarafa.core.ui.MainToolbar = Ext.extend(Zarafa.core.ui.Toolbar, {
 		});
 
 		Zarafa.core.ui.MainToolbar.superclass.constructor.call(this, config);
-		console.log(container.populateInsertionPoint('context.calendar.contextmenu.actions', this));
+		// console.log(calender.populateInsertionPoint('context.calendar.contextmenu.actions', this));
+		console.log(this.registerInsertionPoint('context.settings.categories', this.createSettingCategories, this))
 		this.initButtonGroups();
 	},
 
