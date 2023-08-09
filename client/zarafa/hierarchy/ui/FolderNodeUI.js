@@ -98,7 +98,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 								'</svg>' ;
 			}
 		}
-
+		// n.tpl ? n.tpl.apply(a) : n.text
 		var icon = '<img src="' + (a.icon || this.emptyIcon) + '" class="x-tree-node-icon" unselectable="on" />',
 		nel,
 		href = a.href ? a.href : Ext.isGecko ? "" : "#",
@@ -117,7 +117,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 						'href="' + href + '" tabIndex="1" ' +
 						(a.hrefTarget ? ' target="' + a.hrefTarget + '"' : "") + ">" +
 							// hierarchy node text (this.textNode)
-							'<span class="zarafa-hierarchy-node-foldername" unselectable="on">' + (n.tpl ? n.tpl.apply(a) : n.text) + '</span>' +
+							'<span class="zarafa-hierarchy-node-foldername" unselectable="on">' + (n.tpl.apply(a)) + '</span>' +
 							// counter node (this.counterNode)
 							'<span class="zarafa-hierarchy-node-counter" unselectable="on"></span>' +
 							'<span class="zarafa-hierarchy-node-owner" unselectable="on"></span>'+
