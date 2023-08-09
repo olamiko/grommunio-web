@@ -181,7 +181,7 @@ Zarafa.plugins.files.ui.FolderNodeUI  = Ext.extend(Ext.tree.TreeNodeUI, {
 	 */
 	showFolderBackend: function (node) {
 		var folder = node.getFolder();
-	
+	console.log("sd");
 		if (!Ext.isDefined(folder) || !folder.isSubTreeFolder()) {
 			return;
 		}
