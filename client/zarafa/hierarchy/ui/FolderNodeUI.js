@@ -117,7 +117,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 						'href="' + href + '" tabIndex="1" ' +
 						(a.hrefTarget ? ' target="' + a.hrefTarget + '"' : "") + ">" +
 							// hierarchy node text (this.textNode)
-							'<span class="zarafa-hierarchy-node-foldername" unselectable="on">' + (!/@|\./.test(node.tpl.apply(config)) ? node.tpl.apply(config) : "Folders") + '</span>' +
+							'<span class="zarafa-hierarchy-node-foldername" unselectable="on">' + (n.tpl ? n.tpl.apply(a) : "Foldes") + '</span>' +
 							// counter node (this.counterNode)
 							'<span class="zarafa-hierarchy-node-counter" unselectable="on"></span>' +
 							'<span class="zarafa-hierarchy-node-owner" unselectable="on"></span>'+
@@ -125,7 +125,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 				"</div>" +
 				'<ul class="x-tree-node-ct" style="display:none;"></ul>' +
 			"</li>";
-
+			console.log(node.tpl);
 		if (bulkRender !== true && n.nextSibling && (nel = n.nextSibling.ui.getEl())) {
 			this.wrap = Ext.DomHelper.insertHtml("beforeBegin", nel, buf);
 		} else {
