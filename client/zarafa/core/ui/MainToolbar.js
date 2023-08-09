@@ -46,7 +46,7 @@ Zarafa.core.ui.MainToolbar = Ext.extend(Zarafa.core.ui.Toolbar, {
 		});
 
 		Zarafa.core.ui.MainToolbar.superclass.constructor.call(this, config);
-		console.log(container.populateInsertionPoint('context.addressbook.abgroupdetailcontentpanel.tabs', this));
+		console.log(container.populateInsertionPoint('context.calendar.contextmenu.actions', this));
 		this.initButtonGroups();
 	},
 
