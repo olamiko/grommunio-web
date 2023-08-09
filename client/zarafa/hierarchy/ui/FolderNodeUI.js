@@ -200,6 +200,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		}
 
 		var ownerNode = Ext.get(this.folderOwnerNode);
+		console.log("h")
 		var store = container.getHierarchyStore().getById(folder.get('store_entryid'));
 		var ownerName = '';
 		if(store.isPublicStore()) {
@@ -209,7 +210,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		}
 		ownerNode.update(ownerName);
 		ownerNode.repaint();
-	},
+	}, 
 
 	/**
 	 * Update the {@link #counterNode counter} with the correct value.

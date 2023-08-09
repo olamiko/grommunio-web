@@ -23,7 +23,7 @@ Zarafa.plugins.mdm.ui.MDMFolderNodeUI = Ext.extend(Zarafa.hierarchy.ui.FolderNod
 	{
 		// add some indent caching, this helps performance when rendering a large tree
 		this.indentMarkup = node.parentNode ? node.parentNode.ui.getChildIndent() : '';
-
+		console.log("hjj");
 		var scheme;
 		var cb = Ext.isBoolean(config.checked) && !(node instanceof Zarafa.hierarchy.ui.RootFolderNode);
 		var isCalenderNode = config.folder.isCalendarFolder();

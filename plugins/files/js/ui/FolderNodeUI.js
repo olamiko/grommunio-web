@@ -52,6 +52,7 @@ Zarafa.plugins.files.ui.FolderNodeUI  = Ext.extend(Ext.tree.TreeNodeUI, {
 	renderElements : function(n, a, targetNode, bulkRender)
 	{
 		// add some indent caching, this helps performance when rendering a large tree
+		console.log("hoo");
 		this.indentMarkup = n.parentNode ? n.parentNode.ui.getChildIndent() : '';
 		var cb = Ext.isBoolean(a.checked);
 		var icon = '<img src="' + (a.icon || this.emptyIcon) + '" class="x-tree-node-icon" unselectable="on" />',
@@ -186,6 +187,7 @@ Zarafa.plugins.files.ui.FolderNodeUI  = Ext.extend(Ext.tree.TreeNodeUI, {
 		if (!Ext.isDefined(folder) || !folder.isSubTreeFolder()) {
 			return;
 		}
+		console.log("hh")
 
 		var ownerNode = Ext.get(this.folderBackendNode);
 		var store = folder.getFilesStore();
