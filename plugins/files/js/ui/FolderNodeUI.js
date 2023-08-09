@@ -72,7 +72,7 @@ Zarafa.plugins.files.ui.FolderNodeUI  = Ext.extend(Ext.tree.TreeNodeUI, {
 						'href="' + href + '" tabIndex="1" ' +
 						(a.hrefTarget ? ' target="' + a.hrefTarget + '"' : "") + ">" +
 							// hierarchy node text (this.textNode)
-							'<span unselectable="on">' + (n.tpl ? n.tpl.apply(a) : n.text) + '</span>' +
+							'<span unselectable="on">' + (n.text) + '</span>' +
 							'<span class="zarafa-hierarchy-node-backend" unselectable="on"></span>'+
 						"</a>" +
 					"</div>" +
