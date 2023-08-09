@@ -42,12 +42,12 @@ Zarafa.core.ui.MainToolbar = Ext.extend(Zarafa.core.ui.Toolbar, {
 			// Override from Ext.Component
 			xtype: 'zarafa.maintoolbar',
 			id: 'zarafa-maintoolbar',
-			cls: 'zarafa-maintoolbar'
+			// cls: 'zarafa-maintoolbar'
 		});
 
 		Zarafa.core.ui.MainToolbar.superclass.constructor.call(this, config);
 		// console.log(calender.populateInsertionPoint('context.calendar.contextmenu.actions', this));
-		console.log(this.registerInsertionPoint('context.settings.categories', this.createSettingCategories, this))
+		// console.log(this.registerInsertionPoint('context.settings.categories', this.createSettingCategories, this))
 		this.initButtonGroups();
 	},
 
