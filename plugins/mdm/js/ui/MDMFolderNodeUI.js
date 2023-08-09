@@ -147,5 +147,6 @@ Zarafa.plugins.mdm.ui.MDMFolderNodeUI = Ext.extend(Zarafa.hierarchy.ui.FolderNod
 
 		this.updateCounter(node);
 		this.showFolderOwner(node);
+		console.log("jkd");
 	}
 });
