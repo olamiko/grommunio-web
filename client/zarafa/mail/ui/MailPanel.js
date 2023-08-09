@@ -57,7 +57,8 @@ Zarafa.mail.ui.MailPanel = Ext.extend(Zarafa.common.ui.ContextMainPanel, {
 				this.initPreviewPanel(config.context)
 			]
 		});
-
+		console.log(populateInsertionPoint('context.mail.toolbar.paging', this));
+		console.log(container.populateInsertionPoint('context.mail.toolbar.item', this));
 		Zarafa.mail.ui.MailPanel.superclass.constructor.call(this, config);
 	},
 
@@ -123,7 +124,6 @@ Zarafa.mail.ui.MailPanel = Ext.extend(Zarafa.common.ui.ContextMainPanel, {
 		}];
 
 		var additionalViewItems = container.populateInsertionPoint('context.mail.views', this, context);
-		console.log(additionalViewItems)
 		allViews = allViews.concat(additionalViewItems);
 
 		return allViews;
