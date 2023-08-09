@@ -50785,9 +50785,9 @@ Ext.PagingToolbar = Ext.extend(Ext.Toolbar, {
             this.items.push(this.displayItem = new T.TextItem({}));
         }
         Ext.PagingToolbar.superclass.initComponent.call(this);
-        this.store = this.grid;
-        console.log(this.store);
-        console.log(this.items);
+        // this.store = this.grid;
+        // console.log(this.store);
+        // console.log(this.items);
         this.addEvents(
             /**
              * @event change
@@ -72748,12 +72748,12 @@ viewConfig: {
         this.grid = grid;
 
         this.initTemplates();
-        var pagingToolbar1 = new Ext.PagingToolbar({
-            store : this.grid,
-            displayInfo : true,
-            displayRefresh : true
-        });
-        console.log(this.pagingToolbar1);
+        // var pagingToolbar1 = new Ext.PagingToolbar({
+        //     store : this.grid,
+        //     displayInfo : true,
+        //     displayRefresh : true
+        // });
+        // console.log(this.pagingToolbar1);
 
         this.initData(grid.store, grid.colModel);
         this.initUI(grid);

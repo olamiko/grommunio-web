@@ -123,6 +123,7 @@ Zarafa.mail.ui.MailPanel = Ext.extend(Zarafa.common.ui.ContextMainPanel, {
 		}];
 
 		var additionalViewItems = container.populateInsertionPoint('context.mail.views', this, context);
+		console.log(additionalViewItems)
 		allViews = allViews.concat(additionalViewItems);
 
 		return allViews;
