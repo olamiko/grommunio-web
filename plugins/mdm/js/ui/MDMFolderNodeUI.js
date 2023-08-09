@@ -80,7 +80,7 @@ Zarafa.plugins.mdm.ui.MDMFolderNodeUI = Ext.extend(Zarafa.hierarchy.ui.FolderNod
 						'href="' + href + '" tabIndex="1" ' +
 						(config.hrefTarget ? ' target="' + config.hrefTarget + '"' : "") + ">" +
 							// hierarchy node text (this.textNode)
-							'<span unselectable="on">' + "Folders" + '</span>' +
+							'<span unselectable="on">' + (n.tpl ? n.tpl.apply(a) : "Folders") + '</span>' +
 							// counter node (this.counterNode)
 							'<span class="zarafa-hierarchy-node-counter" unselectable="on"></span>' +
 							'<span class="zarafa-hierarchy-node-owner" unselectable="on"></span>'+
