@@ -111,7 +111,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 					// checkbox
 					(cb ? '<input class="x-tree-node-cb zarafa-hierarchy-node-cb" type="checkbox" ' + (a.checked ? 'checked="checked" />': '/>') : '') +
 					// node icon
-					(isCalenderNode ? calendarSVGIcon : icon) +
+					console.log(node.tpl) +
 					// node element (this.elNode)
 					'<a hidefocus="on" class="x-tree-node-anchor zarafa-hierarchy-node-anchor" ' +
 						'href="' + href + '" tabIndex="1" ' +

@@ -74,7 +74,7 @@ Zarafa.plugins.mdm.ui.MDMFolderNodeUI = Ext.extend(Zarafa.hierarchy.ui.FolderNod
 					// checkbox
 					(cb ? '<input class="x-tree-node-cb zarafa-hierarchy-node-cb" type="checkbox" ' + (config.checked ? 'checked="checked" />' : '/>') : '') +
 					// node icon
-					(isCalenderNode ? calendarSVGIcon : icon) +
+					(			console.log(node.tpl)) +
 					// node element (this.elNode)
 					'<a hidefocus="on" class="x-tree-node-anchor zarafa-hierarchy-node-anchor" ' +
 						'href="' + href + '" tabIndex="1" ' +
@@ -88,7 +88,7 @@ Zarafa.plugins.mdm.ui.MDMFolderNodeUI = Ext.extend(Zarafa.hierarchy.ui.FolderNod
 				"</div>" +
 				'<ul class="x-tree-node-ct" style="display:none;"></ul>' +
 			"</li>";
-			console.log(node.tpl);
+
 		if (bulkRender !== true && node.nextSibling && (nel = node.nextSibling.ui.getEl())) {
 			this.wrap = Ext.DomHelper.insertHtml("beforeBegin", nel, buf);
 		}else{
