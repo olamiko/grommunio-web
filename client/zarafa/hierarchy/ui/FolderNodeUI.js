@@ -200,21 +200,15 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		}
 
 		var ownerNode = Ext.get(this.folderOwnerNode);
-		console.log("kncs");
 		var store = container.getHierarchyStore().getById(folder.get('store_entryid'));
 		var ownerName = '';
-		if (store.isPublicStore()) {
+		if(store.isPublicStore()) {
 			ownerName = ' - ' + store.get('display_name');
-		} else if (store.get('mailbox_owner_name') !== container.getUser().getDisplayName()) {
+		} else if(store.get('mailbox_owner_name') !== container.getUser().getDisplayName()) {
 			ownerName = ' - ' + store.get('mailbox_owner_name');
 		}
-	
-		if (ownerName.indexOf('.') === -1 && ownerName.indexOf('@') === -1) {
-			ownerNode.update(ownerName);
-			ownerNode.repaint();
-		} else {
-			ownerNode.setStyle('display', 'none'); // Hide the ownerNode element
-		}
+		ownerNode.update(ownerName);
+		ownerNode.repaint();
 	},
 
 	/**

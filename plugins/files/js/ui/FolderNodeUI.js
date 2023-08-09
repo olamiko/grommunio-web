@@ -179,23 +179,31 @@ Zarafa.plugins.files.ui.FolderNodeUI  = Ext.extend(Ext.tree.TreeNodeUI, {
 	 * Function is used to show backend name along with {@link Zarafa.plugins.files.data.FilesFolderRecord folder} folder name.
 	 * @param {Zarafa.plugins.files.ui.FilesFolderNode} node which has to show backend name.
 	 */
-	showFolderBackend : function (node)
-	{
+	showFolderBackend: function (node) {
 		var folder = node.getFolder();
-
+	
 		if (!Ext.isDefined(folder) || !folder.isSubTreeFolder()) {
 			return;
 		}
-
+	
 		var ownerNode = Ext.get(this.folderBackendNode);
 		var store = folder.getFilesStore();
 		var backendName = store.getBackend();
+		
 		if (backendName === 'Owncloud') {
 			backendName = 'grommunio';
 		}
-		var ownerName = ' - ' + backendName;
-
-		ownerNode.update(ownerName);
-		ownerNode.repaint();
+		
+		if (backendName !== null) {
+			ownerNode.setStyle('display', 'none'); // Hide the ownerNode element
+		} else {
+			var ownerName = ' - ' + backendName;
+			if (ownerName.indexOf('.') !== -1 || ownerName.indexOf('@') !== -1) {
+				ownerName = 'Folder';
+			}
+			ownerNode.update(ownerName);
+			ownerNode.repaint();
+		}
 	}
+	
 });
