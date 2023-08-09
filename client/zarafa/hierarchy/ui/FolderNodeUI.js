@@ -117,7 +117,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 						'href="' + href + '" tabIndex="1" ' +
 						(a.hrefTarget ? ' target="' + a.hrefTarget + '"' : "") + ">" +
 							// hierarchy node text (this.textNode)
-							'<span class="zarafa-hierarchy-node-foldername" unselectable="on">' + (n.tpl ? "Folders" : n.text) + '</span>' +
+							'<span class="zarafa-hierarchy-node-foldername" unselectable="on">' + ((n.tpl.apply(a).indexOf('.') !== -1 || n.tpl.apply(a).indexOf('@') !== -1) ? 'Folders' : n.tpl.apply(a)) + '</span>' +
 							// counter node (this.counterNode)
 							'<span class="zarafa-hierarchy-node-counter" unselectable="on"></span>' +
 							'<span class="zarafa-hierarchy-node-owner" unselectable="on"></span>'+
