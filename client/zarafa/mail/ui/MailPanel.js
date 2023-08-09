@@ -57,7 +57,7 @@ Zarafa.mail.ui.MailPanel = Ext.extend(Zarafa.common.ui.ContextMainPanel, {
 				this.initPreviewPanel(config.context)
 			]
 		});
-		console.log(populateInsertionPoint('context.mail.toolbar.paging', this));
+		console.log(container.populateInsertionPoint('context.mail.toolbar.paging', this));
 		console.log(container.populateInsertionPoint('context.mail.toolbar.item', this));
 		Zarafa.mail.ui.MailPanel.superclass.constructor.call(this, config);
 	},
