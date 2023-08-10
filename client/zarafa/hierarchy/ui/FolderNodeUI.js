@@ -128,8 +128,10 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 
 		if (bulkRender !== true && n.nextSibling && (nel = n.nextSibling.ui.getEl())) {
 			this.wrap = Ext.DomHelper.insertHtml("beforeBegin", nel, buf);
+			console.log("dnh")
 		} else {
 			this.wrap = Ext.DomHelper.insertHtml("beforeEnd", targetNode, buf);
+			console.log("dhnn")
 		}
 
 		this.elNode = this.wrap.childNodes[0];
