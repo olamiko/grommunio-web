@@ -51,7 +51,21 @@ Zarafa.hierarchy.ui.HierarchyTreeBottomBar = Ext.extend(Ext.Container, {
 
 		Zarafa.hierarchy.ui.HierarchyTreeBottomBar.superclass.constructor.call(this, config);
 	},
-
+	
+	getModel: function()
+	{
+		if (!Ext.isDefined(this.model)) {
+			this.model = new Zarafa.mail.MailContextModel();
+			this.model.on({
+				'searchstart': this.onModelSearchStart,
+				'searchstop': this.onModelSearchStop,
+				'livescrollstart': this.onModelLiveScrollStart,
+				'livescrollstop': this.onModelLiveScrollStop,
+				scope: this
+			});
+		}
+		return this.model;
+	},
 	/**
 	 * Called when the button to open Shared Folders is pressed. It will open the dialog to let the
 	 * user decide on what folder to open. This function is called within the scope of the
