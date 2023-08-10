@@ -192,7 +192,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		this.counterNode = cs[index].firstChild.nextSibling;
 		this.folderOwnerNode = this.counterNode.nextSibling;
 		this.HomeNode = this.folderOwnerNode.nextSibling;
-		console.log(HomeNode);
+		console.log(this.HomeNode);
 		// Apply some optional CSS classes
 		var elNode = Ext.get(this.elNode);
 		var iconNode = Ext.get(this.iconNode);
