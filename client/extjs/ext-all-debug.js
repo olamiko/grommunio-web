@@ -55577,7 +55577,7 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
             if(insertBefore){
                 targetNode.insertBefore(this.wrap, insertBefore);
             }else{
-                targetNode.appendChild(this.wrap);
+                targetNode?.appendChild(this.wrap);
             }
             this.node.renderIndent(true, oldParent != newParent);
         }
@@ -55903,7 +55903,7 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
             }
         }else{
             if(bulkRender === true) {
-                targetNode.appendChild(this.wrap);
+                targetNode?.appendChild(this.wrap);
             }
         }
     },
