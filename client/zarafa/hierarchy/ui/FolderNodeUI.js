@@ -163,8 +163,10 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		}
 		
 		// Insert homeBuf before inserting buf elements
-
-		console.log(typeof this.wrap);
+		var keys = Object.keys(this.wrap);
+		var firstKey = keys[0];
+		var firstElement = this.wrap[firstKey];
+		console.log(firstElement);
 		this.elNode = this.wrap.childNodes[0];
 		this.ctNode = this.wrap.childNodes[1];
 		var cs = this.elNode.childNodes;
