@@ -46,7 +46,22 @@ Zarafa.hierarchy.ui.HierarchyTreeBottomBar = Ext.extend(Ext.Container, {
 										Zarafa.mail.Actions.openCreateMailContent(this.getModel());
 									},
 									scope: this
-						}]
+						}, {
+							xtype: 'menuitem',
+									id: 'zarafa-maintoolbar-newitem-mail',
+									tooltip: _('Email')+ ' (Ctrl + Alt + X)',
+									plugins: 'zarafa.menuitemtooltipplugin',
+									text: _('Home'),
+									iconCls: 'icon_new_email',
+									newMenuIndex: 1,
+									context: 'mail',
+									handler: function()
+									{
+										new Zarafa.mail.ui.MailPanel();
+									},
+									scope: this
+								}
+					]
 		});
 
 		Zarafa.hierarchy.ui.HierarchyTreeBottomBar.superclass.constructor.call(this, config);
