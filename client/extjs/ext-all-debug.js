@@ -55949,6 +55949,7 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
         this.textNode = cs[index].firstChild;
     },
     
+
     /**
      * @private Gets a normalized href for the node.
      * @param {String} href
@@ -56013,12 +56014,12 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
                     this.wasLeaf = false;
                 }
                 if(this.c1 != c1 || this.c2 != c2){
-                    Ext.fly(this.elNode).replaceClass(c1, c2);
+                    Ext.fly(this.elNode)?.replaceClass(c1, c2);
                     this.c1 = c1; this.c2 = c2;
                 }
             }else{
                 if(!this.wasLeaf){
-                    Ext.fly(this.elNode).replaceClass("x-tree-node-expanded", "x-tree-node-collapsed");
+                    Ext.fly(this.elNode)?.replaceClass("x-tree-node-expanded", "x-tree-node-collapsed");
                     delete this.c1;
                     delete this.c2;
                     this.wasLeaf = true;
