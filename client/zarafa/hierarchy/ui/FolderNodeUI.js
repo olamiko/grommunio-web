@@ -157,7 +157,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		// targetNode.appendChild(homeBuf);
 		// console.log(targetNode);
 		// if (bulkRender !== true && n.nextSibling && (nel = n.nextSibling.ui.getEl())) {
-		if (n.nextSibling && (nel = n.nextSibling.ui.getEl())) {
+		if (n.nextSibling) {
 			this.wrap = Ext.DomHelper.insertHtml("beforeBegin", nel, buf);
 
 			console.log("Ddfff");
@@ -235,7 +235,6 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		}
 
 		var ownerNode = Ext.get(this.folderOwnerNode);
-		console.log("h")
 		var store = container.getHierarchyStore().getById(folder.get('store_entryid'));
 		var ownerName = '';
 		if(store.isPublicStore()) {
