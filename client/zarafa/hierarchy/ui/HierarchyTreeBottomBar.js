@@ -15,34 +15,39 @@ Zarafa.hierarchy.ui.HierarchyTreeBottomBar = Ext.extend(Ext.Container, {
 	/**
 	 * @cfg {String} buttonText The text that should be displayed on the button to open shared folders.
 	 */
-	buttonText: _('Open Shared Folders'),
+	buttonText: _('New Mail'),
 
 	/**
 	 * @constructor
 	 * @param config Configuration structure
 	 */
-	constructor: function(config)
+	// constructor: function(config)
+	// {
+	// 	config = config || {};
+
+	// 	var buttonText = Ext.util.Format.htmlEncode(config.buttonText || this.buttonText);
+
+	// 	Ext.applyIf(config, {
+	// 		cls: 'zarafa-hierarchy-treepanel-bottombar',
+	// 		layout:'table',
+	// 		defaultSelectedSharedFolderType: Zarafa.hierarchy.data.SharedFolderTypes['ALL'],
+
+	// 		items: [{
+	// 			cls: 'zarafa-hierarchy-treepanel-footer-opensharedfolder',
+	// 			xtype: 'button',
+	// 			tooltip: buttonText + ' (Alt + S)',
+	// 			text: buttonText + ' + ',
+	// 			handler: this.openSharedFolder.createDelegate(this)
+	// 		}]
+	// 	});
+
+	// 	Zarafa.hierarchy.ui.HierarchyTreeBottomBar.superclass.constructor.call(this, config);
+	// },
+	constructor: function()
 	{
-		config = config || {};
-
-		var buttonText = Ext.util.Format.htmlEncode(config.buttonText || this.buttonText);
-
-		Ext.applyIf(config, {
-			cls: 'zarafa-hierarchy-treepanel-bottombar',
-			layout:'table',
-			defaultSelectedSharedFolderType: Zarafa.hierarchy.data.SharedFolderTypes['ALL'],
-
-			items: [{
-				cls: 'zarafa-hierarchy-treepanel-footer-opensharedfolder',
-				xtype: 'button',
-				tooltip: buttonText + ' (Alt + S)',
-				text: buttonText + ' + ',
-				handler: this.openSharedFolder.createDelegate(this)
-			}]
-		});
-
-		Zarafa.hierarchy.ui.HierarchyTreeBottomBar.superclass.constructor.call(this, config);
+		return new Zarafa.mail.MailContext.createNewMailButton();
 	},
+
 
 	/**
 	 * Called when the button to open Shared Folders is pressed. It will open the dialog to let the

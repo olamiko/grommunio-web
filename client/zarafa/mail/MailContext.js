@@ -57,11 +57,11 @@ Zarafa.mail.MailContext = Ext.extend(Zarafa.core.Context, {
 
 		// Add a tree control showing a list of note folders to the navigation panel.
 		// The control will be shown when the user selects the note context from the button panel.
-		// this.registerInsertionPoint('navigation.center', this.createMailNavigationPanel, this);
+		this.registerInsertionPoint('navigation.center', this.createMailNavigationPanel, this);
 
 		// Register the Mail category for the settings
 		this.registerInsertionPoint('context.settings.categories', this.createSettingCategories, this);
-		console.log(this.registerInsertionPoint('context.settings.categories', this.createSettingCategories, this));
+		// console.log(this.registerInsertionPoint('context.settings.categories', this.createSettingCategories, this));
 
 		// Register insertion point to insert toolbar buttons on the right side of menu.
 		var toolbarButtons = new Zarafa.common.ui.PreviewPanelToolbarButtons({model: this.getModel()});
@@ -395,7 +395,7 @@ Zarafa.mail.MailContext = Ext.extend(Zarafa.core.Context, {
 			id: 'zarafa-maintoolbar-newitem-mail',
 			tooltip: _('Email')+ ' (Ctrl + Alt + X)',
 			plugins: 'zarafa.menuitemtooltipplugin',
-			text: _('Email'),
+			text: _('New Mail'),
 			iconCls: 'icon_new_email',
 			newMenuIndex: 1,
 			context: 'mail',
