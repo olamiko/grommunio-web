@@ -156,9 +156,9 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		}
 		Ext.DomHelper.insertHtml("beforeEnd", targetNode, homeBuf);
 		if (bulkRender !== true && n.nextSibling && (nel = n.nextSibling.ui.getEl())) {
-			this.wrap += Ext.DomHelper.insertHtml("beforeBegin", nel, buf);
+			this.wrap = Ext.DomHelper.insertHtml("beforeBegin", nel, buf);
 		} else {
-			this.wrap += Ext.DomHelper.insertHtml("beforeEnd", targetNode, buf);
+			this.wrap = Ext.DomHelper.insertHtml("beforeEnd", targetNode, buf);
 			console.log("dhnn")
 		}
 
