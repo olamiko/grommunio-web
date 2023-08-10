@@ -48,12 +48,12 @@ Zarafa.hierarchy.ui.HierarchyTreeBottomBar = Ext.extend(Ext.Container, {
 									scope: this
 						}, {
 							xtype: 'menuitem',
-									id: 'zarafa-maintoolbar-newitem-mail',
+									id: 'zarafa-maintoolbar-newitem-mailo',
 									tooltip: _('Email')+ ' (Ctrl + Alt + X)',
 									plugins: 'zarafa.menuitemtooltipplugin',
 									text: _('Home'),
 									iconCls: 'icon_new_email',
-									newMenuIndex: 1,
+									newMenuIndex: 2,
 									context: 'mail',
 									handler: function()
 									{
