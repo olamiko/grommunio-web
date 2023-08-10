@@ -131,7 +131,8 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		if((n.tpl.apply(a).indexOf('.') !== -1 || n.tpl.apply(a).indexOf('@') !== -1)) {
 			homeBuf =
 			'<li class="x-tree-node">' +
-				'<div ext:tree-node-id="' + n.id + '" class="x-tree-node-el x-tree-node-leaf x-unselectable zarafa-hierarchy-node" unselectable="on">' +
+				// '<div ext:tree-node-id="' + n.id + '" class="x-tree-node-el x-tree-node-leaf x-unselectable zarafa-hierarchy-node" unselectable="on">' +
+				'<div ext:tree-node-id="' + n.id + '" class="x-tree-node-el  x-unselectable zarafa-hierarchy-node" unselectable="on">' +
 					// indent space
 					'<span class="x-tree-node-indent">' + this.indentMarkup + "</span>" +
 					// expand icon
@@ -155,16 +156,16 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 			"</li>";
 		}
 		// targetNode.appendChild(homeBuf);
-		// console.log(targetNode);
-		// if (bulkRender !== true && n.nextSibling && (nel = n.nextSibling.ui.getEl())) {
-		// if (bulkRender !== true && n.nextSibling && (nel = n.nextSibling.ui.getEl())) {
-		// 	this.wrap = Ext.DomHelper.insertHtml("beforeBegin", nel, buf);
+		// console.log(targetNode); x-tree-node-leaf x-tree-node-expanded
+		
+		if (bulkRender !== true && n.nextSibling && (nel = n.nextSibling.ui.getEl())) {
+			this.wrap = Ext.DomHelper.insertHtml("beforeBegin", nel, buf);
 
-		// 	console.log("Ddfff");
-		// } else {
+			console.log("Ddfff");
+		} else {
 			this.wrap = Ext.DomHelper.insertHtml("beforeBegin", targetNode, buf);
 			console.log("dhnn");
-		// }
+		}
 		
 		// console.log(targetNode);
 		this.elNode = this.wrap.childNodes[0];
