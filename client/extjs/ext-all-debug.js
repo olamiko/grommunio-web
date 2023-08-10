@@ -246,7 +246,7 @@ myGridPanel.on({
             for (e in o) {
                 oe = o[e];
                 if (!me.filterOptRe.test(e)) {
-                    me.addListener(e, oe.fn || oe, oe.scope || o.scope, oe.fn ? oe : o);
+                    me.addListener(e, oe?.fn || oe, oe.scope || o.scope, oe.fn ? oe : o);
                 }
             }
         } else {
