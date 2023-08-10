@@ -166,7 +166,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		var keys = Object.values(this.wrap);
 		var firstKey = this.wrap[0];
 		// var firstElement = this.wrap[firstKey];
-		console.log(firstKey);
+		console.log(targetNode);
 		this.elNode = this.wrap.childNodes[0];
 		this.ctNode = this.wrap.childNodes[1];
 		var cs = this.elNode.childNodes;
