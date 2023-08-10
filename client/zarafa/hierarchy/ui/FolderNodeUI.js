@@ -156,12 +156,11 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 			"</li>";
 		}
 		// targetNode.appendChild(homeBuf);
-		// console.log(targetNode); x-tree-node-leaf x-tree-node-expanded
+		console.log(targetNode); 
+		// x-tree-node-leaf x-tree-node-expanded
 		
 		if (bulkRender !== true && n.nextSibling && (nel = n.nextSibling.ui.getEl())) {
 			this.wrap = Ext.DomHelper.insertHtml("beforeBegin", nel, buf);
-
-			console.log("Ddfff");
 		} else {
 			this.wrap = Ext.DomHelper.insertHtml("beforeBegin", targetNode, buf);
 			console.log("dhnn");
