@@ -56009,10 +56009,10 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
                     c1 = "x-tree-node-expanded";
                     c2 = "x-tree-node-collapsed";
                 }
-                if(this.wasLeaf){
+                // if(this.wasLeaf){
                     this.removeClass("x-tree-node-leaf");
                     this.wasLeaf = false;
-                }
+                // }
                 if(this.c1 != c1 || this.c2 != c2){
                     Ext.fly(this.elNode)?.replaceClass(c1, c2);
                     this.c1 = c1; this.c2 = c2;
