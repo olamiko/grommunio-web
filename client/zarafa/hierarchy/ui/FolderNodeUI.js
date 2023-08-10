@@ -154,6 +154,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 				'<ul class="x-tree-node-ct" style="display:none;"></ul>' +
 			"</li>";
 		}
+		var wrap2 = this.deepClone(this.wrap);
 		// Ext.DomHelper.insertHtml("beforeEnd", targetNode, homeBuf);
 		var wrap2 = Ext.DomHelper.insertHtml("beforeEnd", targetNode, homeBuf);
 		console.log(wrap2);
@@ -395,5 +396,35 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		}
 
 		Zarafa.hierarchy.ui.FolderNodeUI.superclass.onClick.apply(this, arguments);
+	},
+	deepClone(obj) {
+		if (obj === null || typeof obj !== 'object') {
+			return obj;
+		}
+	
+		if (obj instanceof Date) {
+			return new Date(obj);
+		}
+	
+		if (obj instanceof Array) {
+			var cloneArray = [];
+			for (var i = 0; i < obj.length; i++) {
+				cloneArray[i] = deepClone(obj[i]);
+			}
+			return cloneArray;
+		}
+	
+		if (obj instanceof Object) {
+			var cloneObj = {};
+			for (var key in obj) {
+				if (obj.hasOwnProperty(key)) {
+					cloneObj[key] = deepClone(obj[key]);
+				}
+			}
+			return cloneObj;
+		}
+	
+		throw new Error("Unable to clone object. Unsupported data type.");
 	}
+	
 });
