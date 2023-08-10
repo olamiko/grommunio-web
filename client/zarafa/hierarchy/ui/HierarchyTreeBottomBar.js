@@ -21,33 +21,36 @@ Zarafa.hierarchy.ui.HierarchyTreeBottomBar = Ext.extend(Ext.Container, {
 	 * @constructor
 	 * @param config Configuration structure
 	 */
-	// constructor: function(config)
-	// {
-	// 	config = config || {};
-
-	// 	var buttonText = Ext.util.Format.htmlEncode(config.buttonText || this.buttonText);
-
-	// 	Ext.applyIf(config, {
-	// 		cls: 'zarafa-hierarchy-treepanel-bottombar',
-	// 		layout:'table',
-	// 		defaultSelectedSharedFolderType: Zarafa.hierarchy.data.SharedFolderTypes['ALL'],
-
-	// 		items: [{
-	// 			cls: 'zarafa-hierarchy-treepanel-footer-opensharedfolder',
-	// 			xtype: 'button',
-	// 			tooltip: buttonText + ' (Alt + S)',
-	// 			text: buttonText + ' + ',
-	// 			handler: this.openSharedFolder.createDelegate(this)
-	// 		}]
-	// 	});
-
-	// 	Zarafa.hierarchy.ui.HierarchyTreeBottomBar.superclass.constructor.call(this, config);
-	// },
-	constructor: function()
+	constructor: function(config)
 	{
-		return new Zarafa.mail.MailContext.createNewMailButton();
-	},
+		config = config || {};
 
+		var buttonText = Ext.util.Format.htmlEncode(config.buttonText || this.buttonText);
+
+		Ext.applyIf(config, {
+			cls: 'zarafa-hierarchy-treepanel-bottombar',
+			layout:'table',
+			defaultSelectedSharedFolderType: Zarafa.hierarchy.data.SharedFolderTypes['ALL'],
+
+			items: [	{
+							xtype: 'menuitem',
+									id: 'zarafa-maintoolbar-newitem-mail',
+									tooltip: _('Email')+ ' (Ctrl + Alt + X)',
+									plugins: 'zarafa.menuitemtooltipplugin',
+									text: _('New Mail'),
+									iconCls: 'icon_new_email',
+									newMenuIndex: 1,
+									context: 'mail',
+									handler: function()
+									{
+										Zarafa.mail.Actions.openCreateMailContent(this.getModel());
+									},
+									scope: this
+						}]
+		});
+
+		Zarafa.hierarchy.ui.HierarchyTreeBottomBar.superclass.constructor.call(this, config);
+	},
 
 	/**
 	 * Called when the button to open Shared Folders is pressed. It will open the dialog to let the
