@@ -22476,9 +22476,11 @@ Ext.layout.BorderLayout.Region.prototype = {
     onCollapse : function(animate){
         this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
-            this.getCollapsedEl().dom.style.width = '15em ! important';
+            this.getCollapsedEl().dom.style.visibility = 'visible';
+            console.log("yfh")
         }else{
             this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
+            console.log("uioojf")
         }
         this.state.collapsed = true;
         this.panel.saveState();
@@ -22497,7 +22499,7 @@ Ext.layout.BorderLayout.Region.prototype = {
             this.panel.setSize(c.getWidth(), undefined);
         }
         c.hide();
-        c.dom.style.width = '3em ! important';
+        c.dom.style.visibility = 'hidden';
         this.panel.el.setStyle('z-index', this.floatingZIndex);
     },
 
@@ -55903,7 +55905,7 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
             }
         }else{
             if(bulkRender === true) {
-                targetNode?.appendChild(this.wrap);
+                targetNode.appendChild(this.wrap);
             }
         }
     },
@@ -55916,7 +55918,7 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
         var cb = Ext.isBoolean(a.checked),
             nel,
             href = this.getHref(a.href),
-            buf = ['<li class="x-tree-node"><div ext:tree-node-id="',n.id,'" class="x-tree-node-el x-unselectable ', a.cls,'" unselectable="on">',
+            buf = ['<li class="x-tree-node"><div ext:tree-node-id="',n.id,'" class="x-tree-node-el x-tree-node-leaf x-unselectable ', a.cls,'" unselectable="on">',
             '<span class="x-tree-node-indent">',this.indentMarkup,"</span>",
             '<img alt="" src="', this.emptyIcon, '" class="x-tree-ec-icon x-tree-elbow" />',
             '<img alt="" src="', a.icon || this.emptyIcon, '" class="x-tree-node-icon',(a.icon ? " x-tree-node-inline-icon" : ""),(a.iconCls ? " "+a.iconCls : ""),'" unselectable="on" />',
@@ -56009,10 +56011,10 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
                     c1 = "x-tree-node-expanded";
                     c2 = "x-tree-node-collapsed";
                 }
-                // if(this.wasLeaf){
+                if(this.wasLeaf){
                     this.removeClass("x-tree-node-leaf");
                     this.wasLeaf = false;
-                // }
+                }
                 if(this.c1 != c1 || this.c2 != c2){
                     Ext.fly(this.elNode)?.replaceClass(c1, c2);
                     this.c1 = c1; this.c2 = c2;
