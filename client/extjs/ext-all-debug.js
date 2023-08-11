@@ -22459,15 +22459,12 @@ Ext.layout.BorderLayout.Region.prototype = {
     },
 
     // private
-    beforeCollapse: function(p, animate) {
+    beforeCollapse : function(p, animate){
         this.lastAnim = animate;
-        if (this.splitEl) {
+        if(this.splitEl){
             this.splitEl.hide();
         }
-        
-        // Store the original width before collapsing
-        this.originalWidth = this.panel.getWidth();
-        
+        this.getCollapsedEl().show();
         var el = this.panel.getEl();
         this.originalZIndex = el.getStyle('z-index');
         el.setStyle('z-index', 100);
@@ -22476,40 +22473,38 @@ Ext.layout.BorderLayout.Region.prototype = {
     },
 
     // private
-    onCollapse: function(animate) {
+    onCollapse : function(animate){
         this.panel.el.setStyle('z-index', 1);
-        if (this.lastAnim === false || this.panel.animCollapse === false) {
-            this.getCollapsedEl().setWidth(this.originalWidth / 5); // Reduce the width by 4/5
-        } else {
-            this.getCollapsedEl().slideIn(this.panel.slideAnchor, { duration: 0.2 });
+        if(this.lastAnim === false || this.panel.animCollapse === false){
+            this.getCollapsedEl().dom.style.width = '15em ! important';
+        }else{
+            this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
         }
         this.state.collapsed = true;
         this.panel.saveState();
     },
 
     // private
-    beforeExpand: function(animate) {
-        if (this.isSlid) {
+    beforeExpand : function(animate){
+        if(this.isSlid){
             this.afterSlideIn();
         }
-        
         var c = this.getCollapsedEl();
         this.el.show();
-        
-        if (this.position == 'east' || this.position == 'west') {
+        if(this.position == 'east' || this.position == 'west'){
             this.panel.setSize(undefined, c.getHeight());
-        } else {
+        }else{
             this.panel.setSize(c.getWidth(), undefined);
         }
-        
-        c.setWidth(this.originalWidth / 5); // Reduce the width by 4/5
+        c.hide();
+        c.dom.style.width = '3em ! important';
         this.panel.el.setStyle('z-index', this.floatingZIndex);
     },
 
     // private
-    onExpand: function() {
+    onExpand : function(){
         this.isCollapsed = false;
-        if (this.splitEl) {
+        if(this.splitEl){
             this.splitEl.show();
         }
         this.layout.layout();
