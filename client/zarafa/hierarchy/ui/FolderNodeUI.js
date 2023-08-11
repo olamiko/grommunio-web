@@ -102,8 +102,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		var icon = '<img src="' + (a.icon || this.emptyIcon) + '" class="x-tree-node-icon" unselectable="on" />',
 		nel,
 		href = a.href ? a.href : Ext.isGecko ? "" : "#",
-		buf = 
-		'<li class="x-tree-node">' +
+		buf = '<li class="x-tree-node">' +
 				'<div ext:tree-node-id="' + n.id + '" class="x-tree-node-el x-tree-node-leaf x-unselectable zarafa-hierarchy-node" unselectable="on">' +
 					// indent space
 					'<span class="x-tree-node-indent">' + this.indentMarkup + "</span>" +
@@ -126,49 +125,14 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 				"</div>" +
 				'<ul class="x-tree-node-ct" style="display:none;"></ul>' +
 			"</li>";
-		
-		// console.log(n.tpl.apply(a));
-		if((n.tpl.apply(a).indexOf('.') !== -1 || n.tpl.apply(a).indexOf('@') !== -1)) {
-			homeBuf =
-			'<li class="x-tree-node">' +
-				// '<div ext:tree-node-id="' + n.id + '" class="x-tree-node-el x-tree-node-leaf x-unselectable zarafa-hierarchy-node" unselectable="on">' +
-				'<div ext:tree-node-id="' + n.id + '" class="x-tree-node-el  x-unselectable zarafa-hierarchy-node" unselectable="on">' +
-					// indent space
-					'<span class="x-tree-node-indent">' + this.indentMarkup + "</span>" +
-					// expand icon
-					'<img src="' + this.emptyIcon + '" class="x-tree-ec-icon x-tree-elbow" />' +
-					// checkbox
-					(cb ? '<input class="x-tree-node-cb zarafa-hierarchy-node-cb" type="checkbox" ' + (a.checked ? 'checked="checked" />': '/>') : '') +
-					// node icon
-					(isCalenderNode ? calendarSVGIcon : icon) +
-					// node element (this.elNode)
-					'<a hidefocus="on" class="x-tree-node-anchor zarafa-hierarchy-node-anchor" ' +
-						'href="' + href + '" tabIndex="1" ' +
-						(a.hrefTarget ? ' target="' + a.hrefTarget + '"' : "") + ">" +
-							// hierarchy node text (this.textNode)
-							'<span class="zarafa-hierarchy-node-foldername" unselectable="on">' + "Home" + '</span>' +
-							// counter node (this.counterNode)
-							'<span class="zarafa-hierarchy-node-counter" unselectable="on"></span>' +
-							'<span class="zarafa-hierarchy-node-owner" unselectable="on"></span>'+
-					"</a>" +
-				"</div>" +
-				'<ul class="x-tree-node-ct" style="display:none;"></ul>' +
-			"</li>";
-		}
-		// targetNode.appendChild(homeBuf);
-		//  console.log(targetNode); 
-		// x-tree-node-leaf x-tree-node-expanded
-		
+
 		if (bulkRender !== true && n.nextSibling && (nel = n.nextSibling.ui.getEl())) {
 			this.wrap = Ext.DomHelper.insertHtml("beforeBegin", nel, buf);
 		} else {
-			this.wrap = Ext.DomHelper.insertHtml("beforeBegin", targetNode, buf);
-		//	console.log("dhnn");
+			this.wrap = Ext.DomHelper.insertHtml("beforeEnd", targetNode, buf);
 		}
-		
-		// console.log(targetNode);
+
 		this.elNode = this.wrap.childNodes[0];
-		 console.log(this.wrap);
 		this.ctNode = this.wrap.childNodes[1];
 		var cs = this.elNode.childNodes;
 		this.indentNode = cs[0];
@@ -394,35 +358,5 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		}
 
 		Zarafa.hierarchy.ui.FolderNodeUI.superclass.onClick.apply(this, arguments);
-	},
-	deepClone(obj) {
-		if (obj === null || typeof obj !== 'object') {
-			return obj;
-		}
-	
-		if (obj instanceof Date) {
-			return new Date(obj);
-		}
-	
-		if (obj instanceof Array) {
-			var cloneArray = [];
-			for (var i = 0; i < obj.length; i++) {
-				cloneArray[i] = deepClone(obj[i]);
-			}
-			return cloneArray;
-		}
-	
-		if (obj instanceof Object) {
-			var cloneObj = {};
-			for (var key in obj) {
-				if (obj.hasOwnProperty(key)) {
-					cloneObj[key] = deepClone(obj[key]);
-				}
-			}
-			return cloneObj;
-		}
-	
-		throw new Error("Unable to clone object. Unsupported data type.");
 	}
-	
 });
