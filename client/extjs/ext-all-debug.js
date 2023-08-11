@@ -22477,6 +22477,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible';
+            console.log(this.getCollapsedEl().dom)
         }else{
             this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
         }
@@ -22497,6 +22498,7 @@ Ext.layout.BorderLayout.Region.prototype = {
             this.panel.setSize(c.getWidth(), undefined);
         }
         c.hide();
+        console.log(this.getCollapsedEl().dom);
         c.dom.style.visibility = 'hidden';
         this.panel.el.setStyle('z-index', this.floatingZIndex);
     },
