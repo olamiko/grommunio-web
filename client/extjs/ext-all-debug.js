@@ -22459,9 +22459,9 @@ Ext.layout.BorderLayout.Region.prototype = {
     },
 
     // private
-    beforeCollapse: function(p, animate) {
+    beforeCollapse : function(p, animate){
         this.lastAnim = animate;
-        if (this.splitEl) {
+        if(this.splitEl){
             this.splitEl.hide();
         }
         this.getCollapsedEl().show();
@@ -22473,38 +22473,38 @@ Ext.layout.BorderLayout.Region.prototype = {
     },
 
     // private
-    onCollapse: function(animate) {
+    onCollapse : function(animate){
         this.panel.el.setStyle('z-index', 1);
-        if (this.lastAnim === false || this.panel.animCollapse === false) {
-            this.getCollapsedEl().dom.style.display = 'block'; // Change 'visibility' to 'display'
-        } else {
-            this.getCollapsedEl().slideIn(this.panel.slideAnchor, { duration: .2 });
+        if(this.lastAnim === false || this.panel.animCollapse === false){
+            this.getCollapsedEl().dom.style.visibility = 'visible';
+        }else{
+            this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
         }
         this.state.collapsed = true;
         this.panel.saveState();
     },
 
     // private
-    beforeExpand: function(animate) {
-        if (this.isSlid) {
+    beforeExpand : function(animate){
+        if(this.isSlid){
             this.afterSlideIn();
         }
         var c = this.getCollapsedEl();
         this.el.show();
-        if (this.position == 'east' || this.position == 'west') {
+        if(this.position == 'east' || this.position == 'west'){
             this.panel.setSize(undefined, c.getHeight());
-        } else {
+        }else{
             this.panel.setSize(c.getWidth(), undefined);
         }
         c.hide();
-        c.dom.style.display = 'none'; // Change 'visibility' to 'display'
+        c.dom.style.visibility = 'hidden';
         this.panel.el.setStyle('z-index', this.floatingZIndex);
     },
 
     // private
-    onExpand: function() {
+    onExpand : function(){
         this.isCollapsed = false;
-        if (this.splitEl) {
+        if(this.splitEl){
             this.splitEl.show();
         }
         this.layout.layout();
@@ -22512,7 +22512,6 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.state.collapsed = false;
         this.panel.saveState();
     },
-
 
     // private
     collapseClick : function(e){
