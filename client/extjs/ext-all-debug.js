@@ -22497,7 +22497,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.el.show();
         if(this.position == 'east' || this.position == 'west'){
             // this.panel.setSize(undefined, c.getHeight());
-            console.log("hfj2")
+            console.log(c.getHeight())
         }else{
             console.log("fnfj3")
             // this.panel.setSize(c.getWidth(), undefined);
