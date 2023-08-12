@@ -22456,7 +22456,7 @@ Ext.layout.BorderLayout.Region.prototype = {
 
     // private
     onCollapseClick : function(e){
-        this.panel.collapse();
+        // this.panel.collapse();
     },
 
     // private
