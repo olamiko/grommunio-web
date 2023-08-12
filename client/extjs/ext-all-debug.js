@@ -22383,11 +22383,12 @@ Ext.layout.BorderLayout.Region.prototype = {
         if(ps != 'center'){
             p.allowQueuedExpand = false;
             p.on({
-                beforecollapse: this.beforeCollapse,
-                collapse: this.onCollapse,
+                beforecollapse: this.beforeExpand,
+                collapse: this.onExpand,
                 beforeexpand: this.beforeExpand,
                 expand: this.onExpand,
-                hide: this.onHide,
+                // hide: this.onHide,
+                hide: this.onShow,
                 show: this.onShow,
                 scope: this
             });
@@ -22500,7 +22501,6 @@ Ext.layout.BorderLayout.Region.prototype = {
         // c.hide();
         // c.dom.style.visibility = 'hidden';
         this.panel.el.setStyle('z-index', this.floatingZIndex);
-        console.log(this.floatingZIndex)
     },
 
     // private
