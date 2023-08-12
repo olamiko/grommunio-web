@@ -22462,7 +22462,7 @@ Ext.layout.BorderLayout.Region.prototype = {
     beforeCollapse : function(p, animate){
         this.lastAnim = animate;
         if(this.splitEl){
-            this.splitEl.hide();
+            // this.splitEl.hide();
         }
         this.getCollapsedEl().show();
         var el = this.panel.getEl();
@@ -22514,13 +22514,13 @@ Ext.layout.BorderLayout.Region.prototype = {
 
     // private
     onExpand : function(){
-        this.isCollapsed = false;
+        // this.isCollapsed = false;
         if(this.splitEl){
             this.splitEl.show();
         }
         this.layout.layout();
         this.panel.el.setStyle('z-index', this.originalZIndex);
-        this.state.collapsed = false;
+        // this.state.collapsed = false;
         this.panel.saveState();
     },
 
@@ -22538,7 +22538,7 @@ Ext.layout.BorderLayout.Region.prototype = {
     // private
     onHide : function(){
         if(this.isCollapsed){
-            this.getCollapsedEl().hide();
+            // this.getCollapsedEl().hide();
         }else if(this.splitEl){
             this.splitEl.hide();
         }
