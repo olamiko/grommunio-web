@@ -22473,18 +22473,29 @@ Ext.layout.BorderLayout.Region.prototype = {
     },
 
     // private
-    onCollapse : function(animate){
-        this.panel.el.setStyle('z-index', 1);
-        if(this.lastAnim === false || this.panel.animCollapse === false){
-            this.getCollapsedEl().dom.style.visibility = 'visible';
-            console.log(this.getCollapsedEl())
-        }else{
-            this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
+    // onCollapse : function(animate){
+    //     this.panel.el.setStyle('z-index', 1);
+    //     if(this.lastAnim === false || this.panel.animCollapse === false){
+    //         this.getCollapsedEl().dom.style.visibility = 'visible';
+    //         console.log(this.getCollapsedEl())
+    //     }else{
+    //         this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
+    //     }
+    //     this.state.collapsed = true;
+    //     this.panel.saveState();
+    // },
+    // private
+    onCollapse : function(){
+        this.isCollapsed = false;
+        if(this.splitEl){
+            this.splitEl.show();
         }
-        this.state.collapsed = true;
+        this.layout.layout();
+        this.panel.el.setStyle('z-index', this.originalZIndex);
+        this.state.collapsed = false;
         this.panel.saveState();
+        console.log(this.originalZIndex)
     },
-
     // private
     beforeExpand : function(animate){
         if(this.isSlid){
@@ -22498,9 +22509,9 @@ Ext.layout.BorderLayout.Region.prototype = {
             this.panel.setSize(c.getWidth(), undefined);
         }
         c.hide();
-        console.log(this.getCollapsedEl())
         c.dom.style.visibility = 'hidden';
         this.panel.el.setStyle('z-index', this.floatingZIndex);
+        console.log(this.floatingZIndex)
     },
 
     // private
@@ -22513,6 +22524,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.panel.el.setStyle('z-index', this.originalZIndex);
         this.state.collapsed = false;
         this.panel.saveState();
+        console.log(this.originalZIndex)
     },
 
     // private
