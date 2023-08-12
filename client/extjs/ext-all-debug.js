@@ -22462,7 +22462,7 @@ Ext.layout.BorderLayout.Region.prototype = {
     beforeCollapse : function(p, animate){
         this.lastAnim = animate;
         if(this.splitEl){
-            // this.splitEl.hide();
+            this.splitEl.hide();
         }
         this.getCollapsedEl().show();
         var el = this.panel.getEl();
@@ -22477,16 +22477,11 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible';
-            // this.getCollapsedEl().dom.style.width = '20em !important';
-            // this.panel.setSize(200, 529);
-            console.log("djk0")
-            // this.getCollapsedEl().dom.classList.remove('zarafa-hierachy-menu-collapse');
-            // console.log(this.getCollapsedEl())
+            console.log(this.getCollapsedEl())
         }else{
-            console.log("jkf")
-            // this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
+            this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
         }
-        // this.state.collapsed = true;
+        this.state.collapsed = true;
         this.panel.saveState();
     },
 
@@ -22498,29 +22493,25 @@ Ext.layout.BorderLayout.Region.prototype = {
         var c = this.getCollapsedEl();
         this.el.show();
         if(this.position == 'east' || this.position == 'west'){
-            // this.panel.setSize(undefined, c.getHeight());
-        this.panel.setSize(200, c.getHeight());
-            console.log(c.getHeight())
+            this.panel.setSize(undefined, c.getHeight());
         }else{
-            console.log("fnfj3")
-            // this.panel.setSize(c.getWidth(), undefined);
+            this.panel.setSize(c.getWidth(), undefined);
         }
-        // c.hide();
-        // c.dom.style.visibility = 'hidden';
-                c.dom.style.visibility = 'visible';
-        // this.getCollapsedEl().addCls('zarafa-hierachy-menu-collapse');
+        c.hide();
+        console.log(this.getCollapsedEl())
+        c.dom.style.visibility = 'hidden';
         this.panel.el.setStyle('z-index', this.floatingZIndex);
     },
 
     // private
     onExpand : function(){
-        // this.isCollapsed = false;
+        this.isCollapsed = false;
         if(this.splitEl){
             this.splitEl.show();
         }
         this.layout.layout();
         this.panel.el.setStyle('z-index', this.originalZIndex);
-        // this.state.collapsed = false;
+        this.state.collapsed = false;
         this.panel.saveState();
     },
 
@@ -22538,13 +22529,13 @@ Ext.layout.BorderLayout.Region.prototype = {
     // private
     onHide : function(){
         if(this.isCollapsed){
-            // this.getCollapsedEl().hide();
+            this.getCollapsedEl().hide();
         }else if(this.splitEl){
-            // this.splitEl.hide();
+            this.splitEl.hide();
         }
     },
 
-    // privatehidden
+    // private
     onShow : function(){
         if(this.isCollapsed){
             this.getCollapsedEl().show();
@@ -73100,7 +73091,7 @@ viewConfig: {
         style += String.format("width: {0};", this.getColumnWidth(colIndex));
         
         if (colModel.isHidden(colIndex)) {
-            // style += 'display: none; ';
+            style += 'display: none; ';
         }
         
         if (align) {
