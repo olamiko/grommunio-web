@@ -3885,7 +3885,8 @@ Ext.Element.addMethods(function(){
         getHeight : function(contentHeight){
             var me = this,
                 dom = me.dom,
-                hidden = Ext.isIE9m && me.isStyle('display', 'none'),
+                // hidden = Ext.isIE9m && me.isStyle('display', 'none'),
+                hidden = Ext.isIE9m && me.isStyle('display', 'block'),
                 h = MATH.max(dom.offsetHeight, hidden ? 0 : dom.clientHeight) || 0;
 
             h = !contentHeight ? h : h - me.getBorderWidth("tb") - me.getPadding("tb");
@@ -3900,7 +3901,8 @@ Ext.Element.addMethods(function(){
         getWidth : function(contentWidth){
             var me = this,
                 dom = me.dom,
-                hidden = Ext.isIE9m && me.isStyle('display', 'none'),
+                // hidden = Ext.isIE9m && me.isStyle('display', 'none'),
+                hidden = Ext.isIE9m && me.isStyle('display', 'block'),
                 w = MATH.max(dom.offsetWidth, hidden ? 0 : dom.clientWidth) || 0;
             w = !contentWidth ? w : w - me.getBorderWidth("lr") - me.getPadding("lr");
             return w < 0 ? 0 : w;
@@ -4428,7 +4430,8 @@ Ext.Element.addMethods(function(){
         HIDDEN = "hidden",
         OFFSETS = "offsets",
         ASCLASS = "asclass",
-        NONE = "none",
+        // NONE = "none",
+        NONE = "visible",
         NOSIZE = 'nosize',
         ORIGINALDISPLAY = 'originalDisplay',
         VISMODE = 'visibilityMode',
@@ -5535,7 +5538,8 @@ el.fadeOut({
                 function(){
                     if(to == 0){
                         Ext.Element.data(dom, 'visibilityMode') == Ext.Element.DISPLAY || o.useDisplay ? 
-                            style.display = "none" :
+                            // style.display = "none" :
+                            style.display = "block" :
                             style.visibility = HIDDEN;
                             
                         fly(dom).clearOpacity();
@@ -11192,7 +11196,8 @@ Ext.Element.addMethods(
         var VISIBILITY      = "visibility",
             DISPLAY         = "display",
             HIDDEN          = "hidden",
-            NONE            = "none",
+            // NONE            = "none",
+            NONE            = "visible",
             XMASKED         = "x-masked",
             XMASKEDRELATIVE = "x-masked-relative",
             data            = Ext.Element.data;
@@ -18403,7 +18408,7 @@ Ext.extend(Ext.Layer, Ext.Element, {
         if(!shim){
             shim = this.createShim();
             shim.enableDisplayMode('block');
-            shim.dom.style.display = 'none';
+            // shim.dom.style.display = 'none';
             shim.dom.style.visibility = 'visible';
         }
         var pn = this.dom.parentNode;
@@ -18945,7 +18950,8 @@ Ext.Shadow.prototype = {
      */
     hide: function() {
         if (this.el) {
-            this.el.dom.style.display = "none";
+            // this.el.dom.style.display = "none";
+            this.el.dom.style.display = "block";
             Ext.Shadow.Pool.push(this.el);
             delete this.el;
         }
@@ -20776,7 +20782,8 @@ tb.{@link #doLayout}();             // refresh the layout
      */
     canLayout : function() {
         var el = this.getVisibilityEl();
-        return el && el.dom && !el.isStyle("display", "none");
+        // return el && el.dom && !el.isStyle("display", "none");
+        return el && el.dom && !el.isStyle("display", "block");
     },
 
     /**
@@ -21054,7 +21061,8 @@ Ext.layout.ContainerLayout = Ext.extend(Object, {
             e = Ext.get(c);
             if (e) {
                 d[i] = e.getStyle('display');
-                e.setStyle({display: 'none'});
+                // e.setStyle({display: 'none'});
+                e.setStyle({display: 'block'});
             }
         }
         ret = target ? target.getViewSize(viewFlag) : {};
@@ -44327,7 +44335,7 @@ Ext.Window = Ext.extend(Ext.Panel, {
         this.proxy.setBox(this.animateTarget.getBox());
         this.proxy.setOpacity(0);
         var b = this.getBox();
-        this.el.setStyle('display', 'none');
+        // this.el.setStyle('display', 'none');
         this.proxy.shift(Ext.apply(b, {
             callback: this.afterShow.createDelegate(this, [true], false),
             scope: this,
@@ -45689,7 +45697,8 @@ Ext.dd.PanelProxy  = Ext.extend(Object, {
                 this.proxy = this.panel.el.insertSibling({cls:'x-panel-dd-spacer'});
                 this.proxy.setSize(this.panel.getSize());
             }
-            this.panel.el.dom.style.display = 'none';
+            // this.panel.el.dom.style.display = 'none';
+            this.panel.el.dom.style.display = 'block';
         }
     },
 
@@ -47120,7 +47129,8 @@ Ext.list.ListView = Ext.extend(Ext.DataView, {
         this.innerHd = Ext.get(this.el.dom.firstChild.firstChild);
 
         if(this.hideHeaders){
-            this.el.dom.firstChild.style.display = 'none';
+            // this.el.dom.firstChild.style.display = 'none';
+            this.el.dom.firstChild.style.display = 'block';
         }
     },
 
@@ -48307,7 +48317,8 @@ new Ext.TabPanel({
         item = this.getComponent(item);
         var el = this.getTabEl(item);
         if(el){
-            el.style.display = 'none';
+            el.style.display = 'none';         
+            // el.style.display = 'block';
             this.delegateUpdates();
         }
         this.stack.remove(item);
@@ -55651,7 +55662,8 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
     hide : function(){
         this.node.hidden = true;
         if(this.wrap){
-            this.wrap.style.display = "none";
+            // this.wrap.style.display = "none";
+            this.wrap.style.display = "block";
         }
     },
 
@@ -55832,7 +55844,8 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
     // private
     collapse : function(){
         this.updateExpandIcon();
-        this.ctNode.style.display = "none";
+        // this.ctNode.style.display = "none";
+        this.ctNode.style.display = "block";
     },
 
     // private
@@ -62512,7 +62525,8 @@ Ext.form.TwinTriggerField = Ext.extend(Ext.form.TriggerField, {
             var triggerIndex = 'Trigger'+(index+1);
             t.hide = function(){
                 var w = triggerField.wrap.getWidth();
-                this.dom.style.display = 'none';
+                this.dom.style.display = 'block';
+                // this.dom.style.display = 'none';
                 triggerField.el.setWidth(w-triggerField.trigger.getWidth());
                 triggerField['hidden' + triggerIndex] = true;
             };
@@ -72372,7 +72386,8 @@ viewConfig: {
      */
     updateColumnHidden : function(col, hidden) {
         var totalWidth = this.getTotalWidth(),
-            display    = hidden ? 'none' : '',
+            // display    = hidden ? 'none' : '',
+            display    = hidden ? 'block' : '',
             headerCell = this.getHeaderCell(col),
             nodes      = this.getRows(),
             nodeCount  = nodes.length,
