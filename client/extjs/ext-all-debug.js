@@ -3567,8 +3567,7 @@ Ext.Element.addMethods(function(){
         BOTTOM = "-bottom",
         WIDTH = "-width",
         MATH = Math,
-        // HIDDEN = 'hidden',
-        HIDDEN = 'visble',
+        HIDDEN = 'hidden',
         ISCLIPPED = 'isClipped',
         OVERFLOW = 'overflow',
         OVERFLOWX = 'overflow-x',
@@ -4428,8 +4427,7 @@ Ext.Element.addMethods(function(){
         OPACITY = "opacity",
         VISIBILITY = "visibility",
         DISPLAY = "display",
-        // HIDDEN = "hidden",
-        HIDDEN = "visible",
+        HIDDEN = "hidden",
         OFFSETS = "offsets",
         ASCLASS = "asclass",
         // NONE = "none",
@@ -4821,8 +4819,7 @@ el.animate(
         HEIGHT = "height",
         WIDTH = "width",
         POINTS = "points",
-        // HIDDEN = "hidden",
-        HIDDEN = "visible",
+        HIDDEN = "hidden",
         ABSOLUTE = "absolute",
         VISIBLE = "visible",
         MOTION = "motion",
@@ -10602,8 +10599,7 @@ Ext.Element.addMethods(function(){
         setOverflow : function(v){
             var dom = this.dom;
             if(v=='auto' && Ext.isMac && Ext.isGecko2){ // work around stupid FF 2.0/Mac scroll bar bug
-                // dom.style.overflow = 'hidden';
-                dom.style.overflow = 'visible';
+                dom.style.overflow = 'hidden';
                 (function(){dom.style.overflow = 'auto';}).defer(1);
             }else{
                 dom.style.overflow = v;
@@ -11199,8 +11195,7 @@ Ext.Element.addMethods(
     function() {
         var VISIBILITY      = "visibility",
             DISPLAY         = "display",
-            // HIDDEN          = "hidden",
-            HIDDEN          = "visible",
+            HIDDEN          = "hidden",
             // NONE            = "none",
             NONE            = "visible",
             XMASKED         = "x-masked",
@@ -22478,7 +22473,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         // if(this.splitEl){
         //     this.splitEl.hide();
         // }
-        // this.getCollapsedEl().show();
+        this.getCollapsedEl().show();
         // var el = this.panel.getEl();
         // this.originalZIndex = el.getStyle('z-index');
         // el.setStyle('z-index', 100);
@@ -28286,8 +28281,7 @@ Ext.extend(Ext.Editor, Ext.Component, {
         if(this.zIndex){
             this.el.setZIndex(this.zIndex);
         }
-        // this.el.setStyle("overflow", Ext.isGecko ? "auto" : "hidden");
-        this.el.setStyle("overflow", Ext.isGecko ? "auto" : "visible");
+        this.el.setStyle("overflow", Ext.isGecko ? "auto" : "hidden");
         if(this.field.msgTarget != 'title'){
             this.field.msgTarget = 'qtip';
         }
@@ -30637,7 +30631,6 @@ Ext.ProgressBar = Ext.extend(Ext.BoxComponent, {
             //setup our internal layered text els
             this.textTopEl = Ext.get(this.progressBar.dom.firstChild);
             var textBackEl = Ext.get(inner.childNodes[1]);
-            // this.textTopEl.setStyle("z-index", 99).addClass('x-hidden');
             this.textTopEl.setStyle("z-index", 99).addClass('x-hidden');
             this.textEl = new Ext.CompositeElement([this.textTopEl.dom.firstChild, textBackEl.dom.firstChild]);
             this.textEl.setWidth(inner.offsetWidth);
@@ -30825,7 +30818,6 @@ myAction.on('complete', function(){
     reset : function(hide){
         this.updateProgress(0);
         if(this.textTopEl){
-            // this.textTopEl.addClass('x-hidden');
             this.textTopEl.addClass('x-hidden');
         }
         this.clearTimer();
@@ -33719,8 +33711,7 @@ Ext.extend(Ext.dd.DDProxy, Ext.dd.DD, {
             var s  = div.style;
 
             s.position   = "absolute";
-            // s.visibility = "hidden";
-            s.visibility = "visible";
+            s.visibility = "hidden";
             s.cursor     = "move";
             s.border     = "2px solid #aaa";
             s.zIndex     = 999;
@@ -33820,11 +33811,9 @@ Ext.extend(Ext.dd.DDProxy, Ext.dd.DD, {
         this.beforeMove();
         // Hide the linked element before the move to get around a Safari
         // rendering bug.
-        // lel.style.visibility = "hidden";
-        lel.style.visibility = "visible";
+        lel.style.visibility = "hidden";
         Ext.dd.DDM.moveToEl(lel, del);
-        // del.style.visibility = "hidden";
-        del.style.visibility = "visible";
+        del.style.visibility = "hidden";
         lel.style.visibility = "";
 
         this.afterDrag();
@@ -43044,7 +43033,6 @@ Ext.Resizable = Ext.extend(Ext.util.Observable, {
             config.resizeChild = this.el;
             this.el = this.el.wrap(typeof config.wrap == 'object' ? config.wrap : {cls:'xresizable-wrap'});
             this.el.id = this.el.dom.id = config.resizeChild.id + '-rzwrap';
-            // this.el.setStyle('overflow', 'hidden');            
             this.el.setStyle('overflow', 'hidden');
             this.el.setPositioning(config.resizeChild.getPositioning());
             config.resizeChild.clearPositioning();
@@ -43333,8 +43321,8 @@ Ext.Resizable = Ext.extend(Ext.util.Observable, {
                     -ct.getFrameWidth('r')
                 );
             }
-            this.proxy.setStyle('visibility', 'visible'); // workaround display none
-            // this.proxy.setStyle('visibility', 'hidden'); // workaround display none
+
+            this.proxy.setStyle('visibility', 'hidden'); // workaround display none
             this.proxy.show();
             this.proxy.setBox(this.startBox);
             if(!this.dynamic){
@@ -45410,8 +45398,7 @@ Ext.MessageBox.ERROR
                 bodyEl.addClass('x-dlg-icon');
                 iconCls = icon;
             }else{
-                // iconEl.replaceClass(iconCls, 'x-hidden');
-                // iconEl.replaceClass(iconCls, 'x-hidden');
+                iconEl.replaceClass(iconCls, 'x-hidden');
                 bodyEl.removeClass('x-dlg-icon');
                 iconCls = '';
             }
@@ -62541,15 +62528,13 @@ Ext.form.TwinTriggerField = Ext.extend(Ext.form.TriggerField, {
                 this.dom.style.display = 'block';
                 // this.dom.style.display = 'none';
                 triggerField.el.setWidth(w-triggerField.trigger.getWidth());
-                triggerField['visible' + triggerIndex] = true;
-                // triggerField['hidden' + triggerIndex] = true;
+                triggerField['hidden' + triggerIndex] = true;
             };
             t.show = function(){
                 var w = triggerField.wrap.getWidth();
                 this.dom.style.display = '';
                 triggerField.el.setWidth(w-triggerField.trigger.getWidth());
-                // triggerField['hidden' + triggerIndex] = false;
-                triggerField['visible' + triggerIndex] = false;
+                triggerField['hidden' + triggerIndex] = false;
             };
             this.mon(t, 'click', this['on'+triggerIndex+'Click'], this, {preventDefault:true});
             t.addClassOnOver('x-form-trigger-over');
@@ -67982,7 +67967,7 @@ Ext.form.HtmlEditor = Ext.extend(Ext.form.Field, {
         Ext.form.HtmlEditor.superclass.onRender.call(this, ct, position);
         this.el.dom.style.border = '0 none';
         this.el.dom.setAttribute('tabIndex', -1);
-        // this.el.addClass('x-hidden');
+        this.el.addClass('x-hidden');
         if(Ext.isIE){ // fix IE 1px bogus margin
             this.el.applyStyles('margin-top:-1px;margin-bottom:-1px;');
         }
@@ -68143,7 +68128,7 @@ Ext.form.HtmlEditor = Ext.extend(Ext.form.Field, {
 
             this.disableItems(true);
             this.syncValue();
-            // this.iframe.className = 'x-hidden';
+            this.iframe.className = 'x-hidden';
             this.el.removeClass('x-hidden');
             this.el.dom.removeAttribute('tabIndex');
             this.el.focus();
@@ -68156,7 +68141,7 @@ Ext.form.HtmlEditor = Ext.extend(Ext.form.Field, {
             }
             this.pushValue();
             this.iframe.className = '';
-            // this.el.addClass('x-hidden');
+            this.el.addClass('x-hidden');
             this.el.dom.setAttribute('tabIndex', -1);
             this.deferFocus();
 
@@ -72084,8 +72069,7 @@ viewConfig: {
         }
         
         if (this.forceFit) {
-            // scroller.setStyle('overflow-x', 'hidden');
-            scroller.setStyle('overflow-x', 'visible');
+            scroller.setStyle('overflow-x', 'hidden');
         }
         
         /**
@@ -75015,8 +74999,7 @@ Ext.grid.HeaderDropZone = Ext.extend(Ext.dd.DropZone, {
         }, true);
         this.proxyTop.hide = this.proxyBottom.hide = function(){
             this.setLeftTop(-100,-100);
-            // this.setStyle("visibility", "hidden");
-            this.setStyle("visibility", "visible");
+            this.setStyle("visibility", "hidden");
         };
         this.ddGroup = "gridHeader" + this.grid.getGridEl().id;
         // temporarily disabled
