@@ -22477,7 +22477,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible !important';
-            this.getCollapsedEl().dom.style.width = '20em !important';
+            // this.getCollapsedEl().dom.style.width = '20em !important';
             this.panel.setSize(200, this.getCollapsedEl().getHeight());
             console.log("djk0")
             // this.getCollapsedEl().dom.classList.remove('zarafa-hierachy-menu-collapse');
@@ -22540,11 +22540,11 @@ Ext.layout.BorderLayout.Region.prototype = {
         if(this.isCollapsed){
             // this.getCollapsedEl().hide();
         }else if(this.splitEl){
-            this.splitEl.hide();
+            // this.splitEl.hide();
         }
     },
 
-    // private
+    // privatehidden
     onShow : function(){
         if(this.isCollapsed){
             this.getCollapsedEl().show();
@@ -73100,7 +73100,7 @@ viewConfig: {
         style += String.format("width: {0};", this.getColumnWidth(colIndex));
         
         if (colModel.isHidden(colIndex)) {
-            style += 'display: none; ';
+            // style += 'display: none; ';
         }
         
         if (align) {
