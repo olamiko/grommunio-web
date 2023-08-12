@@ -3909,7 +3909,8 @@ div.zarafa-contact-cardview-selected {
 #zarafa-navigationpanel .x-date-picker .x-date-inner th:first-child {
   border-right: 1px solid #e6e6e6; }
   #zarafa-navigationpanel .x-date-picker .x-date-inner th:first-child span {
-    display: none; }
+    /* display: none;  */
+  }
 
 /* Override blue of ExtJS */
 .x-date-picker .x-date-left,
