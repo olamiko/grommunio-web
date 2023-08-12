@@ -22476,7 +22476,8 @@ Ext.layout.BorderLayout.Region.prototype = {
     onCollapse : function(animate){
         this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
-            this.getCollapsedEl().dom.style.visibility = 'visible';
+            // this.getCollapsedEl().dom.style.visibility = 'visible';
+            this.getCollapsedEl().dom.classList.remove('zarafa-hierachy-menu-collapse');
             console.log(this.getCollapsedEl())
         }else{
             this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
@@ -22499,7 +22500,8 @@ Ext.layout.BorderLayout.Region.prototype = {
         }
         c.hide();
         console.log(this.getCollapsedEl())
-        c.dom.style.visibility = 'hidden';
+        // c.dom.style.visibility = 'hidden';
+        this.getCollapsedEl().addCls('zarafa-hierachy-menu-collapse');
         this.panel.el.setStyle('z-index', this.floatingZIndex);
     },
 
