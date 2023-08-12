@@ -22477,7 +22477,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible';
-            this.getCollapsedEl().dom.classList.remove('zarafa-hierachy-menu-collapse');
+            // this.getCollapsedEl().dom.classList.remove('zarafa-hierachy-menu-collapse');
             // console.log(this.getCollapsedEl())
         }else{
             this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
@@ -22498,11 +22498,11 @@ Ext.layout.BorderLayout.Region.prototype = {
         }else{
             this.panel.setSize(c.getWidth(), undefined);
         }
-        // c.hide();
+        c.hide();
         // console.log(this.getCollapsedEl())
         // c.dom.style.visibility = 'hidden';
                 c.dom.style.visibility = 'visible';
-        this.getCollapsedEl().addCls('zarafa-hierachy-menu-collapse');
+        // this.getCollapsedEl().addCls('zarafa-hierachy-menu-collapse');
         this.panel.el.setStyle('z-index', this.floatingZIndex);
     },
 
