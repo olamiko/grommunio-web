@@ -22469,16 +22469,16 @@ Ext.layout.BorderLayout.Region.prototype = {
 
     // private
     beforeCollapse : function(p, animate){
-        this.lastAnim = animate;
-        if(this.splitEl){
-            this.splitEl.hide();
-        }
-        this.getCollapsedEl().show();
-        var el = this.panel.getEl();
-        this.originalZIndex = el.getStyle('z-index');
-        el.setStyle('z-index', 100);
-        this.isCollapsed = true;
-        this.layout.layout();
+        // this.lastAnim = animate;
+        // if(this.splitEl){
+        //     this.splitEl.hide();
+        // }
+        // this.getCollapsedEl().show();
+        // var el = this.panel.getEl();
+        // this.originalZIndex = el.getStyle('z-index');
+        // el.setStyle('z-index', 100);
+        // this.isCollapsed = true;
+        // this.layout.layout();
     },
 
     // private
