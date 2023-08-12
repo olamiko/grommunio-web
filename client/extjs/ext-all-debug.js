@@ -22459,17 +22459,33 @@ Ext.layout.BorderLayout.Region.prototype = {
     },
 
     // private
-    beforeCollapse : function(p, animate){
-        this.lastAnim = animate;
-        if(this.splitEl){
-            this.splitEl.hide();
+    // beforeCollapse : function(p, animate){
+    //     this.lastAnim = animate;
+    //     if(this.splitEl){
+    //         this.splitEl.hide();
+    //     }
+    //     this.getCollapsedEl().show();
+    //     var el = this.panel.getEl();
+    //     this.originalZIndex = el.getStyle('z-index');
+    //     el.setStyle('z-index', 100);
+    //     this.isCollapsed = true;
+    //     this.layout.layout();
+    // },
+    beforeCollapse : function(animate){
+        if(this.isSlid){
+            this.afterSlideIn();
         }
-        this.getCollapsedEl().show();
-        var el = this.panel.getEl();
-        this.originalZIndex = el.getStyle('z-index');
-        el.setStyle('z-index', 100);
-        this.isCollapsed = true;
-        this.layout.layout();
+        var c = this.getCollapsedEl();
+        this.el.show();
+        if(this.position == 'east' || this.position == 'west'){
+            this.panel.setSize(undefined, c.getHeight());
+        }else{
+            this.panel.setSize(c.getWidth(), undefined);
+        }
+        c.hide();
+        c.dom.style.visibility = 'hidden';
+        this.panel.el.setStyle('z-index', this.floatingZIndex);
+        console.log(this.floatingZIndex)
     },
 
     // private
