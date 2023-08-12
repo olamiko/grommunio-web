@@ -22477,7 +22477,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible';
-            this.panel.setSize(200, c.getHeight());
+            this.panel.setSize(200, this.getCollapsedEl().getHeight());
             console.log("djk0")
             // this.getCollapsedEl().dom.classList.remove('zarafa-hierachy-menu-collapse');
             // console.log(this.getCollapsedEl())
