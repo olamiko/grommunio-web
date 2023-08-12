@@ -22459,34 +22459,19 @@ Ext.layout.BorderLayout.Region.prototype = {
     },
 
     // private
-    // beforeCollapse : function(p, animate){
-    //     this.lastAnim = animate;
-    //     if(this.splitEl){
-    //         this.splitEl.hide();
-    //     }
-    //     this.getCollapsedEl().show();
-    //     var el = this.panel.getEl();
-    //     this.originalZIndex = el.getStyle('z-index');
-    //     el.setStyle('z-index', 100);
-    //     this.isCollapsed = true;
-    //     this.layout.layout();
-    // },
-    beforeCollapse : function(animate){
-        if(this.isSlid){
-            this.afterSlideIn();
+    beforeCollapse : function(p, animate){
+        this.lastAnim = animate;
+        if(this.splitEl){
+            this.splitEl.hide();
         }
-        var c = this.getCollapsedEl();
-        this.el.show();
-        if(this.position == 'east' || this.position == 'west'){
-            this.panel.setSize(undefined, c.getHeight());
-        }else{
-            this.panel.setSize(c.getWidth(), undefined);
-        }
-        c.hide();
-        c.dom.style.visibility = 'hidden';
-        this.panel.el.setStyle('z-index', this.floatingZIndex);
-        console.log(this.floatingZIndex)
+        this.getCollapsedEl().show();
+        var el = this.panel.getEl();
+        this.originalZIndex = el.getStyle('z-index');
+        el.setStyle('z-index', 100);
+        this.isCollapsed = true;
+        this.layout.layout();
     },
+
 
     // private
     // onCollapse : function(animate){
@@ -22513,21 +22498,33 @@ Ext.layout.BorderLayout.Region.prototype = {
         console.log(this.originalZIndex)
     },
     // private
-    beforeExpand : function(animate){
-        if(this.isSlid){
-            this.afterSlideIn();
+    // beforeExpand : function(animate){
+    //     if(this.isSlid){
+    //         this.afterSlideIn();
+    //     }
+    //     var c = this.getCollapsedEl();
+    //     this.el.show();
+    //     if(this.position == 'east' || this.position == 'west'){
+    //         this.panel.setSize(undefined, c.getHeight());
+    //     }else{
+    //         this.panel.setSize(c.getWidth(), undefined);
+    //     }
+    //     c.hide();
+    //     c.dom.style.visibility = 'hidden';
+    //     this.panel.el.setStyle('z-index', this.floatingZIndex);
+    //     console.log(this.floatingZIndex)
+    // },
+    beforeExpand : function(p, animate){
+        this.lastAnim = animate;
+        if(this.splitEl){
+            this.splitEl.hide();
         }
-        var c = this.getCollapsedEl();
-        this.el.show();
-        if(this.position == 'east' || this.position == 'west'){
-            this.panel.setSize(undefined, c.getHeight());
-        }else{
-            this.panel.setSize(c.getWidth(), undefined);
-        }
-        c.hide();
-        c.dom.style.visibility = 'hidden';
-        this.panel.el.setStyle('z-index', this.floatingZIndex);
-        console.log(this.floatingZIndex)
+        this.getCollapsedEl().show();
+        var el = this.panel.getEl();
+        this.originalZIndex = el.getStyle('z-index');
+        el.setStyle('z-index', 100);
+        this.isCollapsed = true;
+        this.layout.layout();
     },
 
     // private
