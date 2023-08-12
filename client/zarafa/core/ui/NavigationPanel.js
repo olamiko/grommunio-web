@@ -123,7 +123,7 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 				align: 'stretch'
 			},
 			id: 'zarafa-navigationpanel',
-			// cls: 'zarafa-navigation zarafa-panel zarafa-context-mainpanel',
+			cls: 'zarafa-navigation zarafa-panel zarafa-context-mainpanel',
 
 			north: northComponents,
 			center: centerComponents,
@@ -133,7 +133,7 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 			collapseQuickTip: _('Collapse hierarchy'),
 			expandQuickTip: _('Expand hierarchy'),
 			animCollapse: false,
-			// headerCfg: { cls: 'zarafa-main-header x-panel-header' }
+			headerCfg: { cls: 'zarafa-main-header x-panel-header' }
 		});
 
 		// parent constructor
