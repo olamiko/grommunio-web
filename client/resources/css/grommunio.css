@@ -3020,7 +3020,7 @@ div.zarafa-contact-cardview-selected {
   .x-window .x-tree-node.zarafa-tree-root-container .x-tree-node-el,
   .x-panel-ghost .x-tree-node.zarafa-tree-root-container .x-tree-node-el {
     padding-left: 6px; }
-    .zarafa-tree-root-container img:first-child,
+    .zarafa-tree-root-container img:first-of-type,
     .zarafa-tree-root-container a{
       /* Styles for the first image and a tag direct descendants */
       /* Add your styles here */
