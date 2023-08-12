@@ -22498,7 +22498,7 @@ Ext.layout.BorderLayout.Region.prototype = {
             this.panel.setSize(c.getWidth(), undefined);
         }
         c.hide();
-        console.log(this.getCollapsedEl().dom)
+        console.log(this.getCollapsedEl())
         c.dom.style.visibility = 'hidden';
         this.panel.el.setStyle('z-index', this.floatingZIndex);
     },

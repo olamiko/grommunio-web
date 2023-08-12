@@ -104,11 +104,12 @@ Zarafa.mail.ui.MailGrid = Ext.extend(Zarafa.common.ui.grid.MapiMessageGrid, {
 		this.on({
 			'cellclick': this.onCellClick,
 			//'rowclick': this.onRowClick,
-			'rowclick': {
-				fn: this.onRowClick,
-				buffer: 1,
-				scope: this
-			},
+			// 'rowclick': {
+			// 	fn: this.onRowClick,
+			// 	buffer: 1,
+			// 	scope: this
+			// },
+			'rowclick': this.onRowDblClick,
 			'rowbodycontextmenu': this.onRowBodyContextMenu,
 			'rowdblclick': this.onRowDblClick,
 			scope: this
