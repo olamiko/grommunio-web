@@ -4428,7 +4428,8 @@ Ext.Element.addMethods(function(){
         OPACITY = "opacity",
         VISIBILITY = "visibility",
         DISPLAY = "display",
-        HIDDEN = "hidden",
+        // HIDDEN = "hidden",
+        HIDDEN = "visible",
         OFFSETS = "offsets",
         ASCLASS = "asclass",
         // NONE = "none",
@@ -4820,7 +4821,8 @@ el.animate(
         HEIGHT = "height",
         WIDTH = "width",
         POINTS = "points",
-        HIDDEN = "hidden",
+        // HIDDEN = "hidden",
+        HIDDEN = "visible",
         ABSOLUTE = "absolute",
         VISIBLE = "visible",
         MOTION = "motion",
@@ -11197,7 +11199,8 @@ Ext.Element.addMethods(
     function() {
         var VISIBILITY      = "visibility",
             DISPLAY         = "display",
-            HIDDEN          = "hidden",
+            // HIDDEN          = "hidden",
+            HIDDEN          = "visible",
             // NONE            = "none",
             NONE            = "visible",
             XMASKED         = "x-masked",
@@ -28283,7 +28286,8 @@ Ext.extend(Ext.Editor, Ext.Component, {
         if(this.zIndex){
             this.el.setZIndex(this.zIndex);
         }
-        this.el.setStyle("overflow", Ext.isGecko ? "auto" : "hidden");
+        // this.el.setStyle("overflow", Ext.isGecko ? "auto" : "hidden");
+        this.el.setStyle("overflow", Ext.isGecko ? "auto" : "visible");
         if(this.field.msgTarget != 'title'){
             this.field.msgTarget = 'qtip';
         }
@@ -33715,7 +33719,8 @@ Ext.extend(Ext.dd.DDProxy, Ext.dd.DD, {
             var s  = div.style;
 
             s.position   = "absolute";
-            s.visibility = "hidden";
+            // s.visibility = "hidden";
+            s.visibility = "visible";
             s.cursor     = "move";
             s.border     = "2px solid #aaa";
             s.zIndex     = 999;
@@ -33815,9 +33820,11 @@ Ext.extend(Ext.dd.DDProxy, Ext.dd.DD, {
         this.beforeMove();
         // Hide the linked element before the move to get around a Safari
         // rendering bug.
-        lel.style.visibility = "hidden";
+        // lel.style.visibility = "hidden";
+        lel.style.visibility = "visible";
         Ext.dd.DDM.moveToEl(lel, del);
-        del.style.visibility = "hidden";
+        // del.style.visibility = "hidden";
+        del.style.visibility = "visible";
         lel.style.visibility = "";
 
         this.afterDrag();
@@ -75008,7 +75015,8 @@ Ext.grid.HeaderDropZone = Ext.extend(Ext.dd.DropZone, {
         }, true);
         this.proxyTop.hide = this.proxyBottom.hide = function(){
             this.setLeftTop(-100,-100);
-            this.setStyle("visibility", "hidden");
+            // this.setStyle("visibility", "hidden");
+            this.setStyle("visibility", "visible");
         };
         this.ddGroup = "gridHeader" + this.grid.getGridEl().id;
         // temporarily disabled
