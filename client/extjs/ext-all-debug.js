@@ -4430,8 +4430,8 @@ Ext.Element.addMethods(function(){
         HIDDEN = "hidden",
         OFFSETS = "offsets",
         ASCLASS = "asclass",
-        // NONE = "none",
-        NONE = "visible",
+        NONE = "none",
+        // NONE = "visible",
         NOSIZE = 'nosize',
         ORIGINALDISPLAY = 'originalDisplay',
         VISMODE = 'visibilityMode',
@@ -5538,8 +5538,8 @@ el.fadeOut({
                 function(){
                     if(to == 0){
                         Ext.Element.data(dom, 'visibilityMode') == Ext.Element.DISPLAY || o.useDisplay ? 
-                            // style.display = "none" :
-                            style.display = "block" :
+                            style.display = "none" :
+                            // style.display = "block" :
                             style.visibility = HIDDEN;
                             
                         fly(dom).clearOpacity();
@@ -18950,8 +18950,8 @@ Ext.Shadow.prototype = {
      */
     hide: function() {
         if (this.el) {
-            // this.el.dom.style.display = "none";
-            this.el.dom.style.display = "block";
+            this.el.dom.style.display = "none";
+            // this.el.dom.style.display = "block";
             Ext.Shadow.Pool.push(this.el);
             delete this.el;
         }
@@ -20782,8 +20782,8 @@ tb.{@link #doLayout}();             // refresh the layout
      */
     canLayout : function() {
         var el = this.getVisibilityEl();
-        // return el && el.dom && !el.isStyle("display", "none");
-        return el && el.dom && !el.isStyle("display", "block");
+        return el && el.dom && !el.isStyle("display", "none");
+        // return el && el.dom && !el.isStyle("display", "block");
     },
 
     /**
@@ -22469,29 +22469,29 @@ Ext.layout.BorderLayout.Region.prototype = {
 
     // private
     beforeCollapse : function(p, animate){
-        this.lastAnim = animate;
-        if(this.splitEl){
-            this.splitEl.hide();
-        }
-        this.getCollapsedEl().show();
-        var el = this.panel.getEl();
-        this.originalZIndex = el.getStyle('z-index');
+        // this.lastAnim = animate;
+        // if(this.splitEl){
+        //     this.splitEl.hide();
+        // }
+        // this.getCollapsedEl().show();
+        // var el = this.panel.getEl();
+        // this.originalZIndex = el.getStyle('z-index');
         // el.setStyle('z-index', 100);
-        this.isCollapsed = true;
-        this.layout.layout();
+        // this.isCollapsed = true;
+        // this.layout.layout();
     },
 
     // private
     onCollapse : function(animate){
         // this.panel.el.setStyle('z-index', 1);
-        if(this.lastAnim === false || this.panel.animCollapse === false){
-            this.getCollapsedEl().dom.style.visibility = 'visible';
-            console.log(this.getCollapsedEl())
-        }else{
-            this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
-        }
-        this.state.collapsed = true;
-        this.panel.saveState();
+        // if(this.lastAnim === false || this.panel.animCollapse === false){
+        //     this.getCollapsedEl().dom.style.visibility = 'visible';
+        //     console.log(this.getCollapsedEl())
+        // }else{
+        //     this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
+        // }
+        // this.state.collapsed = true;
+        // this.panel.saveState();
     },
 
     // private
@@ -55662,8 +55662,8 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
     hide : function(){
         this.node.hidden = true;
         if(this.wrap){
-            // this.wrap.style.display = "none";
-            this.wrap.style.display = "block";
+            this.wrap.style.display = "none";
+            // this.wrap.style.display = "block";
         }
     },
 
@@ -55844,8 +55844,8 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
     // private
     collapse : function(){
         this.updateExpandIcon();
-        // this.ctNode.style.display = "none";
-        this.ctNode.style.display = "block";
+        this.ctNode.style.display = "none";
+        // this.ctNode.style.display = "block";
     },
 
     // private
