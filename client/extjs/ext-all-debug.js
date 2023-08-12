@@ -22484,12 +22484,12 @@ Ext.layout.BorderLayout.Region.prototype = {
     // private
     onCollapse : function(animate){
         // this.panel.el.setStyle('z-index', 1);
-        // if(this.lastAnim === false || this.panel.animCollapse === false){
-        //     this.getCollapsedEl().dom.style.visibility = 'visible';
-        //     console.log(this.getCollapsedEl())
-        // }else{
-        //     this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
-        // }
+        if(this.lastAnim === false || this.panel.animCollapse === false){
+            this.getCollapsedEl().dom.style.visibility = 'visible';
+            console.log(this.getCollapsedEl())
+        }else{
+            this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
+        }
         // this.state.collapsed = true;
         // this.panel.saveState();
     },
