@@ -22477,6 +22477,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible';
+            this.panel.setSize(200, c.getHeight());
             console.log("djk0")
             // this.getCollapsedEl().dom.classList.remove('zarafa-hierachy-menu-collapse');
             // console.log(this.getCollapsedEl())
@@ -22504,7 +22505,6 @@ Ext.layout.BorderLayout.Region.prototype = {
             // this.panel.setSize(c.getWidth(), undefined);
         }
         // c.hide();
-        // console.log(this.getCollapsedEl())
         // c.dom.style.visibility = 'hidden';
                 c.dom.style.visibility = 'visible';
         // this.getCollapsedEl().addCls('zarafa-hierachy-menu-collapse');
