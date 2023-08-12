@@ -22472,59 +22472,35 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.layout.layout();
     },
 
-
     // private
-    // onCollapse : function(animate){
-    //     this.panel.el.setStyle('z-index', 1);
-    //     if(this.lastAnim === false || this.panel.animCollapse === false){
-    //         this.getCollapsedEl().dom.style.visibility = 'visible';
-    //         console.log(this.getCollapsedEl())
-    //     }else{
-    //         this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
-    //     }
-    //     this.state.collapsed = true;
-    //     this.panel.saveState();
-    // },
-    // private
-    onCollapse : function(){
-        this.isCollapsed = true;
-        if(this.splitEl){
-            this.splitEl.show();
+    onCollapse : function(animate){
+        this.panel.el.setStyle('z-index', 1);
+        if(this.lastAnim === false || this.panel.animCollapse === false){
+            this.getCollapsedEl().dom.style.visibility = 'visible';
+            console.log(this.getCollapsedEl())
+        }else{
+            this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
         }
-        this.layout.layout();
-        this.panel.el.setStyle('z-index', this.originalZIndex);
         this.state.collapsed = true;
         this.panel.saveState();
-        console.log(this.originalZIndex)
     },
+
     // private
-    // beforeExpand : function(animate){
-    //     if(this.isSlid){
-    //         this.afterSlideIn();
-    //     }
-    //     var c = this.getCollapsedEl();
-    //     this.el.show();
-    //     if(this.position == 'east' || this.position == 'west'){
-    //         this.panel.setSize(undefined, c.getHeight());
-    //     }else{
-    //         this.panel.setSize(c.getWidth(), undefined);
-    //     }
-    //     c.hide();
-    //     c.dom.style.visibility = 'hidden';
-    //     this.panel.el.setStyle('z-index', this.floatingZIndex);
-    //     console.log(this.floatingZIndex)
-    // },
-    beforeExpand : function(p, animate){
-        this.lastAnim = animate;
-        // if(this.splitEl){
-        //     this.splitEl.hide();
-        // }
-        this.getCollapsedEl().show();
-        var el = this.panel.getEl();
-        this.originalZIndex = el.getStyle('z-index');
-        el.setStyle('z-index', 100);
-        this.isCollapsed = false;
-        this.layout.layout();
+    beforeExpand : function(animate){
+        if(this.isSlid){
+            this.afterSlideIn();
+        }
+        var c = this.getCollapsedEl();
+        this.el.show();
+        if(this.position == 'east' || this.position == 'west'){
+            this.panel.setSize(undefined, c.getHeight());
+        }else{
+            this.panel.setSize(c.getWidth(), undefined);
+        }
+        // c.hide();
+        // c.dom.style.visibility = 'hidden';
+        this.panel.el.setStyle('z-index', this.floatingZIndex);
+        console.log(this.floatingZIndex)
     },
 
     // private
@@ -22537,7 +22513,6 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.panel.el.setStyle('z-index', this.originalZIndex);
         this.state.collapsed = false;
         this.panel.saveState();
-        console.log(this.originalZIndex)
     },
 
     // private
