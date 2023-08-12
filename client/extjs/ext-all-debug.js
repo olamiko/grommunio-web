@@ -3567,7 +3567,8 @@ Ext.Element.addMethods(function(){
         BOTTOM = "-bottom",
         WIDTH = "-width",
         MATH = Math,
-        HIDDEN = 'hidden',
+        // HIDDEN = 'hidden',
+        HIDDEN = 'visble',
         ISCLIPPED = 'isClipped',
         OVERFLOW = 'overflow',
         OVERFLOWX = 'overflow-x',
@@ -10599,7 +10600,8 @@ Ext.Element.addMethods(function(){
         setOverflow : function(v){
             var dom = this.dom;
             if(v=='auto' && Ext.isMac && Ext.isGecko2){ // work around stupid FF 2.0/Mac scroll bar bug
-                dom.style.overflow = 'hidden';
+                // dom.style.overflow = 'hidden';
+                dom.style.overflow = 'visible';
                 (function(){dom.style.overflow = 'auto';}).defer(1);
             }else{
                 dom.style.overflow = v;
@@ -30631,6 +30633,7 @@ Ext.ProgressBar = Ext.extend(Ext.BoxComponent, {
             //setup our internal layered text els
             this.textTopEl = Ext.get(this.progressBar.dom.firstChild);
             var textBackEl = Ext.get(inner.childNodes[1]);
+            // this.textTopEl.setStyle("z-index", 99).addClass('x-hidden');
             this.textTopEl.setStyle("z-index", 99).addClass('x-hidden');
             this.textEl = new Ext.CompositeElement([this.textTopEl.dom.firstChild, textBackEl.dom.firstChild]);
             this.textEl.setWidth(inner.offsetWidth);
@@ -30818,6 +30821,7 @@ myAction.on('complete', function(){
     reset : function(hide){
         this.updateProgress(0);
         if(this.textTopEl){
+            // this.textTopEl.addClass('x-hidden');
             this.textTopEl.addClass('x-hidden');
         }
         this.clearTimer();
@@ -43033,6 +43037,7 @@ Ext.Resizable = Ext.extend(Ext.util.Observable, {
             config.resizeChild = this.el;
             this.el = this.el.wrap(typeof config.wrap == 'object' ? config.wrap : {cls:'xresizable-wrap'});
             this.el.id = this.el.dom.id = config.resizeChild.id + '-rzwrap';
+            // this.el.setStyle('overflow', 'hidden');            
             this.el.setStyle('overflow', 'hidden');
             this.el.setPositioning(config.resizeChild.getPositioning());
             config.resizeChild.clearPositioning();
@@ -43321,8 +43326,8 @@ Ext.Resizable = Ext.extend(Ext.util.Observable, {
                     -ct.getFrameWidth('r')
                 );
             }
-
-            this.proxy.setStyle('visibility', 'hidden'); // workaround display none
+            this.proxy.setStyle('visibility', 'visible'); // workaround display none
+            // this.proxy.setStyle('visibility', 'hidden'); // workaround display none
             this.proxy.show();
             this.proxy.setBox(this.startBox);
             if(!this.dynamic){
@@ -45398,7 +45403,8 @@ Ext.MessageBox.ERROR
                 bodyEl.addClass('x-dlg-icon');
                 iconCls = icon;
             }else{
-                iconEl.replaceClass(iconCls, 'x-hidden');
+                // iconEl.replaceClass(iconCls, 'x-hidden');
+                // iconEl.replaceClass(iconCls, 'x-hidden');
                 bodyEl.removeClass('x-dlg-icon');
                 iconCls = '';
             }
@@ -62528,13 +62534,15 @@ Ext.form.TwinTriggerField = Ext.extend(Ext.form.TriggerField, {
                 this.dom.style.display = 'block';
                 // this.dom.style.display = 'none';
                 triggerField.el.setWidth(w-triggerField.trigger.getWidth());
-                triggerField['hidden' + triggerIndex] = true;
+                triggerField['visible' + triggerIndex] = true;
+                // triggerField['hidden' + triggerIndex] = true;
             };
             t.show = function(){
                 var w = triggerField.wrap.getWidth();
                 this.dom.style.display = '';
                 triggerField.el.setWidth(w-triggerField.trigger.getWidth());
-                triggerField['hidden' + triggerIndex] = false;
+                // triggerField['hidden' + triggerIndex] = false;
+                triggerField['visible' + triggerIndex] = false;
             };
             this.mon(t, 'click', this['on'+triggerIndex+'Click'], this, {preventDefault:true});
             t.addClassOnOver('x-form-trigger-over');
@@ -67967,7 +67975,7 @@ Ext.form.HtmlEditor = Ext.extend(Ext.form.Field, {
         Ext.form.HtmlEditor.superclass.onRender.call(this, ct, position);
         this.el.dom.style.border = '0 none';
         this.el.dom.setAttribute('tabIndex', -1);
-        this.el.addClass('x-hidden');
+        // this.el.addClass('x-hidden');
         if(Ext.isIE){ // fix IE 1px bogus margin
             this.el.applyStyles('margin-top:-1px;margin-bottom:-1px;');
         }
@@ -68128,7 +68136,7 @@ Ext.form.HtmlEditor = Ext.extend(Ext.form.Field, {
 
             this.disableItems(true);
             this.syncValue();
-            this.iframe.className = 'x-hidden';
+            // this.iframe.className = 'x-hidden';
             this.el.removeClass('x-hidden');
             this.el.dom.removeAttribute('tabIndex');
             this.el.focus();
@@ -68141,7 +68149,7 @@ Ext.form.HtmlEditor = Ext.extend(Ext.form.Field, {
             }
             this.pushValue();
             this.iframe.className = '';
-            this.el.addClass('x-hidden');
+            // this.el.addClass('x-hidden');
             this.el.dom.setAttribute('tabIndex', -1);
             this.deferFocus();
 
@@ -72069,7 +72077,8 @@ viewConfig: {
         }
         
         if (this.forceFit) {
-            scroller.setStyle('overflow-x', 'hidden');
+            // scroller.setStyle('overflow-x', 'hidden');
+            scroller.setStyle('overflow-x', 'visible');
         }
         
         /**
