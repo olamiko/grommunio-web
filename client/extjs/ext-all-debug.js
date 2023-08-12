@@ -22469,29 +22469,29 @@ Ext.layout.BorderLayout.Region.prototype = {
 
     // private
     beforeCollapse : function(p, animate){
-        // this.lastAnim = animate;
-        // if(this.splitEl){
-        //     this.splitEl.hide();
-        // }
+        this.lastAnim = animate;
+        if(this.splitEl){
+            this.splitEl.hide();
+        }
         this.getCollapsedEl().show();
-        // var el = this.panel.getEl();
-        // this.originalZIndex = el.getStyle('z-index');
-        // el.setStyle('z-index', 100);
-        // this.isCollapsed = true;
-        // this.layout.layout();
+        var el = this.panel.getEl();
+        this.originalZIndex = el.getStyle('z-index');
+        el.setStyle('z-index', 100);
+        this.isCollapsed = true;
+        this.layout.layout();
     },
 
     // private
     onCollapse : function(animate){
-        // this.panel.el.setStyle('z-index', 1);
+        this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible';
             console.log(this.getCollapsedEl())
         }else{
             this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
         }
-        // this.state.collapsed = true;
-        // this.panel.saveState();
+        this.state.collapsed = true;
+        this.panel.saveState();
     },
 
     // private
