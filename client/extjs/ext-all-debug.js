@@ -22485,7 +22485,7 @@ Ext.layout.BorderLayout.Region.prototype = {
             console.log("jkf")
             // this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
         }
-        this.state.collapsed = true;
+        // this.state.collapsed = true;
         this.panel.saveState();
     },
 
