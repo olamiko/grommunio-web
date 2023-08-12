@@ -22476,14 +22476,14 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.getCollapsedEl().show();
         var el = this.panel.getEl();
         this.originalZIndex = el.getStyle('z-index');
-        el.setStyle('z-index', 100);
+        // el.setStyle('z-index', 100);
         this.isCollapsed = true;
         this.layout.layout();
     },
 
     // private
     onCollapse : function(animate){
-        this.panel.el.setStyle('z-index', 1);
+        // this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible';
             console.log(this.getCollapsedEl())
