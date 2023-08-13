@@ -22470,9 +22470,9 @@ Ext.layout.BorderLayout.Region.prototype = {
     // private
     beforeCollapse : function(p, animate){
         this.lastAnim = animate;
-        // if(this.splitEl){
+        if(this.splitEl){
             this.splitEl.hide();
-        // 
+        }
         this.getCollapsedEl().hide();
         // var el = this.panel.getEl();
         // this.originalZIndex = el.getStyle('z-index');
@@ -22510,8 +22510,7 @@ Ext.layout.BorderLayout.Region.prototype = {
     onCollapse : function(animate){
         this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
-            this.getCollapsedEl().dom.style.visibility = 'hidden';
-
+            this.getCollapsedEl().dom.style.visibility = 'visible';
         }else{
             this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
         }
@@ -22540,9 +22539,9 @@ Ext.layout.BorderLayout.Region.prototype = {
     // private
     onExpand : function(){
         this.isCollapsed = false;
-        // if(this.splitEl){
+        if(this.splitEl){
             this.splitEl.hide();
-        // }
+        }
         this.layout.layout();
         // this.panel.el.setStyle('z-index', this.originalZIndex);
         this.panel.el.setStyle('z-index', 200);
