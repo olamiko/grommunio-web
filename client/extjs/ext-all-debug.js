@@ -22489,7 +22489,7 @@ Ext.layout.BorderLayout.Region.prototype = {
 
         // Calculate the width of the longest div and set the panel width
         let longestWidth = 0;
-        const divElements = panelEl.querySelectorAll('.zarafa-hierachy-menu-collapse'); // Replace with your actual selector
+        const divElements = panelEl// Replace with your actual selector
         divElements.forEach((div) => {
             const divWidth = div.offsetWidth;
             if (divWidth > longestWidth) {
