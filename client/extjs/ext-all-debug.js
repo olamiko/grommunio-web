@@ -22496,7 +22496,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         // Add the class to collapse the menu
         // panelEl.addClass('zarafa-hierachy-menu-collapse');
         // panelEl.addClass('zarafa-hierachy-menu-collapse');
-        const creed = getClassByName('zarafa-hierarchy-treepanel-bbar');
+        const creed = getClassByName('.zarafa-hierarchy-treepanel-bbar');
         console.log(creed);
         panelEl.setStyle('width', 250);
 
