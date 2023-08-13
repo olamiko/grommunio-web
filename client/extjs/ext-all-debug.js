@@ -22504,9 +22504,12 @@ Ext.layout.BorderLayout.Region.prototype = {
 
     // private
     onCollapse : function(animate){
+        const panelEl = this.panel.getEl();
         this.panel.el.setStyle('z-index', 1);
+        console.log(panelEl);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible';
+            
         }else{
             this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
         }
