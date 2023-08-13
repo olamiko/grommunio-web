@@ -3026,7 +3026,7 @@ div.zarafa-contact-cardview-selected {
     padding-left: 6px; }
     .zarafa-hierachy-menu-collapse img:first-of-type,
     /* .zarafa-tree-root-container a, */
-    .zarafa-hierachy-menu-collapse ul,
+    /* .zarafa-hierachy-menu-collapse ul, */
     .zarafa-hierachy-menu-collapse span {
       display: none;
     }
