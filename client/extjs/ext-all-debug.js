@@ -22479,7 +22479,7 @@ Ext.layout.BorderLayout.Region.prototype = {
 
         const panelEl = this.panel.getEl();
         this.isCollapsed = true;
-        panelEl.setStyle('z-index', auto);
+        panelEl.setStyle('z-index', 0);
         // this.layout.layout();
         // Assuming you have a variable for the panel element
         
