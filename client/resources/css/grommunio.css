@@ -655,8 +655,9 @@ div.x-btn-group-bc {
 
 .x-layout-collapsed {
   padding-top: 8px;
-  /* same padding as .x-panel-header */ }
-
+  height: 15px ! important;
+}
+  /* same padding as .x-panel-header */
 /* panel footer */
 .x-panel-footer {
   background: #ffffff; }
