@@ -22519,6 +22519,7 @@ Ext.layout.BorderLayout.Region.prototype = {
 
     // private
     beforeExpand : function(animate){
+        const panelEl = this.panel.getEl();
         if(this.isSlid){
             this.afterSlideIn();
         }
