@@ -22479,7 +22479,7 @@ Ext.layout.BorderLayout.Region.prototype = {
 
         const panelEl = this.panel.getEl();
         this.isCollapsed = true;
-        panelEl.setStyle('z-index', 1);
+        panelEl.setStyle('z-index', auto);
         // this.layout.layout();
         // Assuming you have a variable for the panel element
         
@@ -22533,7 +22533,8 @@ Ext.layout.BorderLayout.Region.prototype = {
         }
         // c.hide();
         // c.dom.style.visibility = 'hidden';
-        this.panel.el.setStyle('z-index', this.floatingZIndex);
+        // this.panel.el.setStyle('z-index', this.floatingZIndex);
+        this.panel.el.setStyle('z-index', 200);
     },
 
     // private
@@ -22543,7 +22544,8 @@ Ext.layout.BorderLayout.Region.prototype = {
             this.splitEl.show();
         }
         this.layout.layout();
-        this.panel.el.setStyle('z-index', this.originalZIndex);
+        // this.panel.el.setStyle('z-index', this.originalZIndex);
+        this.panel.el.setStyle('z-index', 200);
         this.state.collapsed = false;
         this.panel.saveState();
     },
@@ -64741,7 +64743,7 @@ myCombo.keyNav.tab = function() {   // Override TAB handling function
         this.list.setZIndex(this.getZIndex());
         this.list.show();
         if(Ext.isGecko2){
-            this.innerList.setOverflow('auto'); // necessary for FF 2.0/Mac
+            this.innerList.setOverflow('visible'); // necessary for FF 2.0/Mac
         }
         this.mon(Ext.getDoc(), {
             scope: this,
