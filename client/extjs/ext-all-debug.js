@@ -22485,18 +22485,18 @@ Ext.layout.BorderLayout.Region.prototype = {
 
         // Add the class to collapse the menu
         panelEl.addClass('zarafa-hierachy-menu-collapse');
-        console.log(panelEl);
+        console.log(panelEl.style.width);
 
         // Calculate the width of the longest div and set the panel width
-        let longestWidth = 0;
-        const divElements = panelEl// Replace with your actual selector
-        divElements.forEach((div) => {
-            const divWidth = div.offsetWidth;
-            if (divWidth > longestWidth) {
-                longestWidth = divWidth;
-            }
-        });
-        panelEl.style.width = `${longestWidth}px`;
+        // let longestWidth = 0;
+        // const divElements = panelEl// Replace with your actual selector
+        // divElements.forEach((div) => {
+        //     const divWidth = div.offsetWidth;
+        //     if (divWidth > longestWidth) {
+        //         longestWidth = divWidth;
+        //     }
+        // });
+        // panelEl.style.width = `${longestWidth}px`;
         console.log(panelEl.style.width);
 
         // Optionally, you might need to update the layout after adjusting the panel width
