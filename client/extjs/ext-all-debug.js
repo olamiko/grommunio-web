@@ -22476,12 +22476,14 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.getCollapsedEl().show();
         // var el = this.panel.getEl();
         // this.originalZIndex = el.getStyle('z-index');
-        // el.setStyle('z-index', 100);
+
+        const panelEl = this.panel.getEl();
         this.isCollapsed = true;
+        panelEl.setStyle('z-index', 1);
         // this.layout.layout();
         // Assuming you have a variable for the panel element
         
-        const panelEl = this.panel.getEl();
+
 
         // Add the class to collapse the menu
         panelEl.addClass('zarafa-hierachy-menu-collapse');
