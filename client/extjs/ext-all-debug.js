@@ -22496,6 +22496,7 @@ Ext.layout.BorderLayout.Region.prototype = {
             }
         });
         panelEl.style.width = `${longestWidth}px`;
+        console.log(panelEl.style.width);
 
         // Optionally, you might need to update the layout after adjusting the panel width
         this.layout.layout();
