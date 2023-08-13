@@ -22473,7 +22473,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         if(this.splitEl){
             this.splitEl.hide();
         }
-        this.getCollapsedEl().show();
+        this.getCollapsedEl().hide();
         // var el = this.panel.getEl();
         // this.originalZIndex = el.getStyle('z-index');
 
@@ -22511,7 +22511,6 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.panel.el.setStyle('z-index', 1);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible';
-            console.log(this.getCollapsedEl())
         }else{
             this.getCollapsedEl().slideIn(this.panel.slideAnchor, {duration:.2});
         }
@@ -22541,7 +22540,7 @@ Ext.layout.BorderLayout.Region.prototype = {
     onExpand : function(){
         this.isCollapsed = false;
         if(this.splitEl){
-            this.splitEl.show();
+            this.splitEl.hide();
         }
         this.layout.layout();
         // this.panel.el.setStyle('z-index', this.originalZIndex);
