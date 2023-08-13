@@ -3020,12 +3020,12 @@ div.zarafa-contact-cardview-selected {
   .x-window .x-tree-node.zarafa-tree-root-container .x-tree-node-el,
   .x-panel-ghost .x-tree-node.zarafa-tree-root-container .x-tree-node-el {
     padding-left: 6px; }
-    /* .zarafa-hierachy-menu-collapse img:first-of-type, */
-    /* .zarafa-tree-root-container a, */
-        /* .zarafa-hierachy-menu-collapse ul, */
-    /* .zarafa-hierachy-menu-collapse a  { */
-      /* display: none; */
-    /* } */
+    .zarafa-hierachy-menu-collapse img:first-of-type, */
+    .zarafa-tree-root-container a,
+        .zarafa-hierachy-menu-collapse ul,
+    .zarafa-hierachy-menu-collapse a  {
+      display: none;
+    }
     
   .x-window .x-window-bwrap .x-window-body > div .zarafa-folderproperties.x-panel.tabpanel-container,
   .x-panel-ghost .x-window-bwrap .x-window-body > div .zarafa-folderproperties.x-panel.tabpanel-container {

@@ -22479,6 +22479,27 @@ Ext.layout.BorderLayout.Region.prototype = {
         // el.setStyle('z-index', 100);
         // this.isCollapsed = true;
         // this.layout.layout();
+        // Assuming you have a variable for the panel element
+        
+        const panelEl = this.panel.getEl();
+
+        // Add the class to collapse the menu
+        panelEl.classList.add('zarafa-hierachy-menu-collapse');
+
+        // Calculate the width of the longest div and set the panel width
+        let longestWidth = 0;
+        const divElements = panelEl.querySelectorAll('.zarafa-hierachy-menu-collapse'); // Replace with your actual selector
+        divElements.forEach((div) => {
+            const divWidth = div.offsetWidth;
+            if (divWidth > longestWidth) {
+                longestWidth = divWidth;
+            }
+        });
+        panelEl.style.width = `${longestWidth}px`;
+
+        // Optionally, you might need to update the layout after adjusting the panel width
+        this.layout.layout();
+
     },
 
     // private
