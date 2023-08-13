@@ -22485,7 +22485,7 @@ Ext.layout.BorderLayout.Region.prototype = {
 
         // Add the class to collapse the menu
         panelEl.addClass('zarafa-hierachy-menu-collapse');
-        console.log(panelEl.style.width);
+         el.setStyle('width', 250);
 
         // Calculate the width of the longest div and set the panel width
         // let longestWidth = 0;
