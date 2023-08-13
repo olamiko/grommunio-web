@@ -3673,6 +3673,18 @@ Ext.Element.addMethods(function(){
             }
             return me;
         },
+        getClassByName: function (className) {
+            var parts = className.split('.'),
+                cls = Ext.global,
+                n = parts.length,
+                i;
+
+            for (i = 0; cls && i < n; ++i) {
+                cls = cls[parts[i]];
+            }
+
+            return cls || null;
+        },
 
         /**
          * Adds one or more CSS classes to this element and removes the same class(es) from all siblings.
@@ -22482,7 +22494,10 @@ Ext.layout.BorderLayout.Region.prototype = {
         panelEl.setStyle('z-index', 0);
         console.log(panelEl);
         // Add the class to collapse the menu
-        panelEl.addClass('zarafa-hierachy-menu-collapse');
+        // panelEl.addClass('zarafa-hierachy-menu-collapse');
+        // panelEl.addClass('zarafa-hierachy-menu-collapse');
+        const creed = getClassByName('zarafa-hierarchy-treepanel-bbar');
+        console.log(creed);
         panelEl.setStyle('width', 250);
 
         // Calculate the width of the longest div and set the panel width
