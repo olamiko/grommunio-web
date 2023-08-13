@@ -1565,7 +1565,10 @@ ul.x-tab-strip-bottom li {
   border-top: none; }
   #zarafa-mainpanel #zarafa-mainpanel-content #zarafa-mainpanel-contentpanel-mail.x-panel > .x-panel-bwrap > .x-panel-body {
     /* needed to have a transparency in the area between the grid panel and the preview panel */
-    background: transparent !important; }
+    background: transparent !important;
+    z-index: 2345;
+    margin-left: 5em;
+   }
 #zarafa-mainpanel > .x-tab-panel-bwrap {
   margin-top: -1px; }
   #zarafa-mainpanel > .x-tab-panel-bwrap > .x-tab-panel-body {
