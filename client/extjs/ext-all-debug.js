@@ -22480,11 +22480,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         const panelEl = this.panel.getEl();
         this.isCollapsed = true;
         panelEl.setStyle('z-index', 0);
-        // this.layout.layout();
-        // Assuming you have a variable for the panel element
-        
-
-
+        console.log(panelEl);
         // Add the class to collapse the menu
         panelEl.addClass('zarafa-hierachy-menu-collapse');
         panelEl.setStyle('width', 250);
@@ -22525,6 +22521,8 @@ Ext.layout.BorderLayout.Region.prototype = {
         }
         var c = this.getCollapsedEl();
         this.el.show();
+                // Add the class to collapse the menu
+        panelEl.removeClass('zarafa-hierachy-menu-collapse');
         if(this.position == 'east' || this.position == 'west'){
             this.panel.setSize(undefined, c.getHeight());
         }else{
