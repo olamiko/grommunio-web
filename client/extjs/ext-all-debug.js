@@ -22473,7 +22473,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         // if(this.splitEl){
         //     this.splitEl.hide();
         // }
-        // this.getCollapsedEl().show();
+        this.getCollapsedEl().show();
         // var el = this.panel.getEl();
         // this.originalZIndex = el.getStyle('z-index');
         // el.setStyle('z-index', 100);
