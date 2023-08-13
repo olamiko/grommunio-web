@@ -22469,10 +22469,10 @@ Ext.layout.BorderLayout.Region.prototype = {
 
     // private
     beforeCollapse : function(p, animate){
-        // this.lastAnim = animate;
-        // if(this.splitEl){
-        //     this.splitEl.hide();
-        // }
+        this.lastAnim = animate;
+        if(this.splitEl){
+            this.splitEl.hide();
+        }
         this.getCollapsedEl().show();
         // var el = this.panel.getEl();
         // this.originalZIndex = el.getStyle('z-index');
