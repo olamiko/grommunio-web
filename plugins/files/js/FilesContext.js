@@ -55,8 +55,8 @@ Zarafa.plugins.files.FilesContext = Ext.extend(Zarafa.core.Context, {
 		// this.registerInsertionPoint('main.maintabbar.left', this.createMainTab, this);
 		this.registerInsertionPoint('main.maintabbar.left', this.createMainTab, this);
 		var hh = this.registerInsertionPoint('main.maintabbar.left', this.createMainTab, this);
-		var hh = this.registerInsertionPoint('main.maintabbar.left', this.createMainTab, Zarafa.core.Context);
-		console.log(hh);
+		var hh2 = this.registerInsertionPoint('main.maintabbar.left', this.createMainTab, Zarafa.core.Context);
+		console.log(hh); console.log(hh2);
 		this.registerInsertionPoint('main.maintoolbar.new.item', this.createNewFilesButton, this);
 		this.registerInsertionPoint('main.toolbar.actions.last', this.createMainToolbarButtons, this);
 		this.registerInsertionPoint('navigation.center', this.createFilesNavigationPanel, this);
