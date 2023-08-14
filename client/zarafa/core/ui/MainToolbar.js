@@ -42,11 +42,7 @@ Zarafa.core.ui.MainToolbar = Ext.extend(Zarafa.core.ui.Toolbar, {
 			// Override from Ext.Component
 			xtype: 'zarafa.maintoolbar',
 			id: 'zarafa-maintoolbar',
-			cls: 'zarafa-maintoolbar'
-			// style: {
-			// 			// display: 'none'
-			// 			visibility: 'hidden'
-			// 		}
+			// cls: 'zarafa-maintoolbar'
 		});
 
 		Zarafa.core.ui.MainToolbar.superclass.constructor.call(this, config);
