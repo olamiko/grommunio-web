@@ -1406,6 +1406,7 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
   background: white;
   color: #ffffff;
   padding: 0;
+  margin-left: 20em;
   /* focused button */ }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct * {
     font-size: 15px !important; }
@@ -1444,7 +1445,7 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active,
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active.x-btn-over,
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active.x-btn-over.x-btn-click {
-    background-color: #065fa5 !important; }
+    background-color: white !important; }
     body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active .x-btn-small,
     body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active.x-btn-over .x-btn-small,
     body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active.x-btn-over.x-btn-click .x-btn-small {
@@ -1453,7 +1454,8 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
     body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active.x-btn-over button.x-btn-text,
     body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active.x-btn-over.x-btn-click button.x-btn-text {
       border: none;
-      color: #ffffff;
+      /* color: #ffffff; */
+      color: black;
       opacity: 1;
       font-weight: normal;
       background-position: center bottom !important; }
