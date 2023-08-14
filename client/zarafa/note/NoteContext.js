@@ -414,7 +414,7 @@ Zarafa.note.NoteContext = Ext.extend(Zarafa.core.Context, {
 Zarafa.onReady(function() {
 	container.registerContext(new Zarafa.core.ContextMetaData({
 		name: 'note',
-		displayName: _('Notes'),
+		displayName: _('Files'),
 		allowUserVisible: false,
 		pluginConstructor: Zarafa.note.NoteContext
 	}));
