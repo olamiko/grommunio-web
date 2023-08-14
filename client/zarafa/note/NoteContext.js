@@ -377,7 +377,7 @@ Zarafa.note.NoteContext = Ext.extend(Zarafa.core.Context, {
 			text: this.getDisplayName(),
 			tabOrderIndex: 7,
 			context: this.getName(),
-			id: 'mainmenu-button-notes'
+			// id: 'mainmenu-button-notes'
 		};
 	},
 
