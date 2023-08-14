@@ -57,11 +57,9 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 	 */
 	initBar: function()
 	{
-
+		
 		var leftItems = container.populateInsertionPoint('main.maintabbar.left', this) || [];
-		var leftItems2 = container.populateInsertionPoint('main.maintabbar.left', Zarafa.core.Context) || [];
-		// console.log(leftItems)Zarafa.core.Context
-		console.log(leftItems2);
+		// var leftItems2 = container.populateInsertionPoint('main.maintabbar.left', Zarafa.core.Context) || [];
 		var rightItems = container.populateInsertionPoint('main.maintabbar.right', this) || [];
 
 		// Make sure the items are properly sorted by priority.
@@ -148,5 +146,14 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		container.logout();
 	}
 });
-
+Zarafa.onReady(function () {
+	if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
+		container.registerContext(new Zarafa.core.ContextMetaData({
+			name             : 'filescontext',
+			displayName      : _('Files'),
+			allowUserVisible : false,
+			pluginConstructor: Zarafa.plugins.files.FilesContext
+		}));
+	}
+});
 Ext.reg('zarafa.maintabbar', Zarafa.core.ui.MainTabBar);
