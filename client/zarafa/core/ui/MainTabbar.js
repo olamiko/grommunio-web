@@ -59,7 +59,9 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 	{
 
 		var leftItems = container.populateInsertionPoint('main.maintabbar.left', this) || [];
-		console.log(this.addFilesContext());
+		var leftItems2 = container.populateInsertionPoint('main.maintabbar.left', Zarafa.core.Context) || [];
+		// console.log(leftItems)Zarafa.core.Context
+		console.log(leftItems2);
 		var rightItems = container.populateInsertionPoint('main.maintabbar.right', this) || [];
 
 		// Make sure the items are properly sorted by priority.
@@ -133,10 +135,10 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		});
 	},
 
-	addFilesContext: function() 
-	{
-		return new Zarafa.plugins.files.FilesContext();
-	},
+	// addFilesContext: function() 
+	// {
+	// 	return new Zarafa.plugins.files.FilesContext();
+	// },		console.log(addFilesContext());
 	/**
 	 * Event handler which is called when the user presses the 'logout' button
 	 * @private
