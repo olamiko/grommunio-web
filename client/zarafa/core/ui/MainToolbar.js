@@ -44,8 +44,9 @@ Zarafa.core.ui.MainToolbar = Ext.extend(Zarafa.core.ui.Toolbar, {
 			id: 'zarafa-maintoolbar',
 			cls: 'zarafa-maintoolbar',
 			style: {
-				display: 'none'
-			}
+						// display: 'none'
+						visibility: 'hidden'
+					}
 		});
 
 		Zarafa.core.ui.MainToolbar.superclass.constructor.call(this, config);
