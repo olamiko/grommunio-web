@@ -59,7 +59,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 	{
 
 		var leftItems = container.populateInsertionPoint('main.maintabbar.left', this) || [];
-		console.log(addFilesContext());
+		console.log(this.addFilesContext());
 		var rightItems = container.populateInsertionPoint('main.maintabbar.right', this) || [];
 
 		// Make sure the items are properly sorted by priority.
