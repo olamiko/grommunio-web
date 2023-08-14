@@ -89,9 +89,11 @@ Zarafa.plugins.files.FilesContext = Ext.extend(Zarafa.core.Context, {
 	 */
 	createMainTab: function () {
 		return {
-			text         : this.getDisplayName(),
+			// text         : this.getDisplayName(),
+			text         : _('Files'),
 			tabOrderIndex: 6,
-			context      : this.getName(),
+			// context      : this.getName(),
+			context      : 'filescontext',
 			id: 'mainmenu-button-filescontexts'
 		};
 	},
