@@ -44,17 +44,6 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		});
 
 		Zarafa.core.ui.MainTabBar.superclass.constructor.call(this, config);
-		Zarafa.onReady(function () {
-			if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
-				container.registerContext(new Zarafa.core.ContextMetaData({
-					name             : 'filescontext',
-					displayName      : _('Files'),
-					allowUserVisible : false,
-					pluginConstructor: Zarafa.plugins.files.FilesContext
-				}));
-			}
-		});
-
 		this.initBar();
 	},
 
@@ -67,7 +56,17 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 	 */
 	initBar: function()
 	{
-		
+		Zarafa.onReady(function () {
+			if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
+				container.registerContext(new Zarafa.core.ContextMetaData({
+					name             : 'filescontext',
+					displayName      : _('Files'),
+					allowUserVisible : false,
+					pluginConstructor: Zarafa.plugins.files.FilesContext
+				}));
+			}
+		});
+
 		var leftItems = container.populateInsertionPoint('main.maintabbar.left', this) || [];
 		// var leftItems2 = container.populateInsertionPoint('main.maintabbar.left', Zarafa.core.Context) || [];
 		console.log(leftItems);
