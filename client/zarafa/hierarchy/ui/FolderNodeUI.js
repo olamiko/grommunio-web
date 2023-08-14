@@ -353,7 +353,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		if (!container.getServerConfig().isWidgetEnabled() && folder.isOwnRoot()){
 			e.preventDefault();
 			folder = folder.getMAPIStore().getDefaultFolder("inbox");
-			this.node.getOwnerTree().getNodeById(folder.get('entryid')).getUI().elNode.click();
+			this.node.getOwnerTree().getNodeById(folder.get('entryid'))?.getUI().elNode.click();
 			return;
 		}
 
