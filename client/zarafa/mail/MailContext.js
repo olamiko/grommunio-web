@@ -54,6 +54,7 @@ Zarafa.mail.MailContext = Ext.extend(Zarafa.core.Context, {
 
 		// The tab in the top tabbar
 		this.registerInsertionPoint('main.maintabbar.left', this.createMainTab, this);
+		console.log(this);
 
 		// Add a tree control showing a list of note folders to the navigation panel.
 		// The control will be shown when the user selects the note context from the button panel.
