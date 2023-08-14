@@ -1425,7 +1425,8 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
       font-size: 10px !important;
       font-weight: 700 !important;
       line-height: 16px !important;
-      color: #ffffff;
+      /* color: #ffffff; */
+      color: black;
       text-transform: uppercase;
       text-shadow: none;
       padding: 10px 12px 10px 12px;
