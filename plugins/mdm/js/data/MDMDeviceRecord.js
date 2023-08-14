@@ -24,7 +24,8 @@ Zarafa.plugins.mdm.data.MDMDeviceRecordFields = [
 	{name: 'contactsfolder', type: 'string', defaultValue:'0'},
 	{name: 'tasksfolder', type: 'string', defaultValue:'0'},
 	{name: 'calendarsfolder', type: 'string', defaultValue:'0'},
-	{name: 'notesfolder', type: 'string', defaultValue:'0'},
+	// {name: 'notesfolder', type: 'string', defaultValue:'0'},
+	{name: 'filesfolder', type: 'string', defaultValue:'0'},
 	{name: 'message_class', type: 'string', defaultValue:"IPM.MDM"}
 ];
 
