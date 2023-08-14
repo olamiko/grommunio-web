@@ -95,19 +95,13 @@ Zarafa.plugins.files.FilesContext = Ext.extend(Zarafa.core.Context, {
 			id: 'mainmenu-button-filescontexts'
 		};
 	},
-	getName: function()
-	{
-		return this.name;
-	},
+    getDisplayName: function () {
+        return _('Files'); // Replace with your localization logic if needed
+    },
 
-	/**
-	 * Obtain the display name for this plugin
-	 * @return {String} The display name for this plugin
-	 */
-	getDisplayName: function()
-	{
-		return this.displayName;
-	},
+    getName: function () {
+        return 'filescontext'; // Return the context name
+    },
 	/**
 	 * This method hooks to the attachments chooser button and allows users to add files from
 	 * the Files plugin to their emails.
