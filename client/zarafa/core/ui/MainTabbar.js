@@ -38,7 +38,8 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 			// Override from Ext.Component
 			xtype: 'zarafa.maintabbar',
 			id: 'zarafa-mainmenu',
-			cls: 'zarafa-maintoolbar zarafa-maintabbar',
+			// cls: 'zarafa-maintoolbar zarafa-maintabbar',
+			cls: 'grommunio-image zarafa-maintabbar',
 			defaultType: 'zarafa.maintab'
 		});
 
