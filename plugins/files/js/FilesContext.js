@@ -56,7 +56,7 @@ Zarafa.plugins.files.FilesContext = Ext.extend(Zarafa.core.Context, {
 		this.registerInsertionPoint('main.maintabbar.left', this.createMainTab, this);
 		var hh = this.registerInsertionPoint('main.maintabbar.left', this.createMainTab, this);
 		var hh2 = this.registerInsertionPoint('main.maintabbar.left', this.createMainTab, Zarafa.core.Context);
-		console.log(hh); console.log(hh2);
+		// console.log(hh); console.log(hh2);
 		this.registerInsertionPoint('main.maintoolbar.new.item', this.createNewFilesButton, this);
 		this.registerInsertionPoint('main.toolbar.actions.last', this.createMainToolbarButtons, this);
 		this.registerInsertionPoint('navigation.center', this.createFilesNavigationPanel, this);
@@ -95,7 +95,19 @@ Zarafa.plugins.files.FilesContext = Ext.extend(Zarafa.core.Context, {
 			id: 'mainmenu-button-filescontexts'
 		};
 	},
+	getName: function()
+	{
+		return this.name;
+	},
 
+	/**
+	 * Obtain the display name for this plugin
+	 * @return {String} The display name for this plugin
+	 */
+	getDisplayName: function()
+	{
+		return this.displayName;
+	},
 	/**
 	 * This method hooks to the attachments chooser button and allows users to add files from
 	 * the Files plugin to their emails.
@@ -675,12 +687,12 @@ Zarafa.plugins.files.FilesContext = Ext.extend(Zarafa.core.Context, {
  * It hooks the context to grommunio Web.
  */
 Zarafa.onReady(function () {
-	if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
+	// if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
 		container.registerContext(new Zarafa.core.ContextMetaData({
 			name             : 'filescontext',
 			displayName      : _('Files'),
 			allowUserVisible : false,
 			pluginConstructor: Zarafa.plugins.files.FilesContext
 		}));
-	}
+	// }
 });
