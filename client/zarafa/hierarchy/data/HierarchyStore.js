@@ -364,7 +364,8 @@ Zarafa.hierarchy.data.HierarchyStore = Ext.extend(Zarafa.core.data.IPFStore, {
 					case 'calendar':
 					case 'contacts':
 					case 'tasks':
-					case 'notes':
+					// case 'notes':
+					case 'files':
 						break;
 					default:
 						folder_type = 'inbox';
