@@ -375,7 +375,7 @@ Zarafa.note.NoteContext = Ext.extend(Zarafa.core.Context, {
 	{
 		return {
 			text: this.getDisplayName(),
-			tabOrderIndex: 6,
+			tabOrderIndex: 7,
 			context: this.getName(),
 			id: 'mainmenu-button-notes'
 		};
