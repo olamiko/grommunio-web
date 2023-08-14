@@ -42,16 +42,6 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 			// cls: 'zarafa-maintabbar grommunio-image',
 			defaultType: 'zarafa.maintab'
 		});
-		Zarafa.onReady(function () {
-			// if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
-				container.registerContext(new Zarafa.core.ContextMetaData({
-					name             : 'filescontext',
-					displayName      : _('Files'),
-					allowUserVisible : false,
-					pluginConstructor: Zarafa.plugins.files.FilesContext
-				}));
-			// }
-		});
 		Zarafa.core.ui.MainTabBar.superclass.constructor.call(this, config);
 		this.initBar();
 	},
@@ -153,7 +143,16 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 	onLogoutButton: function()
 	{
 		container.logout();
-	}
+	},
 });
-
+Zarafa.onReady(function () {
+	// if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
+		container.registerContext(new Zarafa.core.ContextMetaData({
+			name             : 'filescontext',
+			displayName      : _('Files'),
+			allowUserVisible : false,
+			pluginConstructor: Zarafa.plugins.files.FilesContext
+		}));
+	// }
+});
 Ext.reg('zarafa.maintabbar', Zarafa.core.ui.MainTabBar);
