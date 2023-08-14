@@ -19,7 +19,8 @@ Zarafa.common.plugins.ManualPlugin = Ext.extend(Zarafa.core.Plugin, {
 		'calendar': 'calendar.html',
 		'contact': 'contacts.html',
 		'task': 'tasks.html',
-		'note': 'notes.html',
+		// 'note': 'notes.html',
+		'filescontext': 'filescontexts.html',
 		'settings': 'settings.html'
 	},
 
