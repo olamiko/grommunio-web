@@ -42,13 +42,16 @@ Zarafa.core.ui.MainToolbar = Ext.extend(Zarafa.core.ui.Toolbar, {
 			// Override from Ext.Component
 			xtype: 'zarafa.maintoolbar',
 			id: 'zarafa-maintoolbar',
-			cls: 'zarafa-maintoolbar'
+			cls: 'zarafa-maintoolbar',
+			style: {
+				display: 'none'
+			}
 		});
 
 		Zarafa.core.ui.MainToolbar.superclass.constructor.call(this, config);
 		// console.log(calender.populateInsertionPoint('context.calendar.contextmenu.actions', this));
 		// console.log(this.registerInsertionPoint('context.settings.categories', this.createSettingCategories, this))
-		// this.initButtonGroups();
+		this.initButtonGroups();
 	},
 
 	/**
@@ -60,11 +63,11 @@ Zarafa.core.ui.MainToolbar = Ext.extend(Zarafa.core.ui.Toolbar, {
 		// Initialize the items list with all default buttons, and add buttons which were
 		// registered through insertion points.
 		this.addItems([], 'main.toolbar.actions.first');
-		this.addNewItems();
-		this.addActionItems();
-		this.addPrintButton();
-		this.addViewItems();
-		this.addItems([], 'main.toolbar.actions.last');
+		// this.addNewItems();
+		// this.addActionItems();
+		// this.addPrintButton();
+		// this.addViewItems();
+		// this.addItems([], 'main.toolbar.actions.last');
 		this.addItems([{xtype: 'tbfill'}], 'main.toolbar.actions.right');
 	},
 
