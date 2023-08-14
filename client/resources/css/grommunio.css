@@ -1421,7 +1421,9 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
       border: none;
       margin: 0; }
     body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .x-btn button.x-btn-text {
-      font-size: 15px !important;
+      /* font-size: 15px !important; */
+      font-size: 10px !important;
+      font-weight: 700 !important;
       line-height: 16px !important;
       color: #ffffff;
       text-transform: uppercase;
