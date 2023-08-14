@@ -37,8 +37,9 @@ Zarafa.core.Plugin = Ext.extend(Zarafa.core.data.StatefulObservable, {
 	 */
 	initPlugin: function()
 	{
-		var about = this.info.getAbout();
-
+		if (this.info) {
+			var about = this.info.getAbout();
+		}
 		// If the about text is provided, automatically register it
 		if (!Ext.isEmpty(about)) {
 			this.registerAboutText(this.getDisplayName(), about);
