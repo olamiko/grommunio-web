@@ -51,7 +51,6 @@ Zarafa.core.ui.MainViewport = Ext.extend(Ext.Viewport, {
 				border: false,
 				items: [
 					this.createTopbarContainer(),
-					this.createContentContainer2(),
 					this.createNavigationPanel(),
 					this.createTodayPanel(),
 					this.createContentContainer()				]
@@ -160,45 +159,6 @@ Zarafa.core.ui.MainViewport = Ext.extend(Ext.Viewport, {
 		});
 		return this.contentPanel;
 	},
-	createContentContainer2: function()
-	{
-		return new Ext.Container({
-			name: 'main.topbar2',
-			region: 'north',
-			layout: 'border',
-			height: 36+54,
-			items: [
-				// new Zarafa.core.ui.MainTabBar({
-				// 	name: 'main.maintabbar',
-				// 	region: 'center',
-				// 	height: 36,
-				// 	boxMinHeight: 36,
-				// 	boxMaxHeight: 36,
-				// 	ref: '../../mainTabBar'
-				// }),
-				// new Zarafa.core.ui.MainToolbar({
-				// 	name: 'main.toolbar',
-				// 	region: 'north',
-				// 	height: 0,
-				// 	boxMinHeight: 0,
-				// 	boxMaxHeight: 0,
-				// 	ref: '../../mainToolbar',
-				// 	// style: {
-				// 	// 	display: 'none'
-				// 	// }
-				// }),
-				new Zarafa.mail.ui.MailPanel({
-					name: 'main.mailPsanel',
-					region: 'south',
-					height: 54,
-					boxMinHeight: 54,
-					boxMaxHeight: 54,
-				// 	// ref: '../../mailPaneld',
-				})
-			]
-		});
-	}
-
 
 	/**
 	 * Returns the {@link Zarafa.core.ui.ContextContainer ContentPanel} for
