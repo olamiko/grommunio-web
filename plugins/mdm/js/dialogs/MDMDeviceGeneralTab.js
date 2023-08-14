@@ -111,10 +111,16 @@ Zarafa.plugins.mdm.dialogs.MDMDeviceGeneralTab = Ext.extend(Ext.form.FormPanel, 
 				}, {
 					fieldLabel: _('Contacts'),
 					name: 'contactsfolder'
-				}, {
-					fieldLabel: _('Notes'),
-					name: 'notesfolder'
-				}, {
+				}, 
+				// {
+				// 	fieldLabel: _('Notes'),
+				// 	name: 'notesfolder'
+				// },
+				{
+					fieldLabel: _('Files'),
+					name: 'filesfolder'
+				},
+				 {
 					fieldLabel: _('Tasks'),
 					name: 'tasksfolder'
 				},
