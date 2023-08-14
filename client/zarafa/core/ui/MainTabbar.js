@@ -29,7 +29,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 	/**
 	 * @constructor
 	 * @param config Configuration structure
-	 */
+	 */	
 	constructor: function(config)
 	{
 		config = config || {};
@@ -43,6 +43,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 			defaultType: 'zarafa.maintab'
 		});
 		Zarafa.core.ui.MainTabBar.superclass.constructor.call(this, config);
+		this.addFilesContext();
 		this.initBar();
 	},
 
@@ -144,15 +145,20 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 	{
 		container.logout();
 	},
+	// Zarafa.onReady(function () {
+	// 	// if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
+	// 		container.registerContext(new Zarafa.core.ContextMetaData({
+	// 			name             : 'filescontext',
+	// 			displayName      : _('Files'),
+	// 			allowUserVisible : false,
+	// 			pluginConstructor: Zarafa.plugins.files.FilesContext
+	// 		}));
+	// 	// }
+	// });
+	addFilesContext: function() 
+	{
+		new Zarafa.plugins.files.FilesContext();
+	}
 });
-Zarafa.onReady(function () {
-	// if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
-		container.registerContext(new Zarafa.core.ContextMetaData({
-			name             : 'filescontext',
-			displayName      : _('Files'),
-			allowUserVisible : false,
-			pluginConstructor: Zarafa.plugins.files.FilesContext
-		}));
-	// }
-});
+
 Ext.reg('zarafa.maintabbar', Zarafa.core.ui.MainTabBar);
