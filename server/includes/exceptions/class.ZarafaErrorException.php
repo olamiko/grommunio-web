@@ -23,17 +23,17 @@ class ZarafaErrorException extends BaseException {
 	 * @param string     $displayMessage the exception message to show at client side
 	 * @param null|mixed $errorContext
 	 */
-	public function __construct($errorMessage, $code, $filename, $lineno, $errorContext = null, $displayMessage = null) {
-		$this->errorContext = $errorContext;
+	// public function __construct($errorMessage, $code, $filename, $lineno, $errorContext = null, $displayMessage = null) {
+	// 	$this->errorContext = $errorContext;
 
-		if (!$displayMessage) {
-			$displayMessage = _('Action is not performed correctly.');
-		}
+	// 	if (!$displayMessage) {
+	// 		$displayMessage = _('Action is not performed correctly.');
+	// 	}
 
-		parent::__construct($errorMessage, $code, null, $displayMessage);
-		$this->setFile($filename);
-		$this->setLineNo($lineno);
-	}
+	// 	parent::__construct($errorMessage, $code, null, $displayMessage);
+	// 	$this->setFile($filename);
+	// 	$this->setLineNo($lineno);
+	// }
 
 	/**
 	 * Function sets the filename where the exception was thrown.
