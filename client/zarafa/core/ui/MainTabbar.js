@@ -66,9 +66,9 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		var leftItems1 = [zeroItem, secondItem, fifthItem, firstItem, fourthItem];
 
 		console.log(leftItems1);
-		// var leftItems = leftItems.push(sevenItem);
-		// // var leftItems = leftItems.slice(0, 6);
-		// console.log(leftItems);
+		// var leftItems1 = leftItems1.push(sevenItem);
+		// // var leftItems1 = leftItems1.slice(0, 6);
+		// console.log(leftItems1);
 		// console.log(sevenItem);
 		var rightItems = container.populateInsertionPoint('main.maintabbar.right', this) || [];
 
@@ -77,7 +77,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		// The right items are sorted so that the first item appears to the most right
 		rightItems = Zarafa.core.Util.sortArray(rightItems, 'DESC', 'tabOrderIndex');
 
-		this.addTooltip(leftItems, rightItems);
+		this.addTooltip(leftItems1, rightItems);
 
 		var loginText = {
 				xtype: 'tbtext',
@@ -115,7 +115,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 			scope: this
 		};
 
-		this.add(leftItems, {xtype: 'tbfill'}, loginText, reminder, rightItems);
+		this.add(leftItems1, {xtype: 'tbfill'}, loginText, reminder, rightItems);
 
 		// Don't show the logout button when using SSO, but always show it in DeskApp
 		if ( !container.getServerConfig().usingSSO() || Zarafa.isDeskApp ){
@@ -131,13 +131,13 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 
 	/**
 	 * Used to apply key shortcut and context name in tooltip.
-	 * @param {Array} leftItems The leftItems contains the left context items which are properly sorted by priority.
+	 * @param {Array} leftItems1 The leftItems1 contains the left context items which are properly sorted by priority.
 	 * @param {Array} rightItems The rightItems contains the right context items.
 	 */
-	addTooltip: function(leftItems, rightItems)
+	addTooltip: function(leftItems1, rightItems)
 	{
 		var contextItems = [];
-		contextItems = contextItems.concat(leftItems, rightItems);
+		contextItems = contextItems.concat(leftItems1, rightItems);
 		Ext.each(contextItems, function(context, index) {
 			context.tooltip = context.text + ' (Ctrl + '+index+')';
 		});
