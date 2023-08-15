@@ -533,6 +533,7 @@ Zarafa.contact.ContactContext = Ext.extend(Zarafa.core.Context, {
 			text: this.getDisplayName(),
 			tabOrderIndex: 4,
 			context: this.getName(),
+			cls: "icon_maintab_contact",
 			id: 'mainmenu-button-contacts'
 		};
 	},

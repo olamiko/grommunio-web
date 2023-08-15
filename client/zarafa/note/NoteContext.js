@@ -377,10 +377,13 @@ Zarafa.note.NoteContext = Ext.extend(Zarafa.core.Context, {
 			text: this.getDisplayName(),
 			tabOrderIndex: 7,
 			context: this.getName(),
+			cls: "icon_new_note",
 			id: 'mainmenu-button-notes'
 		};
 	},
-
+	// mainmenu-button-calendar
+	// zarafa-settings-category-calendar
+	// resources\iconsets\extensions.json, breeze\breeze-icons.css, classic\classic-icons.css
 	/**
 	 * Event handler which is executed right before the {@link #viewmodechange}
 	 * event is fired. This will check which {@link Zarafa.note.data.ViewModes ViewMode}

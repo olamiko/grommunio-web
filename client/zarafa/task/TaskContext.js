@@ -463,6 +463,7 @@ Zarafa.task.TaskContext = Ext.extend(Zarafa.core.Context, {
 			text: this.getDisplayName(),
 			tabOrderIndex: 5,
 			context: this.getName(),
+			cls: "icon_task",
 			id: 'mainmenu-button-tasks'
 		};
 	},

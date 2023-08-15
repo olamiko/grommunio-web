@@ -50,6 +50,8 @@ Zarafa.common.plugins.ManualPlugin = Ext.extend(Zarafa.core.Plugin, {
 			text: _('Help'),
 			tabOrderIndex: 0,
 			handler: this.onHelpButton,
+			cls: 'icon-maintab_help',
+			id: 'mainmenu-button-help',
 			scope: this
 		};
 	},

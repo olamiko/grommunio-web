@@ -627,6 +627,7 @@ Zarafa.mail.MailContext = Ext.extend(Zarafa.core.Context, {
 			text: this.getDisplayName(),
 			tabOrderIndex: 2,
 			context: this.getName(),
+			cls: ".icon_mail_read .icon_mail_report_ndr",
 			id: 'mainmenu-button-mail'
 		};
 	},

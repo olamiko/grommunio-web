@@ -9,6 +9,13 @@
 	".icon_note_large_white": ".x-btn.zarafa-action .icon_new_note",
 
 	".icon_settings": "#mainmenu-button-settings em",
+	".icon_task": "#mainmenu-button-tasks em",
+	".icon_new_note": "#mainmenu-button-notes em",
+	".icon_maintab_files": "#mainmenu-button-filescontexts em",
+	".icon_maintab_help": "#mainmenu-button-help em",
+	// ".icon_settings": "#mainmenu-button-settings em",
+	// ".icon_settings": "#mainmenu-button-settings em",
+	// ".icon_settings": "#mainmenu-button-settings em",
 	".icon_logout": "#mainmenu-button-logout em",
 
 	".icon_cogwheel_s": ".x-grid3-hd-btn",
