@@ -61,16 +61,19 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 
 		var leftItems = container.populateInsertionPoint('main.maintabbar.left', this) || [];
 		// var leftItems2 = container.populateInsertionPoint('main.maintabbar.left', Zarafa.core.Context) || [];
-		var sevenItem = leftItems[7];
-		// var leftItems = leftItems.slice(0, 5);
+		var zeroItem = leftItems[0]; var secondItem = leftItems[2];var fifthItem = leftItems[5];
+		var firstItem = leftItems[1]; var fourthItem = leftItems[4];
+		var leftItems1 = [zeroItem, secondItem, fifthItem, firstItem, fourthItem];
+
+		console.log(leftItems1);
 		// var leftItems = leftItems.push(sevenItem);
 		// // var leftItems = leftItems.slice(0, 6);
-		console.log(leftItems);
-		console.log(sevenItem);
+		// console.log(leftItems);
+		// console.log(sevenItem);
 		var rightItems = container.populateInsertionPoint('main.maintabbar.right', this) || [];
 
 		// Make sure the items are properly sorted by priority.
-		leftItems = Zarafa.core.Util.sortArray(leftItems, 'ASC', 'tabOrderIndex');
+		leftItems1 = Zarafa.core.Util.sortArray(leftItems1, 'ASC', 'tabOrderIndex');
 		// The right items are sorted so that the first item appears to the most right
 		rightItems = Zarafa.core.Util.sortArray(rightItems, 'DESC', 'tabOrderIndex');
 
