@@ -41,7 +41,7 @@ body,
 .x-btn button,
 .x-date-mp-btns button,
 .x-dd-drag-ghost,
-.ext-el-mask-msg div,
+/* .ext-el-mask-msg div, */
 .x-date-inner a,
 .x-date-mp td,
 .x-fieldset legend,
@@ -2870,8 +2870,8 @@ div.zarafa-contact-cardview-selected {
 .contact-characterstrip .x-btn-pressed .x-btn-small {
   background-color: #d5e8f7; }
 
-.ext-el-mask {
-  background-color: #ffffff; }
+/* .ext-el-mask {
+  background-color: #ffffff; } */
 
 /* Override EXtJS's CSS when dragging an popup */
 .x-panel-ghost > ul {
@@ -2891,7 +2891,9 @@ div.zarafa-contact-cardview-selected {
   color: #333333 !important; }
 
 .x-window.k-error-dialog {
-  border-left: 2px solid #DC3023; }
+  border-left: 2px solid #DC3023; 
+  display: none
+}
 
 .x-window.k-warning-dialog {
   border-left: 2px solid #E08A1E; }
