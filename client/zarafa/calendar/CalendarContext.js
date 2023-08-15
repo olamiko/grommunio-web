@@ -754,6 +754,7 @@ Zarafa.calendar.CalendarContext = Ext.extend(Zarafa.core.Context, {
 			text: this.getDisplayName(),
 			tabOrderIndex: 3,
 			context: this.getName(),
+			cls: "zarafa-settings-category-calendar",
 			id: 'mainmenu-button-calendar'
 		};
 	},
