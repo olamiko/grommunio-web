@@ -76,8 +76,8 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 
 		var theUserName = container.getUser().getDisplayName();
 		const nameArray = theUserName.split(" ");
-		const nameInitials = nameArray.map(word => word.charAt(0).toUpperCase());
-		const initials = nameInitials.join(""); // Join the initials together
+		const nameInitials = nameArray.map(word => word.charAt(0).toUpperCase()).join("");
+		const initials = nameInitials.toString(); // Join the initials together
 		
 		console.log(initials); // Output: "cf"
 		var loginText = {
