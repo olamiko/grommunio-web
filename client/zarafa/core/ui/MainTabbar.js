@@ -62,7 +62,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		var leftItems = container.populateInsertionPoint('main.maintabbar.left', this) || [];
 		// var leftItems2 = container.populateInsertionPoint('main.maintabbar.left', Zarafa.core.Context) || [];
 		var leftItems = [...new Set(leftItems)];
-		var sevenItem = left[6];
+		var sevenItem = leftItems[6];
 		var leftItems = leftItems.slice(0, 4).concat(sevenItem);
 		// leftItems.slice(0,6);
 		console.log(leftItems);
