@@ -61,7 +61,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 
 		var leftItems1 = container.populateInsertionPoint('main.maintabbar.left', this) || [];
 		var rightItems = container.populateInsertionPoint('main.maintabbar.right', this) || [];
-		console.log(rightItems);
+		console.log(leftItems);
 
 		// var zeroItem = leftItems[0]; var secondItem = leftItems[2];var fifthItem = leftItems[5];
 		// var firstItem = leftItems[1]; var fourthItem = leftItems[4];
@@ -78,7 +78,8 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 				xtype: 'tbtext',
 				width: 'auto',
 				cls: 'zarafa-maintabbar-logintext',
-				text: container.getUser().getDisplayName(),
+				// text: container.getUser().getDisplayName(),
+				text: container.getUser(),
 				id: 'mainmenu-logintext'
 		};
 
@@ -110,7 +111,9 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 			scope: this
 		};
 
-		this.add(leftItems1, {xtype: 'tbfill'}, loginText, reminder, rightItems);
+		// this.add(leftItems1, {xtype: 'tbfill'}, loginText, reminder, rightItems);
+		this.add(leftItems1, rightItems);
+		console.log(loginText);
 
 		// Don't show the logout button when using SSO, but always show it in DeskApp
 		if ( !container.getServerConfig().usingSSO() || Zarafa.isDeskApp ){
@@ -138,10 +141,6 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		});
 	},
 
-	// addFilesContext: function() 
-	// {
-	// 	return new Zarafa.plugins.files.FilesContext();
-	// },		console.log(addFilesContext());
 	/**
 	 * Event handler which is called when the user presses the 'logout' button
 	 * @private

@@ -1404,9 +1404,10 @@ li.x-menu-item-active {
 body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
   /* background: linear-gradient(150deg, #009FFD, #2a2a72); */
   background: white;
-  color: #ffffff;
+  /* color: #ffffff; */
+  color:#000000;
   padding: 0;
-  margin-left: 15em;
+  margin-left: 2em;
   /* focused button */ }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct * {
     font-size: 15px !important; }
