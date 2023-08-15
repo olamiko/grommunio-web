@@ -61,6 +61,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 
 		var leftItems = container.populateInsertionPoint('main.maintabbar.left', this) || [];
 		// var leftItems2 = container.populateInsertionPoint('main.maintabbar.left', Zarafa.core.Context) || [];
+		var leftItems = [...new Set(leftItems)];
 		console.log(leftItems);
 		var rightItems = container.populateInsertionPoint('main.maintabbar.right', this) || [];
 
