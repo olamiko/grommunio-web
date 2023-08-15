@@ -96,8 +96,8 @@ Zarafa.plugins.files.FilesContext = Ext.extend(Zarafa.core.Context, {
 			context      : 'filescontext',
 			id: 'mainmenu-button-filescontexts',
 			// style: {
-			height: "15px !important", 
-			width: "15px !important"
+			height: "10px !important", 
+			width: "10px !important"
 			// }
 		};
 	},
