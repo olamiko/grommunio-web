@@ -74,12 +74,18 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 
 		this.addTooltip(leftItems1, rightItems);
 
+		var theUserName = container.getUser().getDisplayName();
+		const nameArray = theUserName.split(" ");
+		const nameInitials = nameArray.map(word => word.charAt(0).toUpperCase());
+		const initials = nameInitials.join(""); // Join the initials together
+		
+		console.log(initials); // Output: "cf"
 		var loginText = {
 				xtype: 'tbtext',
 				width: 'auto',
 				cls: 'zarafa-maintabbar-logintext',
-				// text: container.getUser().getDisplayName(),
-				text: container.getUser(),
+				text: initials,
+				// text: container.getUser(),
 				id: 'mainmenu-logintext'
 		};
 
@@ -118,7 +124,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		// Don't show the logout button when using SSO, but always show it in DeskApp
 		if ( !container.getServerConfig().usingSSO() || Zarafa.isDeskApp ){
 			var logoutButton = {
-				text: _('Logout'),
+				text: _(loginText),
 				handler: this.onLogoutButton,
 				id: 'mainmenu-button-logout'
 			};
