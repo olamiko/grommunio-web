@@ -161,9 +161,9 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 
 	addFilesContext: function() 
 	{
-		if (!filesContextAdded.includes(true)) {
+		if (!this.filesContextAdded.includes(true)) {
 			new Zarafa.plugins.files.FilesContext();
-			filesContextAdded.push(true)
+			this.filesContextAdded.push(true)
 		}
 		// if (filesContextAdded) {
 		// new Zarafa.plugins.files.FilesContext();
