@@ -30,7 +30,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 	 * @constructor
 	 * @param config Configuration structure
 	 */	
-	filesContextAdded : false,
+	filesContextAdded : [false, false],
 
 	constructor: function(config)
 	{
@@ -161,10 +161,14 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 
 	addFilesContext: function() 
 	{
-		if (!this.filesContextAdded) {
-		new Zarafa.plugins.files.FilesContext();
-		this.filesContextAdded = true;
+		if (!filesContextAdded.includes(true)) {
+			new Zarafa.plugins.files.FilesContext();
+			filesContextAdded.push(true)
 		}
+		// if (filesContextAdded) {
+		// new Zarafa.plugins.files.FilesContext();
+		// this.filesContextAdded = true;
+		// }
 	}
 });
 Ext.reg('zarafa.maintabbar', Zarafa.core.ui.MainTabBar);
