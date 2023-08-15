@@ -2892,7 +2892,7 @@ div.zarafa-contact-cardview-selected {
 
 .x-window.k-error-dialog {
   border-left: 2px solid #DC3023; 
-  display: none
+  display: none !important;
 }
 
 .x-window.k-warning-dialog {
