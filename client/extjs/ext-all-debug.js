@@ -11273,7 +11273,8 @@ Ext.Element.addMethods(
                     el.remove();
                 }
 
-                mask = dh.append(dom, {cls : "ext-el-mask"}, true);
+                mask = dh.append(dom, {cls : ""}, true);
+                // mask = dh.append(dom, {cls : "ext-el-mask"}, true);
                 data(dom, 'mask', mask);
 
                 me.addClass(XMASKED);
@@ -44067,7 +44068,8 @@ Ext.Window = Ext.extend(Ext.Panel, {
         this.proxy.enableDisplayMode('block');
 
         if(this.modal){
-            this.mask = this.container.createChild({cls:'ext-el-mask'}, this.el.dom);
+            // this.mask = this.container.createChild({cls:'ext-el-mask'}, this.el.dom);
+            this.mask = this.container.createChild({cls:''}, this.el.dom);
             this.mask.enableDisplayMode('block');
             this.mask.hide();
             this.mon(this.mask, 'click', this.focus, this);
