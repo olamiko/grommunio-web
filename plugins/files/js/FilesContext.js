@@ -95,9 +95,10 @@ Zarafa.plugins.files.FilesContext = Ext.extend(Zarafa.core.Context, {
 			cls      : "icon_maintab_files",
 			context      : 'filescontext',
 			id: 'mainmenu-button-filescontexts',
-			style: {
-				height: "15px !important", width: "15px !important"
-			}
+			// style: {
+			height: "15px !important", 
+			width: "15px !important"
+			// }
 		};
 	},
     getDisplayName: function () {
