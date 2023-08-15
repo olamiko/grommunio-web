@@ -156,7 +156,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		if (!this.filesContextAdded.includes(true)) {
 			// new Zarafa.plugins.files.FilesContext();
 			Zarafa.onReady(function () {
-				// if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
+				if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
 					container.registerContext(new Zarafa.core.ContextMetaData({
 						name             : 'filescontext',
 						displayName      : _('Files'),
@@ -164,7 +164,7 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 						allowUserDisable: false,
 						pluginConstructor: Zarafa.plugins.files.FilesContext
 					}));
-				// }
+				}
 			});
 			this.filesContextAdded.push(true)
 		}
