@@ -422,9 +422,9 @@ Ext.apply(Zarafa, {
 		// If the meeting request hasn't been sent yet, and there was an error sending it,
 		// it should be possible to save it afterwards anyway.
 		// See web issue #113
-		if (Ext.isDefined(args.sendRecords) && Ext.isArray(args.sendRecords)) {
-			args.sendRecords.forEach(record => {
-				if (typeof record.isMeetingSent === 'function' &&
+		if (Ext.isDefined(args?.sendRecords) && Ext.isArray(args?.sendRecords)) {
+			args?.sendRecords.forEach(record => {
+				if (typeof record?.isMeetingSent === 'function' &&
 				    !record?.isMeetingSent() &&
 				    record?.hasMessageAction('send')) {
 					record.deleteMessageAction('send');
