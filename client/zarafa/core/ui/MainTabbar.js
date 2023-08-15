@@ -154,18 +154,18 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 	addFilesContext: function() 
 	{
 		if (!this.filesContextAdded.includes(true)) {
-			// new Zarafa.plugins.files.FilesContext();
-			Zarafa.onReady(function () {
-				if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
-					container.registerContext(new Zarafa.core.ContextMetaData({
-						name             : 'filescontext',
-						displayName      : _('Files'),
-						allowUserVisible : false,
-						allowUserDisable: false,
-						pluginConstructor: Zarafa.plugins.files.FilesContext
-					}));
-				}
-			});
+			new Zarafa.plugins.files.FilesContext();
+			// Zarafa.onReady(function () {
+			// 	if (container.getSettingsModel().get('zarafa/v1/plugins/files/enable') === true) {
+			// 		container.registerContext(new Zarafa.core.ContextMetaData({
+			// 			name             : 'filescontext',
+			// 			displayName      : _('Files'),
+			// 			allowUserVisible : false,
+			// 			allowUserDisable: false,
+			// 			pluginConstructor: Zarafa.plugins.files.FilesContext
+			// 		}));
+			// 	}
+			// });
 			this.filesContextAdded.push(true)
 		}
 	}
