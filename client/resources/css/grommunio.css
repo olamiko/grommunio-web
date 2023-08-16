@@ -1484,7 +1484,12 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
   {
     padding-left: 20px; }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-logout em button.x-btn-text {
-    padding-left: 32px;
+    /* padding-left: 32px; */
+        width: 2.8em;
+    color: white;
+    font-size: inherit !important;
+    border-radius: 50%;
+    background-color: blue;
     text-transform: none; }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-logintext {
     opacity: 0.7;
