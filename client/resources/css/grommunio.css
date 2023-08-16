@@ -1473,7 +1473,10 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
       background-position: center bottom !important; }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .x-toolbar-right button.x-btn-text {
     text-transform: none; }
-  body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-settings em,
+  body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-settings em{
+    margin-left: 3em;
+    background-position: 12px center !important;
+  }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-logout em {
     background-position: 12px center !important; }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-settings em button.x-btn-text,
