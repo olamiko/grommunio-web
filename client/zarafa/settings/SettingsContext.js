@@ -270,7 +270,8 @@ Zarafa.settings.SettingsContext = Ext.extend(Zarafa.core.Context, {
 	createSettingsMainTab: function()
 	{
 		return {
-			text: this.getDisplayName(),
+			// text: this.getDisplayName(),
+			text: _(''),
 			tabOrderIndex: 1,
 			context: this.getName(),
 			id: 'mainmenu-button-settings'
@@ -427,7 +428,8 @@ Zarafa.settings.SettingsContext = Ext.extend(Zarafa.core.Context, {
 Zarafa.onReady(function() {
 	container.registerContext(new Zarafa.core.ContextMetaData({
 		name: 'settings',
-		displayName: _('Settings'),
+		// displayName: _('Settings'),
+		displayName: _(''),
 		allowUserVisible: false,
 		pluginConstructor: Zarafa.settings.SettingsContext
 	}));
