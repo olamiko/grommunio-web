@@ -1220,11 +1220,9 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 
 /* global search input field */
 .zarafa-searchfield {
-  /* padding-top: 0px !important;
+  padding-top: 0px !important;
   max-width: 350px;
-  border-right: 1px solid transparent;  */
-  width: 1em !important;
-}
+  border-right: 1px solid transparent; }
 
 /* seperator In ExtJS it's tbseperator, used in for example create new mail dialog*/
 .x-toolbar .xtb-sep {
