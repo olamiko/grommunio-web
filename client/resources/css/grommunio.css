@@ -684,6 +684,7 @@ div.x-btn-group-bc {
 /* Remove some borders for specific panels so we don't get double borders */
 #zarafa-mainpanel-contentpanel-mail .zarafa-context-mainpanel > .x-panel-bwrap > .x-panel-body {
   /* border: none;  */
+  margin-top: 4em;
 }
 #zarafa-mainpanel-contentpanel-mail #zarafa-main-content-mail-preview {
   border: none; }
@@ -736,27 +737,34 @@ body.Safari input[type="radio"] {
   padding: 0 6px; }
 
 .x-form-text.x-form-focus:not(.x-trigger-noedit) {
-  border-color: #3094e3 !important; }
+  border-color: #3094e3 !important;
+  padding-left: 5em;
+}
 
 .x-form-field-wrap.x-trigger-wrap-focus:not(.x-freebusy-userlist-container) {
   border-color: #3094e3; }
   .x-form-field-wrap.x-trigger-wrap-focus:not(.x-freebusy-userlist-container) input.x-form-text.x-form-field.x-form-focus {
-    border-color: #3094e3 !important; }
+    border-color: #3094e3 !important; 
+    padding-left: 5em;
+  }
 
 .x-form-text:not(.x-zarafa-boxfield):not(.x-zarafa-boxfield-input),
 .ext-strict .x-form-text:not(.x-zarafa-boxfield):not(.x-zarafa-boxfield-input),
 .ext-webkit .x-small-editor .x-form-text:not(.x-zarafa-boxfield):not(.x-zarafa-boxfield-input),
-.ext-strict .ext-webkit .x-small-editor .x-form-text:not(.x-zarafa-boxfield):not(.x-zarafa-boxfield-input) {
+.et-strict .ext-webkit .x-small-editor .x-form-text:not(.x-zarafa-boxfield):not(.x-zarafa-boxfield-input) {
   line-height: 24px;
-  height: 22px !important;
-  /* subtract 2 for the border-width */ }
+  height: 42px !important;
+  border-radius: 10%;
+  position: fixed;
+  /* subtract 2 for the border-width */ 
+}
 
 /* combobox and spinner field */
 .x-form-field-trigger-wrap .x-form-text,
 .x-form-field-wrap .x-form-text {
   line-height: 22px;
   height: 22px; }
-.x-form-field-trigger-wrap .x-form-trigger,
+.x-foxrm-field-trigger-wrap .x-form-trigger,
 .x-form-field-trigger-wrap .x-form-spinner-trigger,
 .x-form-field-wrap .x-form-trigger,
 .x-form-field-wrap .x-form-spinner-trigger {
@@ -1204,16 +1212,19 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
   padding: 4.5px 6px;
   /* we need to subtract 2px extra to account for the borders around the buttons */
   border: none;
-  border-bottom: 1px solid #e6e6e6; 
+  /* border-bottom: 1px solid #e6e6e6;  */
   position: fixed;
   top: 4em;
+  margin-left: 23em;
 }
 
 /* global search input field */
 .zarafa-searchfield {
-  padding-top: 0px !important;
+  /* padding-top: 0px !important;
   max-width: 350px;
-  border-right: 1px solid transparent; }
+  border-right: 1px solid transparent;  */
+  width: 1em !important;
+}
 
 /* seperator In ExtJS it's tbseperator, used in for example create new mail dialog*/
 .x-toolbar .xtb-sep {
@@ -1248,7 +1259,8 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
       border: 1px solid transparent; }
   .x-toolbar .x-btn.x-btn-over:not(.zarafa-action):not(.x-btn-noicon) .x-btn-small,
   .x-toolbar .x-btn.x-btn-pressed:not(.zarafa-action):not(.x-btn-noicon) .x-btn-small {
-    border: 1px solid #dadada; }
+    /* border: 1px solid transparent;  */
+  }
   .x-toolbar .x-btn.x-btn-over.x-btn-click:not(.zarafa-action):not(.x-btn-noicon) .x-btn-small {
     background-color: #f8f8f8; }
   .x-toolbar .x-btn.x-btn-focus:not(.zarafa-action):not(.x-btn-noicon) .x-btn-small {

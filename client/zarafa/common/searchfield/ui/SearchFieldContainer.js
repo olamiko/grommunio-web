@@ -20,7 +20,7 @@ Zarafa.common.searchfield.ui.SearchFieldContainer = Ext.extend(Ext.Container, {
 	{
 		Ext.apply(config, {
 			xtype: 'zarafa.searchfieldcontainer',
-			cls: 'search_container',
+			cls: 'search_container icon_magnifier',
 			items:[{
 				xtype: 'zarafa.searchtextfield',
 				searchContainer: this
@@ -28,12 +28,17 @@ Zarafa.common.searchfield.ui.SearchFieldContainer = Ext.extend(Ext.Container, {
 				xtype: 'zarafa.searchfoldercombo',
 				model: config.model,
 				searchFieldContainer: this
-			},{
-				xtype: 'button',
-				ref: 'searchBtn',
-				iconCls: 'icon_magnifier',
-				scope: this
-			}]
+			}
+			// ,{
+			// 	xtype: 'button',
+			// 	ref: 'searchBtn',
+			// 	iconCls: 'icon_magnifier',
+			// 	scope: this,
+			// 	style: {
+			// 		"visibility": hidden
+			// 	}
+			// }
+		]
 		});
 
 		Zarafa.common.searchfield.ui.SearchFieldContainer.superclass.constructor.call(this, config);
