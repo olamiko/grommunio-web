@@ -281,7 +281,7 @@ button::-moz-focus-inner {
 .x-btn.x-btn-over .x-btn-small, .x-btn.x-btn-over .x-btn-medium, .x-btn.x-btn-over .x-btn-large {
   border-radius: 0;
   background: #dadada;
-  /* box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35);  */
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35); 
 }
 
 /* active button */
