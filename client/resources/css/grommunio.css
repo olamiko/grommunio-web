@@ -281,7 +281,8 @@ button::-moz-focus-inner {
 .x-btn.x-btn-over .x-btn-small, .x-btn.x-btn-over .x-btn-medium, .x-btn.x-btn-over .x-btn-large {
   border-radius: 0;
   background: #dadada;
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35); }
+  /* box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35);  */
+}
 
 /* active button */
 .x-btn.x-btn-over.x-btn-click .x-btn-small, .x-btn.x-btn-over.x-btn-click .x-btn-medium, .x-btn.x-btn-over.x-btn-click .x-btn-large, .x-btn.x-btn-click .x-btn-small, .x-btn.x-btn-click .x-btn-medium, .x-btn.x-btn-click .x-btn-large {
@@ -676,7 +677,7 @@ div.x-btn-group-bc {
 /* tab panels */
 .x-tab-panel-body {
   border-color: #e6e6e6; }
-
+  /* x-btn zarafa-maintab x-btn-noicon */
 #zarafa-mainpanel {
   margin-left: -3px; }
 
