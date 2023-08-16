@@ -83,8 +83,10 @@ body,
   background-position: center center !important; }
 
 .arrow_menubar, .zarafa-maintabbar-maintab-active button.x-btn-text, .zarafa-maintabbar-maintab-active.x-btn-over button.x-btn-text, .zarafa-maintabbar-maintab-active.x-btn-over.x-btn-click button.x-btn-text {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMicgaGVpZ2h0PSc2JyB2aWV3Qm94PScwIDAgMTIgNic+IDxwYXRoIHN0eWxlPSdmaWxsOiNmZmZmZmYnIGQ9J00gNiAwIEwgMCA2IEwgMTIgNiBMIDYgMCB6ICcgLz48L3N2Zz4=) !important;
+  /* background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMicgaGVpZ2h0PSc2JyB2aWV3Qm94PScwIDAgMTIgNic+IDxwYXRoIHN0eWxlPSdmaWxsOiNmZmZmZmYnIGQ9J00gNiAwIEwgMCA2IEwgMTIgNiBMIDYgMCB6ICcgLz48L3N2Zz4=) !important; */
   background-repeat: no-repeat !important;
+  border-radius: 10%;
+  background-color: rgb(213, 232, 247, 0.5) ! important;
   background-position: center center !important; }
 
 .arrow_right_l, .light-background .zarafa-calendar-tab-icon-separate, .x-date-right a, .x-date-mp-ybtn a, .x-tree-lines .x-tree-elbow-plus, .x-tree-lines .x-tree-elbow-end-plus, .x-menu-item-arrow, .x-tool.x-tool-toggle.x-tool-collapse-east, .x-layout-collapsed .x-tool.x-tool-toggle.x-tool-expand-west, .x-panel-header .x-tool.x-tool-collapse-east, .x-layout-collapsed .x-tool.x-tool-expand-west, .x-tab-scroller-right {
@@ -279,7 +281,8 @@ button::-moz-focus-inner {
 .x-btn.x-btn-over .x-btn-small, .x-btn.x-btn-over .x-btn-medium, .x-btn.x-btn-over .x-btn-large {
   border-radius: 0;
   background: #dadada;
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35); }
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.35); 
+}
 
 /* active button */
 .x-btn.x-btn-over.x-btn-click .x-btn-small, .x-btn.x-btn-over.x-btn-click .x-btn-medium, .x-btn.x-btn-over.x-btn-click .x-btn-large, .x-btn.x-btn-click .x-btn-small, .x-btn.x-btn-click .x-btn-medium, .x-btn.x-btn-click .x-btn-large {
@@ -674,7 +677,7 @@ div.x-btn-group-bc {
 /* tab panels */
 .x-tab-panel-body {
   border-color: #e6e6e6; }
-
+  /* x-btn zarafa-maintab x-btn-noicon */
 #zarafa-mainpanel {
   margin-left: -3px; }
 
@@ -1407,8 +1410,8 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
   /* color: #ffffff; */
   color:#000000;
   padding: 0;
-  /* margin-left: 2em; */
-  margin-left: 16em;
+  margin-left: 2em;
+  /* margin-left: 16em; */
   /* focused button */ }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct * {
     font-size: 15px !important; }
@@ -1431,7 +1434,8 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
       color: black;
       text-transform: uppercase;
       text-shadow: none;
-      padding: 10px 12px 10px 12px;
+      padding: 10px 5px;
+      margin-right: 20px;
       height: auto;
       opacity: 0.7;
       width: auto;
@@ -1440,7 +1444,9 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .x-btn.x-btn-focus .x-btn-small {
     border: none !important; }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .x-btn.x-btn-over, body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .x-btn.x-btn-over.x-btn-click {
-    background-color: #1976d2 !important; }
+    /* background-color: #1976d2 !important;  */
+    background-color: transparent !important;
+  }
     body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .x-btn.x-btn-over .x-btn-small, body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .x-btn.x-btn-over.x-btn-click .x-btn-small {
       border: none; }
     body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .x-btn.x-btn-over button.x-btn-text, body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .x-btn.x-btn-over.x-btn-click button.x-btn-text {
@@ -1460,8 +1466,9 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
     body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active.x-btn-over.x-btn-click button.x-btn-text {
       border: none;
       /* color: #ffffff; */
-      color: black;
-      opacity: 1;
+      /* color: black; */
+      color: blue;
+      opacity: 0;
       font-weight: normal;
       background-position: center bottom !important; }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .x-toolbar-right button.x-btn-text {
@@ -1477,9 +1484,14 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-help em button.x-btn-text,
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-tasks em button.x-btn-text
   {
-    padding-left: 32px; }
+    padding-left: 20px; }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-logout em button.x-btn-text {
-    padding-left: 32px;
+    /* padding-left: 32px; */
+        width: 2.8em;
+    color: white;
+    font-size: inherit !important;
+    border-radius: 50%;
+    background: linear-gradient(120deg, #009FFD, #2a2a72);;
     text-transform: none; }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-logintext {
     opacity: 0.7;
