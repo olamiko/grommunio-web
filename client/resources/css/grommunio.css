@@ -83,10 +83,10 @@ body,
   background-position: center center !important; }
 
 .arrow_menubar, .zarafa-maintabbar-maintab-active button.x-btn-text, .zarafa-maintabbar-maintab-active.x-btn-over button.x-btn-text, .zarafa-maintabbar-maintab-active.x-btn-over.x-btn-click button.x-btn-text {
-  /* background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMicgaGVpZ2h0PSc2JyB2aWV3Qm94PScwIDAgMTIgNic+IDxwYXRoIHN0eWxlPSdmaWxsOiNmZmZmZmYnIGQ9J00gNiAwIEwgMCA2IEwgMTIgNiBMIDYgMCB6ICcgLz48L3N2Zz4=) !important; */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMicgaGVpZ2h0PSc2JyB2aWV3Qm94PScwIDAgMTIgNic+IDxwYXRoIHN0eWxlPSdmaWxsOiNmZmZmZmYnIGQ9J00gNiAwIEwgMCA2IEwgMTIgNiBMIDYgMCB6ICcgLz48L3N2Zz4=) !important;
   background-repeat: no-repeat !important;
   border-radius: 10%;
-  /* background-color: rgb(213, 232, 247, 0.5) ! important; */
+  background-color: rgb(213, 232, 247, 0.5) ! important;
   background-position: center center !important; }
 
 .arrow_right_l, .light-background .zarafa-calendar-tab-icon-separate, .x-date-right a, .x-date-mp-ybtn a, .x-tree-lines .x-tree-elbow-plus, .x-tree-lines .x-tree-elbow-end-plus, .x-menu-item-arrow, .x-tool.x-tool-toggle.x-tool-collapse-east, .x-layout-collapsed .x-tool.x-tool-toggle.x-tool-expand-west, .x-panel-header .x-tool.x-tool-collapse-east, .x-layout-collapsed .x-tool.x-tool-expand-west, .x-tab-scroller-right {
@@ -1462,7 +1462,8 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active,
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active.x-btn-over,
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active.x-btn-over.x-btn-click {
-    /* background-color: white !important;  */
+    background-color: white !important; 
+    background-color: transparent !important;
   }
     body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active .x-btn-small,
     body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct .zarafa-maintabbar-maintab-active.x-btn-over .x-btn-small,
