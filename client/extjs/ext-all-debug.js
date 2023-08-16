@@ -18018,7 +18018,7 @@ myGridPanel.mon(myGridPanel.getSelectionModel(), {
         this.mons.push({
             item: item, ename: ename, fn: fn, scope: scope
         });
-        item.on(ename, fn, scope, opt);
+        item?.on(ename, fn, scope, opt);
     },
 
     /**
