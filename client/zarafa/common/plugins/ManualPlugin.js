@@ -47,7 +47,8 @@ Zarafa.common.plugins.ManualPlugin = Ext.extend(Zarafa.core.Plugin, {
 	createManualMainTab: function()
 	{
 		return {
-			text: _('Help'),
+			// text: _('Help'),
+			text: _(''),
 			tabOrderIndex: 0,
 			handler: this.onHelpButton,
 			cls: 'icon-maintab_help',
