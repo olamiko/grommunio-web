@@ -58,6 +58,20 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 	 */
 	initBar: function()
 	{
+		var theUserName = container.getUser().getDisplayName();
+		const nameArray = theUserName.split(" ");
+		const nameInitials = nameArray.map(word => word.charAt(0).toUpperCase()).join("");
+		const initials = nameInitials.toString(); // Join the initials together
+		
+		var loginText = {
+				xtype: 'tbtext',
+				width: 'auto',
+				cls: 'zarafa-maintabbar-logintext',
+				text: initials,
+				// text: container.getUser(),
+				id: 'mainmenu-logintext'
+		};
+
 			// Don't show the logout button when using SSO, but always show it in DeskApp
 		if ( !container.getServerConfig().usingSSO() || Zarafa.isDeskApp ){
 			var logoutButton = {
@@ -85,20 +99,6 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		rightItems = Zarafa.core.Util.sortArray(rightItems, 'DESC', 'tabOrderIndex');
 
 		this.addTooltip(leftItems1, rightItems);
-
-		var theUserName = container.getUser().getDisplayName();
-		const nameArray = theUserName.split(" ");
-		const nameInitials = nameArray.map(word => word.charAt(0).toUpperCase()).join("");
-		const initials = nameInitials.toString(); // Join the initials together
-		
-		var loginText = {
-				xtype: 'tbtext',
-				width: 'auto',
-				cls: 'zarafa-maintabbar-logintext',
-				text: initials,
-				// text: container.getUser(),
-				id: 'mainmenu-logintext'
-		};
 
 		// Adding reminder button with bell icon.
 		var reminder = {
