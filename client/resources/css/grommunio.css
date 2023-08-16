@@ -1477,7 +1477,7 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-help em button.x-btn-text,
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-tasks em button.x-btn-text
   {
-    padding-left: 32px; }
+    padding-left: 20px; }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-logout em button.x-btn-text {
     padding-left: 32px;
     text-transform: none; }
