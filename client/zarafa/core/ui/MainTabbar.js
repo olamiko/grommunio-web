@@ -58,6 +58,19 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 	 */
 	initBar: function()
 	{
+			// Don't show the logout button when using SSO, but always show it in DeskApp
+		if ( !container.getServerConfig().usingSSO() || Zarafa.isDeskApp ){
+			var logoutButton = {
+				text: _(loginText.text),
+				handler: this.onLogoutButton,
+				id: 'mainmenu-button-logout'
+			};
+
+		//	this.add(logoutButton);
+		this.registerInsertionPoint('main.maintabbar.right', this.createManualLogoutTab, this);
+		};
+		
+		
 
 		var leftItems = container.populateInsertionPoint('main.maintabbar.left', this) || [];
 		var rightItems = container.populateInsertionPoint('main.maintabbar.right', this) || [];
@@ -65,7 +78,6 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		var zeroItem = leftItems[0]; var secondItem = leftItems[2];var fifthItem = leftItems[5];
 		var firstItem = leftItems[1]; var fourthItem = leftItems[4];
 		var leftItems1 = [zeroItem, secondItem, fifthItem, firstItem, fourthItem];
-				console.log(leftItems1);
 
 		// Make sure the items are properly sorted by priority.
 		leftItems1 = Zarafa.core.Util.sortArray(leftItems1, 'ASC', 'tabOrderIndex');
@@ -79,7 +91,6 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		const nameInitials = nameArray.map(word => word.charAt(0).toUpperCase()).join("");
 		const initials = nameInitials.toString(); // Join the initials together
 		
-		console.log(initials); // Output: "cf"
 		var loginText = {
 				xtype: 'tbtext',
 				width: 'auto',
@@ -121,16 +132,6 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		this.add(leftItems1, rightItems);
 		console.log(loginText);
 
-		// Don't show the logout button when using SSO, but always show it in DeskApp
-		if ( !container.getServerConfig().usingSSO() || Zarafa.isDeskApp ){
-			var logoutButton = {
-				text: _(loginText.text),
-				handler: this.onLogoutButton,
-				id: 'mainmenu-button-logout'
-			};
-
-			this.add(logoutButton);
-		}
 	},
 
 	/**
@@ -156,6 +157,20 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 		container.logout();
 	},
 
+	createManualLogoutTab: function()
+	{
+		return {
+			// text: _('Help'),
+			text: _(loginText.text),
+			handler: this.onLogoutButton,
+			id: 'mainmenu-button-logout',
+			tabOrderIndex: 4,
+			// handler: this.onHelpButton,
+			// cls: 'icon-maintab_help',
+			// id: 'mainmenu-button-help',
+			scope: this,		
+		};
+	},
 
 	addFilesContext: function() 
 	{
