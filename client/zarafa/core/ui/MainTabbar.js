@@ -171,6 +171,23 @@ Zarafa.core.ui.MainTabBar = Ext.extend(Ext.Toolbar, {
 			scope: this,		
 		};
 	},
+	
+	registerInsertionPoint: function(match, createFunction, scope)
+	{
+		if (!this.insertionPoints) {
+			this.insertionPoints = [];
+		}
+
+		if (!scope) {
+			scope = this;
+		}
+
+		this.insertionPoints.push({
+			match: match,
+			createFunction: createFunction,
+			scope: scope
+		});
+	},
 
 	addFilesContext: function() 
 	{
