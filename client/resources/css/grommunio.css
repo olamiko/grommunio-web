@@ -738,7 +738,7 @@ body.Safari input[type="radio"] {
 
 .x-form-text.x-form-focus:not(.x-trigger-noedit) {
   /* border-color: #3094e3 !important; */
-  border-color: white !important;
+  /* border-color: white !important; */
   text-indent: 5em;
 }
 
