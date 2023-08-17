@@ -22484,10 +22484,8 @@ Ext.layout.BorderLayout.Region.prototype = {
         // console.log(panelEl);
         // Add the class to collapse the menu
         const parentDiv = document.getElementById('zarafa-mainview');
-        console.log(parentDiv);
-        // addClass('zarafa-child-collapsed');
         // Add a class to the parent element
-        // parentElement.classList.add('newClass');
+        parentDiv.classList.add('zarafa-child-collapsed');
         panelEl.addClass('zarafa-hierachy-menu-collapse');
         panelEl.setStyle('width', 250);
 
@@ -22501,7 +22499,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         //     }
         // });
         // panelEl.style.width = `${longestWidth}px`;
-        // console.log(panelEl.style.width);
+        // console.log(panelEl.style.width);div#zarafa-main-content-mail-toolbar
 
         // Optionally, you might need to update the layout after adjusting the panel width
         this.layout.layout();
@@ -22511,8 +22509,9 @@ Ext.layout.BorderLayout.Region.prototype = {
     // private
     onCollapse : function(animate){
         const panelEl = this.panel.getEl();
+        // this.panel.el.setStyle('z-index', 1);
         this.panel.el.setStyle('z-index', 200);
-        // console.log(panelEl);
+        panelEl.setStyle('width', 50);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible';
             
