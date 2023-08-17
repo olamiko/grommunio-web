@@ -1299,6 +1299,9 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
     margin-top: 0.8em;
     position: fixed;
   }
+  .zarafa-child-collapsed #zarafa-navigationpanel > div {
+    width: 2em;
+  }
   .zarafa-child-collapsed #zarafa-main-content-mail-toolbar {
     margin-left: 7em ! important;
   }

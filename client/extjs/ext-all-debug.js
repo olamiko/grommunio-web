@@ -22532,6 +22532,10 @@ Ext.layout.BorderLayout.Region.prototype = {
         this.el.show();
                 // Add the class to collapse the menu
         panelEl.removeClass('zarafa-hierachy-menu-collapse');
+        const parentDiv = document.getElementById('zarafa-mainview');
+
+        // Remove a class from the parent element
+        parentDiv.classList.remove('zarafa-mainview');
         if(this.position == 'east' || this.position == 'west'){
             this.panel.setSize(undefined, c.getHeight());
         }else{
