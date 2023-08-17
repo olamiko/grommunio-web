@@ -22483,9 +22483,11 @@ Ext.layout.BorderLayout.Region.prototype = {
         panelEl.setStyle('z-index', 0);
         // console.log(panelEl);
         // Add the class to collapse the menu
-        // const parentDiv = panelEl.parentNode.getEl();
-        // console.log(parentDiv);
+        const parentDiv = document.getElementById('zarafa-mainview');
+        console.log(parentDiv);
         // addClass('zarafa-child-collapsed');
+        // Add a class to the parent element
+        // parentElement.classList.add('newClass');
         panelEl.addClass('zarafa-hierachy-menu-collapse');
         panelEl.setStyle('width', 250);
 
