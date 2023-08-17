@@ -191,14 +191,14 @@ Zarafa.mail.ui.MailGridContextMenu = Ext.extend(Zarafa.core.ui.menu.ConditionalM
 		return[{
 			xtype: 'zarafa.conditionalitem',
 			text: _('Copy/Move'),
-			iconCls: 'icon_copy',
+			iconCls: 'icon_edgedFolder',
 			hideOnDisabled: false,
 			handler: this.onCopyMove,
 			scope: this
 		},{
 			xtype: 'zarafa.conditionalitem',
 			text: _('Move to Junk Folder'),
-			iconCls: 'icon_folder_default_junk',
+			iconCls: 'icon_script',
 			beforeShow: this.onMoveToJunkBeforeShow,
 			handler: this.onContextItemJunk,
 			scope: this
