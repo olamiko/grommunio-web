@@ -1297,7 +1297,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
     margin-left: 3.5em;
   }
   #zarafa-main-content-mail-toolbar .x-toolbar-right {
-    margin-left: -20vw;
+    margin-left: -23vw;
     /* margin-bottom: 3em; */
     margin-top: 0.8em;
     position: fixed;
@@ -1309,7 +1309,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
     margin-left: 10em ! important;
   }
   .zarafa-child-collapsed #zarafa-main-content-mail-toolbar .x-toolbar-right {
-    margin-left: -35vw;
+    margin-left: -38vw;
     /* margin-bottom: 3em; */
     margin-top: 0.8em;
     position: fixed;
@@ -3123,7 +3123,7 @@ div.zarafa-contact-cardview-selected {
     }
     #zarafa-navigationpanel .zarafa-hierachy-menu-collapse {
       /* Your CSS styles for the div with the specified id and class go here */
-      width: 3.5em;
+      width: 4em;
     }
     
   .x-window .x-window-bwrap .x-window-body > div .zarafa-folderproperties.x-panel.tabpanel-container,
