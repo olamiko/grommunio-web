@@ -1486,7 +1486,7 @@ body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct {
     text-transform: none; }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-settings em{
     margin-left: 4em;
-    background-position: 12px right !important;
+    background-position: 12px left !important;
   }
   body #zarafa-mainmenu.zarafa-maintabbar > .x-toolbar-ct #mainmenu-button-logout em {
     background-position: 12px center !important; }
