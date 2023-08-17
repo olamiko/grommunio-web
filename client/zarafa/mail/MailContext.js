@@ -653,7 +653,7 @@ Zarafa.mail.MailContext = Ext.extend(Zarafa.core.Context, {
 		return {
 			xtype: 'splitbutton',
 			cls: 'k-filter-options-btn',
-			text: '<span>' + _('Filter') + '</span>',
+			text: '<span>' + _('') + '</span>',
 			overflowText: _('Filter'),
 			iconCls: 'icon_filter',
 			ref: 'filterBtn',

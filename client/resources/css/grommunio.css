@@ -1222,7 +1222,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 .zarafa-searchfield {
   padding-top: 0px !important;
   /* max-width: 350px; */
-  width: 61vw ! important;
+  width: 64vw ! important;
   border-right: 1px solid transparent; }
 
 /* seperator In ExtJS it's tbseperator, used in for example create new mail dialog*/
@@ -1287,7 +1287,12 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
       margin-left: -35vw ! important;
   }
   .x-toolbar .x-btn.k-filter-options-btn .icon_filter.x-btn-text {
-    border-right: none !important; }
+    border-right: none !important; 
+    margin-left: -25vw;
+    /* margin-bottom: 3em; */
+    margin-top: 1em;
+    position: relative;
+  }
     .x-toolbar .x-btn.k-filter-options-btn .icon_filter.x-btn-text span {
       padding-left: 5px; }
   .x-toolbar .x-btn-group.zarafa-mr-buttons .x-btn-group-tl,
