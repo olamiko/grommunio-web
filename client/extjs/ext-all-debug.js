@@ -22535,7 +22535,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         const parentDiv = document.getElementById('zarafa-mainview');
 
         // Remove a class from the parent element
-        parentDiv.classList.remove('zarafa-mainview');
+        parentDiv.classList.remove('zarafa-hierachy-menu-collapse');
         if(this.position == 'east' || this.position == 'west'){
             this.panel.setSize(undefined, c.getHeight());
         }else{
