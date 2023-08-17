@@ -206,8 +206,8 @@ body {
 .x-panel-body {
   background-color: white !important; }
 
-#zarafa-navigationpanel > div {
-  border: 2px solid #e6e6e6 ! important;
+#zarafa-navigationpanel > div:not(:first-child) {
+  border: 1px solid #e6e6e6 ! important;
  }
 
 .zarafa-widgetpanel > div {
@@ -605,7 +605,7 @@ div.x-btn-group-bc {
     color: #000000;
     font-weight: normal;
     /* border-color: #e6e6e6; */
-    background: #e6e6e6;
+    background: white;
     line-height: 20px;
     padding: 8px 9px 8px 12px; }
   .x-panel .x-panel-header .x-tool,
@@ -630,7 +630,7 @@ div.x-btn-group-bc {
 .x-panel-ghost .x-tool {
   display: none; }
  #zarafa-navigationpanel .x-panel-bwrap {
-  margin-top: 1.7em;
+  margin-top: 1.1em;
  }
 /* panel collapse button */
 .x-tool.x-tool-toggle.x-tool-collapse-west,
