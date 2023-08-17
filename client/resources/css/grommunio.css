@@ -85,7 +85,7 @@ body,
 .arrow_menubar, .zarafa-maintabbar-maintab-active button.x-btn-text, .zarafa-maintabbar-maintab-active.x-btn-over button.x-btn-text, .zarafa-maintabbar-maintab-active.x-btn-over.x-btn-click button.x-btn-text {
   /* background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMicgaGVpZ2h0PSc2JyB2aWV3Qm94PScwIDAgMTIgNic+IDxwYXRoIHN0eWxlPSdmaWxsOiNmZmZmZmYnIGQ9J00gNiAwIEwgMCA2IEwgMTIgNiBMIDYgMCB6ICcgLz48L3N2Zz4=) !important; */
   background-repeat: no-repeat !important;
-  border-radius: 10%;
+  border-radius: 1em;
   background-color: rgb(213, 232, 247, 0.5) ! important;
   background-position: center center !important; }
 
@@ -737,8 +737,9 @@ body.Safari input[type="radio"] {
   padding: 0 6px; }
 
 .x-form-text.x-form-focus:not(.x-trigger-noedit) {
-  border-color: #3094e3 !important;
-  padding-left: 5em;
+  /* border-color: #3094e3 !important; */
+  border-color: white !important;
+  text-indent: 5em;
 }
 
 .x-form-field-wrap.x-trigger-wrap-focus:not(.x-freebusy-userlist-container) {
@@ -1223,7 +1224,8 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
   padding-top: 0px !important;
   /* max-width: 350px; */
   width: 64vw ! important;
-  border-right: 1px solid transparent; }
+  /* border-right: 1px solid transparent;  */
+}
 
 /* seperator In ExtJS it's tbseperator, used in for example create new mail dialog*/
 .x-toolbar .xtb-sep {
