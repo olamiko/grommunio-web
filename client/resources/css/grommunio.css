@@ -755,7 +755,7 @@ body.Safari input[type="radio"] {
 .et-strict .ext-webkit .x-small-editor .x-form-text:not(.x-zarafa-boxfield):not(.x-zarafa-boxfield-input) {
   line-height: 24px;
   height: 42px !important;
-  border-radius: 10%;
+  border-radius: 1em;
   position: fixed;
   /* subtract 2 for the border-width */ 
 }
