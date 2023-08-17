@@ -4978,7 +4978,7 @@ body.ext-ie6.x-body-masked .x-window select {
 .x-box-item {
 	position:absolute;
 	margin-top: -1.9em;
-	left:0;
+	left: 0%;;
 	top:0;
 }.x-progress-wrap {
 	border:1px solid;
