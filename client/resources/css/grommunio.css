@@ -1217,6 +1217,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
   position: fixed;
   top: 4em;
   margin-left: 23em;
+  margin-top: 2.5em;
 }
 
 /* global search input field */
