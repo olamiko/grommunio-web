@@ -22481,8 +22481,9 @@ Ext.layout.BorderLayout.Region.prototype = {
         const panelEl = this.panel.getEl();
         this.isCollapsed = true;
         panelEl.setStyle('z-index', 0);
-        console.log(panelEl);
+        // console.log(panelEl);
         // Add the class to collapse the menu
+        panelEl.dom.parentNode.addClass('zarafa-child-collapsed');
         panelEl.addClass('zarafa-hierachy-menu-collapse');
         panelEl.setStyle('width', 250);
 
@@ -22506,8 +22507,8 @@ Ext.layout.BorderLayout.Region.prototype = {
     // private
     onCollapse : function(animate){
         const panelEl = this.panel.getEl();
-        this.panel.el.setStyle('z-index', 1);
-        console.log(panelEl);
+        this.panel.el.setStyle('z-index', 200);
+        // console.log(panelEl);
         if(this.lastAnim === false || this.panel.animCollapse === false){
             this.getCollapsedEl().dom.style.visibility = 'visible';
             
