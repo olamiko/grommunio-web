@@ -3763,9 +3763,13 @@ a.x-menu-item {
 .x-combo-list .x-toolbar {
 	border-top:1px solid;
 	border-bottom:0 none;
-}.x-panel {
+}
+.x-panel {
+	/* border-style: solid;
+	border-width:0; */
 	border-style: solid;
-	border-width:0;
+    border-width: 0;
+    border-color: gainsboro;
 }
 
 .x-panel-header {

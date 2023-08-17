@@ -200,13 +200,15 @@ body {
 .x-layout-collapsed {
   background-color: transparent;
   box-shadow: none;
-  border: none; }
+  border: none; 
+}
 
 .x-panel-body {
   background-color: white !important; }
 
 #zarafa-navigationpanel > div {
-  border-right: none; }
+  border: 2px solid #e6e6e6 ! important;
+ }
 
 .zarafa-widgetpanel > div {
   border-left: 1px solid #e6e6e6; }
@@ -602,7 +604,7 @@ div.x-btn-group-bc {
   .x-panel-ghost .x-panel-header {
     color: #000000;
     font-weight: normal;
-    border-color: #e6e6e6;
+    /* border-color: #e6e6e6; */
     background: #e6e6e6;
     line-height: 20px;
     padding: 8px 9px 8px 12px; }
@@ -627,7 +629,9 @@ div.x-btn-group-bc {
 
 .x-panel-ghost .x-tool {
   display: none; }
-
+ #zarafa-navigationpanel .x-panel-bwrap {
+  margin-top: 1.7em;
+ }
 /* panel collapse button */
 .x-tool.x-tool-toggle.x-tool-collapse-west,
 .x-layout-collapsed .x-tool.x-tool-toggle.x-tool-expand-east,
@@ -1310,7 +1314,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
     position: fixed;
   }
   .zarafa-child-collapsed #zarafa-navigationpanel > div {
-    width: 2em;
+    width: 4em;
   }
   .zarafa-child-collapsed #zarafa-main-content-mail-toolbar {
     margin-left: 10em ! important;
