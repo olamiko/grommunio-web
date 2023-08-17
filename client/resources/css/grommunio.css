@@ -76,6 +76,11 @@ body,
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzknIHZpZXdCb3g9JzAgMCA1IDknPiA8cGF0aCBzdHlsZT0nZmlsbDojNGY0YzRkJyBkPSdNIDUsMCA1LDkgMCw0LjUgNSwwIFonIC8+PC9zdmc+) !important;
   background-repeat: no-repeat !important;
   background-position: center center !important; }
+.x-tool-hamburger {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQwIDE0SDhNNDAgMjRIOE00MCAzNEg4IiBzdHJva2U9IiMzRjNGM0YiIHN0cm9rZS13aWR0aD0iMy41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==) !important;
+  background-repeat: no-repeat !important;
+  background-position: left !important;
+}
 
 .arrow_left_l_white, .zarafa-calendar-tab-icon-merge {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzknIHZpZXdCb3g9JzAgMCA1IDknPiA8cGF0aCBzdHlsZT0nZmlsbDojZmZmZmZmJyBkPSdNIDUsMCA1LDkgMCw0LjUgNSwwIFonIC8+PC9zdmc+) !important;
@@ -699,7 +704,9 @@ div.x-btn-group-bc {
   border-bottom: 1px solid #e6e6e6; }
 #zarafa-mainpanel-contentpanel-mail.zarafa-preview-bottom #zarafa-main-content-mail-preview {
   border-top: none !important; }
-
+.x-panel-header-text {
+    display: none;
+}
 #zarafa-mainpanel-contentpanel-today .zarafa-main-header {
   background: transparent;
   border-left: 1px solid #e6e6e6; }
@@ -2891,7 +2898,7 @@ div.zarafa-contact-cardview-selected {
 
 .zarafa-contact-cardview-card .x-panel .x-panel-tl {
   background-color: #f0f0f0; }
-
+ 
 .zarafa-contact-cardview-contact-card {
   width: 45px;
   height: 125px;

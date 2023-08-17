@@ -38,7 +38,7 @@ Zarafa.hierarchy.ui.HierarchyTreeBottomBar = Ext.extend(Ext.Container, {
 									tooltip: _('Email')+ ' (Ctrl + Alt + X)',
 									plugins: 'zarafa.menuitemtooltipplugin',
 									text: _('New Mail'),
-									iconCls: 'icon_new_email',
+									iconCls: 'icon_write',
 									newMenuIndex: 1,
 									context: 'mail',
 									handler: function()
@@ -46,21 +46,22 @@ Zarafa.hierarchy.ui.HierarchyTreeBottomBar = Ext.extend(Ext.Container, {
 										Zarafa.mail.Actions.openCreateMailContent(this.getModel());
 									},
 									scope: this
-						}, {
-							xtype: 'menuitem',
-									id: 'zarafa-maintoolbar-newitem-mailo',
-									tooltip: _('Email')+ ' (Ctrl + Alt + X)',
-									plugins: 'zarafa.menuitemtooltipplugin',
-									text: _('Home'),
-									iconCls: 'icon_new_email',
-									newMenuIndex: 2,
-									context: 'mail',
-									handler: function()
-									{
-										new Zarafa.mail.ui.MailPanel();
-									},
-									scope: this
-								}
+						}
+						// , {
+						// 	xtype: 'menuitem',
+						// 			id: 'zarafa-maintoolbar-newitem-mailo',
+						// 			tooltip: _('Email')+ ' (Ctrl + Alt + X)',
+						// 			plugins: 'zarafa.menuitemtooltipplugin',
+						// 			text: _('Home'),
+						// 			iconCls: 'icon_new_email',
+						// 			newMenuIndex: 2,
+						// 			context: 'mail',
+						// 			handler: function()
+						// 			{
+						// 				new Zarafa.mail.ui.MailPanel();
+						// 			},
+						// 			scope: this
+						// 		}
 					]
 		});
 
