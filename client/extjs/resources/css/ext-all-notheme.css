@@ -3017,7 +3017,7 @@ input.x-tree-node-cb {
 }
 
 .x-dd-drag-ghost .x-tree-node-indent, .x-dd-drag-ghost .x-tree-ec-icon{
-	display:none !important;
+	/* display:none !important; */
 }
 
 .x-date-picker {

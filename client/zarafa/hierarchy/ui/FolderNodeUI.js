@@ -168,9 +168,9 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 			elNode.addClass(a.cls);
 		}
 
-		// if (a.icon) {
-		// 	iconNode.addClass('x-tree-node-inline-icon');
-		// }
+		if (a.icon) {
+			iconNode.addClass('x-tree-node-inline-icon');
+		}
 
 		if (a.iconCls) {
 			iconNode.addClass(a.iconCls);
