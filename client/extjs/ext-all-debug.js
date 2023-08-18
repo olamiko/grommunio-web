@@ -30673,7 +30673,7 @@ Ext.ProgressBar = Ext.extend(Ext.BoxComponent, {
             var textBackEl = Ext.get(inner.childNodes[1]);
             this.textTopEl.setStyle("z-index", 99).addClass('x-hidden');
             this.textEl = new Ext.CompositeElement([this.textTopEl.dom.firstChild, textBackEl.dom.firstChild]);
-            this.textEl?.setWidth(inner.offsetWidth);
+            this.textEl?.setWidth(inner?.offsetWidth);
         }
         this.progressBar.setHeight(inner.offsetHeight);
     },
