@@ -72,22 +72,24 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 
 		// Collect components for 'north', 'center' and 'south' from registered plugins
 		var northComponents = container.populateInsertionPoint('navigation.north', this);
-		// var centerComponents = container.populateInsertionPoint('navigation.center', this);
-		// var southComponents = container.populateInsertionPoint('navigation.south', this);
-
+		var centerComponents = container.populateInsertionPoint('navigation.center', this);
+		var southComponents = container.populateInsertionPoint('navigation.south', this);
+		console.log(northComponents);
+		console.log(southComponents);
+		console.log(centerComponents);
 		for (var i = 0, len = northComponents.length; i < len; i++){
 			northComponents[i] = Ext.create(northComponents[i]);
 		}
 
-		// for (var i = 0, len = centerComponents.length; i < len; i++){
-		// 	centerComponents[i] = Ext.create(centerComponents[i]);
-		// }
-		// // Add the default ShowAllFoldersPanel to the start of the centerComponents
-		// centerComponents.unshift(this.getAllFoldersPanel());
+		for (var i = 0, len = centerComponents.length; i < len; i++){
+			centerComponents[i] = Ext.create(centerComponents[i]);
+		}
+		// Add the default ShowAllFoldersPanel to the start of the centerComponents
+		centerComponents.unshift(this.getAllFoldersPanel());
 
-		// for (var i = 0, len = southComponents.length; i < len; i++){
-		// 	southComponents[i] = Ext.create(southComponents[i]);
-		// }
+		for (var i = 0, len = southComponents.length; i < len; i++){
+			southComponents[i] = Ext.create(southComponents[i]);
+		}
 		var items = [];
 		items.push.apply(items, northComponents);
 
@@ -101,10 +103,10 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 					deferredRender: true
 				},
 				activeItem: 0,
-				items: northComponents
+				items: centerComponents
 			});
 
-		// items.push.apply(items, southComponents);
+		items.push.apply(items, southComponents);
 
 		// Add CSS class to every item
 		for(var i=0,len=items.length;i<len;i++){
@@ -126,9 +128,8 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 			cls: 'zarafa-navigation zarafa-panel zarafa-context-mainpanel',
 
 			north: northComponents,
-			// center: centerComponents,
-			// south: southComponents,
-			north: northComponents,
+			center: centerComponents,
+			south: southComponents,
 
 			items: items,
 			// collapseQuickTip: _('Collapse hierarchy'),
