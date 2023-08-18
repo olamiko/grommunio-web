@@ -103,7 +103,8 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		nel,
 		href = a.href ? a.href : Ext.isGecko ? "" : "#",
 		buf = '<li class="x-tree-node">' +
-				'<div ext:tree-node-id="' + n.id + '" class="x-tree-node-el x-tree-node-leaf x-unselectable zarafa-hierarchy-node" unselectable="on">' +
+				// '<div ext:tree-node-id="' + n.id + '" class="x-tree-node-el x-tree-node-leaf x-unselectable zarafa-hierarchy-node" unselectable="on">' +
+				'<div ext:tree-node-id="' + n.id + '" class="x-tree-node-el x-unselectable zarafa-hierarchy-node" unselectable="on">' +
 					// indent space
 					'<span class="x-tree-node-indent">' + this.indentMarkup + "</span>" +
 					// expand icon
@@ -131,15 +132,15 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		} else {
 			this.wrap = Ext.DomHelper.insertHtml("beforeEnd", targetNode, buf);
 		}
-
+		console.log(this.wrap);
 		this.elNode = this.wrap.childNodes[0];
 		this.ctNode = this.wrap.childNodes[1];
 		var cs = this.elNode.childNodes;
-		console.log(cs);
-		console.log(this.elNode);
 		this.indentNode = cs[0];
 		this.ecNode = cs[1];
 		this.iconNode = cs[2];
+		console.log(this.indentNode);
+		console.log(this.ecNode);
 		var index = 3;
 		if (cb) {
 			this.checkbox = cs[2];
