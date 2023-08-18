@@ -104,7 +104,6 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		href = a.href ? a.href : Ext.isGecko ? "" : "#",
 		buf = '<li class="x-tree-node">' +
 				'<div ext:tree-node-id="' + n.id + '" class="x-tree-node-el x-tree-node-leaf x-unselectable zarafa-hierarchy-node" unselectable="on">' +
-				// '<div ext:tree-node-id="' + n.id + '" class="x-tree-node-el x-tree-node-leaf x-unselectable zarafa-hierarchy-node" unselectable="on">' +
 					// indent space
 					'<span class="x-tree-node-indent">' + this.indentMarkup + "</span>" +
 					// expand icon
@@ -158,15 +157,10 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		this.counterNode = cs[index].firstChild.nextSibling;
 		this.folderOwnerNode = this.counterNode.nextSibling;
 		// Apply some optional CSS classes
-		// var elNode = Ext.get(this.elNode);
-		var elNode = Ext.get(this.iconNode);
-		console.log(elNode);
+		var elNode = Ext.get(this.wrap);
 		var iconNode = Ext.get(this.iconNode);
-		console.log(iconNode);
 		var containerNode = Ext.get(this.wrap);
-		console.log(containerNode);
 		var textNode = Ext.get(this.textNode);
-		console.log(textNode);
 		if (isCalenderNode) {
 			textNode.addClass('zarafa-hierarchy-node-color');
 		}
@@ -174,9 +168,9 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 			elNode.addClass(a.cls);
 		}
 
-		if (a.icon) {
-			iconNode.addClass('x-tree-node-inline-icon');
-		}
+		// if (a.icon) {
+		// 	iconNode.addClass('x-tree-node-inline-icon');
+		// }
 
 		if (a.iconCls) {
 			iconNode.addClass(a.iconCls);
