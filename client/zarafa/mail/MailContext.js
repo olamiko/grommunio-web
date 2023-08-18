@@ -371,10 +371,10 @@ Zarafa.mail.MailContext = Ext.extend(Zarafa.core.Context, {
 					enableDD: true,
 					enableItemDrop: true,
 					deferredLoading: true,
-					bbarConfig: {
-						defaultSelectedSharedFolderType: Zarafa.hierarchy.data.SharedFolderTypes['MAIL'],
-						buttonText: _('Open Shared Mails')
-					}
+					// bbarConfig: {
+					// 	defaultSelectedSharedFolderType: Zarafa.hierarchy.data.SharedFolderTypes['MAIL'],
+					// 	buttonText: _('Open Shared Mails')
+					// }
 				}]
 			}]
 		};
