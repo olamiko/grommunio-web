@@ -22495,12 +22495,12 @@ Ext.layout.BorderLayout.Region.prototype = {
         // Calculate the width of the longest div and set the panel width
         // let longestWidth = 0;
         // const divElements = panelEl// Replace with your actual selector
-        // divElements.forEach((div) => {
-        //     const divWidth = div.offsetWidth;
-        //     if (divWidth > longestWidth) {
-        //         longestWidth = divWidth;
-        //     }
-        // });
+        divElements.forEach((div) => {
+            const divWidth = div.offsetWidth;
+            if (divWidth > longestWidth) {
+                longestWidth = divWidth;
+            }
+        });
         // panelEl.style.width = `${longestWidth}px`;
         // console.log(panelEl.style.width);div#zarafa-main-content-mail-toolbar
 
@@ -30668,15 +30668,15 @@ Ext.ProgressBar = Ext.extend(Ext.BoxComponent, {
             this.textEl = Ext.get(this.textEl);
             delete this.textTopEl;
         }
-        // else{
-        //     //setup our internal layered text els
-        //     this.textTopEl = Ext.get(this.progressBar.dom.firstChild);
-        //     var textBackEl = Ext.get(inner.childNodes[1]);
-        //     this.textTopEl.setStyle("z-index", 99).addClass('x-hidden');
-        //     this.textEl = new Ext.CompositeElement([this.textTopEl.dom.firstChild, textBackEl.dom.firstChild]);
-        //     this.textEl?.setWidth(inner?.offsetWidth);
-        // }
-        // this.progressBar.setHeight(inner.offsetHeight);
+        else{
+            //setup our internal layered text els
+            this.textTopEl = Ext.get(this.progressBar.dom.firstChild);
+            var textBackEl = Ext.get(inner.childNodes[1]);
+            this.textTopEl.setStyle("z-index", 99).addClass('x-hidden');
+            this.textEl = new Ext.CompositeElement([this.textTopEl.dom.firstChild, textBackEl.dom.firstChild]);
+            this.textEl?.setWidth(inner?.offsetWidth);
+        }
+        this.progressBar.setHeight(inner.offsetHeight);
     },
     
     // private
