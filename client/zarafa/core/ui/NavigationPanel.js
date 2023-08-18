@@ -72,18 +72,18 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 
 		// Collect components for 'north', 'center' and 'south' from registered plugins
 		var northComponents = container.populateInsertionPoint('navigation.north', this);
-		var centerComponents = container.populateInsertionPoint('navigation.center', this);
+		// var centerComponents = container.populateInsertionPoint('navigation.center', this);
 		// var southComponents = container.populateInsertionPoint('navigation.south', this);
 
 		for (var i = 0, len = northComponents.length; i < len; i++){
 			northComponents[i] = Ext.create(northComponents[i]);
 		}
 
-		for (var i = 0, len = centerComponents.length; i < len; i++){
-			centerComponents[i] = Ext.create(centerComponents[i]);
-		}
-		// Add the default ShowAllFoldersPanel to the start of the centerComponents
-		centerComponents.unshift(this.getAllFoldersPanel());
+		// for (var i = 0, len = centerComponents.length; i < len; i++){
+		// 	centerComponents[i] = Ext.create(centerComponents[i]);
+		// }
+		// // Add the default ShowAllFoldersPanel to the start of the centerComponents
+		// centerComponents.unshift(this.getAllFoldersPanel());
 
 		// for (var i = 0, len = southComponents.length; i < len; i++){
 		// 	southComponents[i] = Ext.create(southComponents[i]);
@@ -101,7 +101,7 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 					deferredRender: true
 				},
 				activeItem: 0,
-				items: centerComponents
+				items: northComponents
 			});
 
 		// items.push.apply(items, southComponents);
@@ -126,7 +126,7 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 			cls: 'zarafa-navigation zarafa-panel zarafa-context-mainpanel',
 
 			north: northComponents,
-			center: centerComponents,
+			// center: centerComponents,
 			// south: southComponents,
 			north: northComponents,
 
