@@ -73,7 +73,7 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 		// Collect components for 'north', 'center' and 'south' from registered plugins
 		var northComponents = container.populateInsertionPoint('navigation.north', this);
 		var centerComponents = container.populateInsertionPoint('navigation.center', this);
-		var southComponents = container.populateInsertionPoint('navigation.south', this);
+		// var southComponents = container.populateInsertionPoint('navigation.south', this);
 
 		for (var i = 0, len = northComponents.length; i < len; i++){
 			northComponents[i] = Ext.create(northComponents[i]);
