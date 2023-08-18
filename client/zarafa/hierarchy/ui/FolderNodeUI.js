@@ -134,7 +134,6 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 
 		this.elNode = this.wrap.childNodes[0];
 		this.ctNode = this.wrap.childNodes[1];
-		console.log(this.elNode[1]);
 		var cs = this.elNode.childNodes;
 		this.indentNode = cs[0];
 		this.ecNode = cs[1];
@@ -158,9 +157,11 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		this.counterNode = cs[index].firstChild.nextSibling;
 		this.folderOwnerNode = this.counterNode.nextSibling;
 		// Apply some optional CSS classes
-		var elNode = Ext.get(this.wrap);
+		var elNode = Ext.get(this.elNode);
 		var iconNode = Ext.get(this.iconNode);
+		console.log(iconNode);
 		var containerNode = Ext.get(this.wrap);
+		console.log(containerNode);
 		var textNode = Ext.get(this.textNode);
 		if (isCalenderNode) {
 			textNode.addClass('zarafa-hierarchy-node-color');
