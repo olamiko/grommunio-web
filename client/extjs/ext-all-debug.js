@@ -55987,7 +55987,7 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
         }else{
             this.wrap = Ext.DomHelper.insertHtml("beforeEnd", targetNode, buf);
         }
-
+        console.log(this.wrap);
         this.elNode = this.wrap.childNodes[0];
         // console.log(this.elNode);
         this.ctNode = this.wrap.childNodes[1];
