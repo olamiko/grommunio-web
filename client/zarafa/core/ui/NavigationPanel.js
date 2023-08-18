@@ -85,9 +85,9 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 		// Add the default ShowAllFoldersPanel to the start of the centerComponents
 		centerComponents.unshift(this.getAllFoldersPanel());
 
-		for (var i = 0, len = southComponents.length; i < len; i++){
-			southComponents[i] = Ext.create(southComponents[i]);
-		}
+		// for (var i = 0, len = southComponents.length; i < len; i++){
+		// 	southComponents[i] = Ext.create(southComponents[i]);
+		// }
 		var items = [];
 		items.push.apply(items, northComponents);
 
@@ -104,7 +104,7 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 				items: centerComponents
 			});
 
-		items.push.apply(items, southComponents);
+		// items.push.apply(items, southComponents);
 
 		// Add CSS class to every item
 		for(var i=0,len=items.length;i<len;i++){
@@ -127,7 +127,8 @@ Zarafa.core.ui.NavigationPanel = Ext.extend(Zarafa.core.ui.MainViewSidebar, {
 
 			north: northComponents,
 			center: centerComponents,
-			south: southComponents,
+			// south: southComponents,
+			north: northComponents,
 
 			items: items,
 			// collapseQuickTip: _('Collapse hierarchy'),
