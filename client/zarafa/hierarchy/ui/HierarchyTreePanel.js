@@ -220,6 +220,7 @@ Zarafa.hierarchy.ui.HierarchyTreePanel = Ext.extend(Zarafa.hierarchy.ui.Tree, {
 		// TODO This needs to be fixed by lazy loading the stuff in the mainPanel, then we can do container.getNavigationBar()
 		// But at the moment it is instantiated as getMainPanel is run and so we cannot yet get the navigationBar that way
 		var navigationPanel = this.findParentByType('zarafa.navigationpanel');
+		console.log(navigationPanel);
 		if(navigationPanel){
 			this.mon(navigationPanel, 'toggleshowallfolders', this.onToggleShowAllFolders, this);
 		}
