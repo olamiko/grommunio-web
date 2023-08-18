@@ -25,7 +25,7 @@ Zarafa.settings.SettingsContext = Ext.extend(Zarafa.core.Context, {
 		// Register some default categories for the settings
 		this.registerInsertionPoint('context.settings.categories', this.createSettingCategories, this);
 		// console.log(this.registerInsertionPoint('context.settings.categories', this.createSettingCategories, this));
-		console.log(this.registerInsertionPoint)
+		// console.log(this.registerInsertionPoint)
 
 		this.addEvents(
 			/**
