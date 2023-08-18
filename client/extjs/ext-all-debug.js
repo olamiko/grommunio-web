@@ -30667,14 +30667,15 @@ Ext.ProgressBar = Ext.extend(Ext.BoxComponent, {
             //use an external text el
             this.textEl = Ext.get(this.textEl);
             delete this.textTopEl;
-        }else{
-            //setup our internal layered text els
-            this.textTopEl = Ext.get(this.progressBar.dom.firstChild);
-            var textBackEl = Ext.get(inner.childNodes[1]);
-            this.textTopEl.setStyle("z-index", 99).addClass('x-hidden');
-            this.textEl = new Ext.CompositeElement([this.textTopEl.dom.firstChild, textBackEl.dom.firstChild]);
-            this.textEl?.setWidth(inner?.offsetWidth);
         }
+        // else{
+        //     //setup our internal layered text els
+        //     this.textTopEl = Ext.get(this.progressBar.dom.firstChild);
+        //     var textBackEl = Ext.get(inner.childNodes[1]);
+        //     this.textTopEl.setStyle("z-index", 99).addClass('x-hidden');
+        //     this.textEl = new Ext.CompositeElement([this.textTopEl.dom.firstChild, textBackEl.dom.firstChild]);
+        //     this.textEl?.setWidth(inner?.offsetWidth);
+        // }
         this.progressBar.setHeight(inner.offsetHeight);
     },
     
