@@ -22493,16 +22493,16 @@ Ext.layout.BorderLayout.Region.prototype = {
         panelEl.setStyle('width', 250);
 
         // Calculate the width of the longest div and set the panel width
-        // let longestWidth = 0;
-        // const divElements = panelEl// Replace with your actual selector
+        let longestWidth = 0;
+        const divElements = panelEl// Replace with your actual selector
         divElements.forEach((div) => {
             const divWidth = div.offsetWidth;
             if (divWidth > longestWidth) {
                 longestWidth = divWidth;
             }
         });
-        // panelEl.style.width = `${longestWidth}px`;
-        // console.log(panelEl.style.width);div#zarafa-main-content-mail-toolbar
+        panelEl.style.width = `${longestWidth}px`;
+        console.log(panelEl.style.width);
 
         // Optionally, you might need to update the layout after adjusting the panel width
         this.layout.layout();
@@ -22530,7 +22530,7 @@ Ext.layout.BorderLayout.Region.prototype = {
         const panelEl = this.panel.getEl();
         if(this.isSlid){
             this.afterSlideIn();
-        }
+        }   
         var c = this.getCollapsedEl();
         this.el.show();
                 // Add the class to collapse the menu
