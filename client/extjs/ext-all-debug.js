@@ -55989,10 +55989,10 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
         }
 
         this.elNode = this.wrap.childNodes[0];
-        console.log(this.elNode);
+        // console.log(this.elNode);
         this.ctNode = this.wrap.childNodes[1];
         var cs = this.elNode.childNodes;
-        console.log(cs);
+        // console.log(cs);
         this.indentNode = cs[0];
         this.ecNode = cs[1];
         this.iconNode = cs[2];
