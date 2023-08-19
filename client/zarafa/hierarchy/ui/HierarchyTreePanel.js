@@ -58,7 +58,7 @@ Zarafa.hierarchy.ui.HierarchyTreePanel = Ext.extend(Zarafa.hierarchy.ui.Tree, {
 		// Check user setting to add treeFIlter.
 		var treeFilter = container.getSettingsModel().get('zarafa/v1/contexts/hierarchy/show_searchbar', true, false);
 		// console.log(this);
-		var parentElement = this.body;
+		const parentElement = document.getElementById("ext-gen81");
 		// if (parentElement) {
 		// 	// Find all elements with class "x-tree-node" within the parent element
 		// 	const treeNodes = parentElement.getElementsByClassName("x-tree-node");
