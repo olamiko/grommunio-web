@@ -131,8 +131,8 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		} else {
 			this.wrap = Ext.DomHelper.insertHtml("beforeEnd", targetNode, buf);
 		}
-		const newDiv = document.getElementById("ext-gen81");
-		const containerDiv = document.getElementById("ext-gen79");
+		const newDiv = document.getElementById("ext-gen99");
+		const containerDiv = document.querySelector("ul#ext-gen85 > div");
 
 
 		if (newDiv) {
