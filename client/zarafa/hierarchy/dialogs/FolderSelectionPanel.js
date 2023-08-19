@@ -43,6 +43,8 @@ Zarafa.hierarchy.dialogs.FolderSelectionPanel = Ext.extend(Ext.Panel, {
 		});
 
 		Zarafa.hierarchy.dialogs.FolderSelectionPanel.superclass.constructor.call(this, config);
+		console.log(config);
+		console.log(this);
 	},
 
 	/**
