@@ -40,7 +40,7 @@ Ext.namespace('Zarafa.hierarchy.ui');
  </code></pre>
  */
 Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
-
+	filesContextAdded : [false, false],
 	/**
 	 * The currently active countertype for this folder node
 	 * @property
@@ -135,10 +135,10 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		const containerDiv = document.querySelector("ul#ext-gen85 > div");
 
 
-		if (newDiv) {
+		if (!this.filesContextAdded.includes(true)) {
 			const clonedDiv = newDiv.cloneNode(true);
-		  containerDiv.appendChild(clonedDiv); // Append the new element as the last child
-		//   console.log(this.wrap);
+		  	containerDiv.appendChild(clonedDiv); // Append the new element as the last child
+			this.filesContextAdded.push(true)
 		} 
 		this.elNode = this.wrap.childNodes[0];
 		this.ctNode = this.wrap.childNodes[1];
