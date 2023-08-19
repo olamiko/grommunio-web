@@ -221,6 +221,7 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 	updateCounter: function(node)
 	{
 		var folder = node.getFolder();
+		console.log(folder);
 
 		// Don't show counters for the To-do list
 		if ( folder.isTodoListFolder() ){
@@ -229,6 +230,8 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 
 		var elNode = Ext.get(this.elNode);
 		var counterNode = Ext.get(this.counterNode);
+		console.log(elNode);
+		console.log(counterNode);
 
 		if (!Ext.isDefined(folder)) {
 			return;
