@@ -352,7 +352,7 @@ Zarafa.mail.MailContext = Ext.extend(Zarafa.core.Context, {
 	 * @private
 	 */
 	createMailNavigationPanel: function()
-	{
+	{ console.log(this.getModel());
 		return {
 			xtype: 'zarafa.contextnavigation',
 			context: this,
