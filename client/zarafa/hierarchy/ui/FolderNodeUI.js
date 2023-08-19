@@ -137,6 +137,11 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		// if (newDiv){
 			if (newDiv && !this.filesContextAdded.includes(true)) {
 				const clonedDiv = newDiv.cloneNode(true);
+				  // Generate a new unique ID for the cloned element
+				const newId = generateUniqueId(); // You need to implement this function
+
+				// Update the ID of the cloned element
+				clonedDiv.id = newId;
 				containerDiv.appendChild(clonedDiv); // Append the new element as the last child
 				this.filesContextAdded.push(true)
 			}
