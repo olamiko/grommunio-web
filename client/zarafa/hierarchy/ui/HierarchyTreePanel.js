@@ -58,7 +58,7 @@ Zarafa.hierarchy.ui.HierarchyTreePanel = Ext.extend(Zarafa.hierarchy.ui.Tree, {
 		// Check user setting to add treeFIlter.
 		var treeFilter = container.getSettingsModel().get('zarafa/v1/contexts/hierarchy/show_searchbar', true, false);
 		// console.log(this);
-		const parentElement = document.getElementById("ext-gen81");
+		// const parentElement = document.getElementById("ext-gen81");
 		// if (parentElement) {
 		// 	// Find all elements with class "x-tree-node" within the parent element
 		// 	const treeNodes = parentElement.getElementsByClassName("x-tree-node");
@@ -78,8 +78,8 @@ Zarafa.hierarchy.ui.HierarchyTreePanel = Ext.extend(Zarafa.hierarchy.ui.Tree, {
 		//   } else {
 		// 	console.log("Parent element with id 'ext-gen81' not found.");
 		//   }
-		  console.log(this.body);
-		  console.log(parentElement);
+		  console.log(this);
+		//   console.log(parentElement);
 
 		Ext.applyIf(config, {
 			xtype: 'zarafa.hierarchytreepanel',
