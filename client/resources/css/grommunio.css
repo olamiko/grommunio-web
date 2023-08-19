@@ -1977,6 +1977,11 @@ Note: Does not work in IE11 */
 .x-form-field.zarafa-hierarchy-treepanel-showallfolders {
   padding: 0 0 0 0;
   margin: 0 0 0 0; }
+  #ext-gen81 >ul > div:nth-child(2)::before {
+    content: "";
+    display: block;
+  }
+  
 
 /* counters */
 .zarafa-hierarchy-node-total-count span.zarafa-hierarchy-node-counter {
