@@ -56085,7 +56085,7 @@ Ext.tree.TreeNodeUI = Ext.extend(Object, {
             }
             var ecc = "x-tree-ec-icon "+cls;
             if(this.ecc != ecc){
-                this.ecNode?.className = ecc;
+                this.ecNode.className = ecc;
                 this.ecc = ecc;
             }
         }
