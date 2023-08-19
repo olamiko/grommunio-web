@@ -150,11 +150,42 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 				this.filesContextAdded.push(true)
 			}
 		// } const element = document.getElementById("ext-gen100");
-		const newElement = document.getElementById("ext-gen100");
-		if (newElement) {
+		// const newElement = document.getElementById("ext-gen100");
+		// if (newElement) {
+		// // Replace the text content with "Home"
+		// newElement.textContent = "Home";
+		// } 
+		// Get the element by ID
+	const hierarchyTreePanel = document.getElementsByClassName("zarafa-hierarchy-treepanel-body");
+
+	if (hierarchyTreePanel) {
+	// Find the first div child with class "x-tree-node-el"
+	const firstDivChild = hierarchyTreePanel.querySelector("div.x-tree-node-el");
+
+	if (firstDivChild) {
+		// Remove the class "x-tree-node-el" from the div
+		firstDivChild.classList.remove("x-tree-node-el");
+	}
+
+	// Find the first span child
+	const firstSpanChild = hierarchyTreePanel.querySelector("span:first-child");
+
+	if (firstSpanChild) {
+		// Set the display to "none" for the first span child
+		firstSpanChild.style.display = "none";
+	}
+
+	// Find the second span child
+	const secondSpanChild = hierarchyTreePanel.querySelector("span:nth-child(2)");
+
+	if (secondSpanChild) {
 		// Replace the text content with "Home"
-		newElement.textContent = "Home";
-		} 
+		secondSpanChild.textContent = "Home";
+	}
+	} else {
+	console.log("Element 'zarafa-hierarchy-treepanel-body' not found.");
+	}
+
 		this.elNode = this.wrap.childNodes[0];
 		this.ctNode = this.wrap.childNodes[1];
 		var cs = this.elNode.childNodes;
