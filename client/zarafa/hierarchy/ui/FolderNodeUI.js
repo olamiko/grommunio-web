@@ -135,8 +135,8 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 		console.log(newDiv);
 
 		if (newDiv) {
-		  this.wrap.appendChild(newDiv); // Append the new element as the last child
-		  console.log(this.wrap);
+		//   this.wrap.appendChild(newDiv); // Append the new element as the last child
+		//   console.log(this.wrap);
 		} 
 		this.elNode = this.wrap.childNodes[0];
 		this.ctNode = this.wrap.childNodes[1];
