@@ -58,27 +58,28 @@ Zarafa.hierarchy.ui.HierarchyTreePanel = Ext.extend(Zarafa.hierarchy.ui.Tree, {
 		// Check user setting to add treeFIlter.
 		var treeFilter = container.getSettingsModel().get('zarafa/v1/contexts/hierarchy/show_searchbar', true, false);
 		// console.log(this);
-		parentElement = this.body;
-		if (parentElement) {
-			// Find all elements with class "x-tree-node" within the parent element
-			const treeNodes = parentElement.getElementsByClassName("x-tree-node");
+		var parentElement = this.body;
+		// if (parentElement) {
+		// 	// Find all elements with class "x-tree-node" within the parent element
+		// 	const treeNodes = parentElement.getElementsByClassName("x-tree-node");
 		  
-			// Check if there are at least two elements with class "x-tree-node"
-			if (treeNodes.length >= 2) {
-			  // Clone the second element
-			  const clonedElement = treeNodes[1].cloneNode(true);
+		// 	// Check if there are at least two elements with class "x-tree-node"
+		// 	if (treeNodes.length >= 2) {
+		// 	  // Clone the second element
+		// 	  const clonedElement = treeNodes[1].cloneNode(true);
 		  
-			  // Insert the cloned element as the first child of the parent element
-			  parentElement.insertBefore(clonedElement, treeNodes[0]);
+		// 	  // Insert the cloned element as the first child of the parent element
+		// 	  parentElement.insertBefore(clonedElement, treeNodes[0]);
 		  
-			  console.log("Duplication and reordering complete.");
-			} else {
-			  console.log("Not enough elements with class 'x-tree-node' to perform the operation.");
-			}
-		  } else {
-			console.log("Parent element with id 'ext-gen81' not found.");
-		  }
+		// 	  console.log("Duplication and reordering complete.");
+		// 	} else {
+		// 	  console.log("Not enough elements with class 'x-tree-node' to perform the operation.");
+		// 	}
+		//   } else {
+		// 	console.log("Parent element with id 'ext-gen81' not found.");
+		//   }
 		  console.log(this.body);
+		  console.log(parentElement);
 
 		Ext.applyIf(config, {
 			xtype: 'zarafa.hierarchytreepanel',
