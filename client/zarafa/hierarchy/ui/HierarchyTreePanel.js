@@ -78,9 +78,9 @@ Zarafa.hierarchy.ui.HierarchyTreePanel = Ext.extend(Zarafa.hierarchy.ui.Tree, {
 		//   } else {
 		// 	console.log("Parent element with id 'ext-gen81' not found.");
 		//   }
-		  console.log(this.getTopToolbar());
-		  console.log(this);
-		  console.log(this.topToolbar());
+		  console.log(Zarafa.hierarchy.ui.Tree());
+		  console.log(config);
+		//   console.log(this.topToolbar());
 		//   console.log(parentElement);
 
 		Ext.applyIf(config, {
