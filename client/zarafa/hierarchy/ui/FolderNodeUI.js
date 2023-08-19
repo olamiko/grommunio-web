@@ -140,7 +140,12 @@ Zarafa.hierarchy.ui.FolderNodeUI = Ext.extend(Ext.tree.TreeNodeUI, {
 				containerDiv.appendChild(clonedDiv); // Append the new element as the last child
 				this.filesContextAdded.push(true)
 			}
-		// } 
+		// } const element = document.getElementById("ext-gen100");
+		const newElement = document.getElementById("ext-gen100");
+		if (newElement) {
+		// Replace the text content with "Home"
+		newElement.textContent = "Home";
+		} 
 		this.elNode = this.wrap.childNodes[0];
 		this.ctNode = this.wrap.childNodes[1];
 		var cs = this.elNode.childNodes;
