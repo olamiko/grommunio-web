@@ -696,16 +696,17 @@ div.x-btn-group-bc {
   /* border: none;  */
   margin-top: 4em;
 }
+.zarafa-context-mainpanel .x-panel-body-noheader {
+  width: 70vw ! important ;
+  border-bottom: 1px solid gainsboro ! important;
+  border-right: 1px solid gainsboro ! important;
+}
 .zarafa-child-collapsed .zarafa-context-mainpanel .x-panel-body-noheader {
   width: 80vw ! important ;
   border-bottom: 1px solid gainsboro ! important;
   border-right: 1px solid gainsboro ! important;
 }
-.zarafa-context-mainpanel .x-panel-body-noheader {
-  width: 50vw ! important ;
-  border-bottom: 1px solid gainsboro ! important;
-  border-right: 1px solid gainsboro ! important;
-}
+
 #zarafa-mainpanel-contentpanel-mail #zarafa-main-content-mail-preview {
   border: none; }
 
