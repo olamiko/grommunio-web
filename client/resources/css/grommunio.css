@@ -1316,6 +1316,9 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
   .zarafa-child-collapsed #zarafa-navigationpanel > div {
     width: 4em;
   }
+  .zarafa-child-collapsed .x-menu-list-item {
+    background: none ! important
+  }
   .zarafa-child-collapsed #zarafa-main-content-mail-toolbar {
     margin-left: 10em ! important;
   }
@@ -1382,15 +1385,14 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
       box-shadow: none; }
       .x-menu .x-menu-list li.x-menu-list-item.x-menu-item-active a {
         /* background-color: #f2f2f2 !important;  */
-        background-image:url(../images/default/menu/item-over.gif);background-color:#dbecf4;border-color:#aaccf6
+        /* background-image:url(../images/default/menu/item-over.gif);background-color:#dbecf4;border-color:#aaccf6 */
       }
     .x-menu .x-menu-list li.x-menu-list-item.x-menu-item-selected {
       box-shadow: none; }
       .x-menu .x-menu-list li.x-menu-list-item.x-menu-item-selected a {
         background-color: #d5e8f7; }
     .x-menu .x-menu-list li.x-menu-list-item.x-menu-item-active:active a:not(.k-unclickable) {
-      /* background-color: #e6e6e6 !important;  */
-      background-image:url(../images/default/menu/item-over.gif);background-color:#dbecf4;border-color:#aaccf6
+      background-color: #e6e6e6 !important; 
     }
 
     .x-menu .x-menu-list li.x-menu-sep-li {
