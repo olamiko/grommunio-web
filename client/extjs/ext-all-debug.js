@@ -59554,13 +59554,13 @@ Ext.menu.Menu = Ext.extend(Ext.Container, {
     onScrollerIn : function(e, t){
         var ul = this.ul.dom, top = Ext.fly(t).is('.x-menu-scroller-top');
         if(top ? ul.scrollTop > 0 : ul.scrollTop + this.activeMax < ul.scrollHeight){
-            Ext.fly(t).addClass(['x-menu-item-active', 'x-menu-scroller-active']);
+            // Ext.fly(t).addClass(['x-menu-item-active', 'x-menu-scroller-active']);
         }
     },
 
     // private
     onScrollerOut : function(e, t){
-        Ext.fly(t).removeClass(['x-menu-item-active', 'x-menu-scroller-active']);
+        // Ext.fly(t).removeClass(['x-menu-item-active', 'x-menu-scroller-active']);
     },
 
     /**
@@ -60169,7 +60169,7 @@ Ext.menu.BaseItem = Ext.extend(Ext.Component, {
     /**
      * @cfg {String} activeClass The CSS class to use when the item becomes activated (defaults to "x-menu-item-active")
      */
-    activeClass : "x-menu-item-active",
+    // activeClass : "x-menu-item-active",
     /**
      * @cfg {Boolean} hideOnClick True to hide the containing menu after this item is clicked (defaults to true)
      */
