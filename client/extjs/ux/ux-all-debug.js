@@ -71,7 +71,7 @@ Ext.ux.grid.BufferView = Ext.extend(Ext.grid.GridView, {
 		ts.rowHolder.compile();
 
 		ts.rowBody = new Ext.Template(
-		        '<table class="x-grid3-row-table" border="0" cellspacing="0" cellpadding="0" style="{tstyle}">',
+		        '<table class="x-grid3-row-table icon_mail_read" border="0" cellspacing="0" cellpadding="0" style="{tstyle}">',
 			'<tbody><tr>{cells}</tr>',
 			(this.enableRowBody ? '<tr class="x-grid3-row-body-tr" style="{bodyStyle}"><td colspan="{cols}" class="x-grid3-body-cell" tabIndex="0" hidefocus="on"><div class="x-grid3-row-body">{body}</div></td></tr>' : ''),
 			'</tbody></table>'

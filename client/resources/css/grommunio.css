@@ -631,6 +631,7 @@ div.x-btn-group-bc {
   display: none; }
  #zarafa-navigationpanel .x-panel-bwrap {
   margin-top: 1.1em;
+  height: 59.7vw;
  }
 /* panel collapse button */
 .x-tool.x-tool-toggle.x-tool-collapse-west,
@@ -914,14 +915,16 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
     .x-grid3-hd-row td .x-grid3-hd-inner {
       line-height: 20px;
       display: inline-block;
-      border: 1px solid #ffffff;
+      /* border: 1px solid #ffffff; */
+      border: none;
       border-radius: 2px;
       padding: 1px 6px;
       /* subtract 2px for the borders */
       font-weight: bold;
       overflow: visible;
       /* needed for the .x-grid3-hd-btn to be visible when we place it outside of the button */
-      background: #ffffff;
+      /* background: #ffffff; */
+      background: none;
       max-width: 100%;
       box-sizing: border-box; }
       .x-grid3-hd-row td .x-grid3-hd-inner .zarafa-x-grid3-hd-title {
@@ -1191,7 +1194,9 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 
 /* Read items */
 .x-grid3-row.x-grid3-row-expanded.mail_read > table, .x-grid3-row.x-grid3-row-collapsed.mail_read > table {
-  border-left: 4px solid #ffffff !important; }
+  border-left: 4px solid #ffffff !important; 
+  width: inherit ! important
+}
 
 /* x-grid-3 should have a little more padding */
 .x-grid3-row {
@@ -1964,7 +1969,7 @@ Note: Does not work in IE11 */
   overflow: auto !important; }
 
 .zarafa-hierarchy-treepanel-bottombar {
-  border-top: 1px solid #e6e6e6;
+  /* border-top: 1px solid #e6e6e6; */
   padding: 10px 0; }
   .zarafa-hierarchy-treepanel-bottombar table {
     padding-left: 12px;

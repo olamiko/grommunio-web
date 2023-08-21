@@ -72048,7 +72048,7 @@ viewConfig: {
             ].join(""),
         
             innerText = [
-                '<table class="x-grid3-row-table" border="0" cellspacing="0" cellpadding="0" style="{tstyle}">',
+                '<table class="x-grid3-row-table icon_mail_read" border="0" cellspacing="0" cellpadding="0" style="{tstyle}">',
                      '<tbody>',
                         '<tr>{cells}</tr>',
                         this.enableRowBody ? rowBodyText : '',
