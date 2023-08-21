@@ -1916,10 +1916,10 @@ Note: Does not work in IE11 */
 .zarafa-tree-ipm-subtree-container, .zarafa-tree-ipm-subtree-favorites-container {
   padding: 12px 0 6px; }
 
-/* .zarafa-tree-ipm-subtree-container:last-child, .zarafa-tree-ipm-subtree-favorites-container:last-child {
+.zarafa-tree-ipm-subtree-container:last-child, .zarafa-tree-ipm-subtree-favorites-container:last-child {
   padding-bottom: 12px; 
   display: none;
-} */
+}
 
 /* Fix for the background-color when the titles are longer than the width of the box */
 .zarafa-hierarchy-treepanel .x-tree-root-ct {
@@ -1977,10 +1977,10 @@ Note: Does not work in IE11 */
 .x-form-field.zarafa-hierarchy-treepanel-showallfolders {
   padding: 0 0 0 0;
   margin: 0 0 0 0; }
-  #ext-gen81 >ul > div:nth-child(2)::before {
+  /* #ext-gen81 >ul > div:nth-child(2)::before {
     content: "";
     display: block;
-  }
+  } */
   
 
 /* counters */
