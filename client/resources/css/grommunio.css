@@ -1310,7 +1310,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
     margin-left: 3.5em;
   }
   #zarafa-main-content-mail-toolbar .x-toolbar-right {
-    margin-left: -23vw;
+    margin-left: -20vw;
     /* margin-bottom: 3em; */
     margin-top: 0.8em;
     position: fixed;
@@ -1676,6 +1676,8 @@ ul.x-tab-strip-bottom li {
     background: transparent !important;
     z-index: 2345;
     margin-left: 5em;
+    height: 85vh ! important;
+    border-bottom: 1px solid gainsboro;
    }
 #zarafa-mainpanel > .x-tab-panel-bwrap {
   margin-top: -1px; }
@@ -1684,8 +1686,9 @@ ul.x-tab-strip-bottom li {
     background: transparent;
     /* Move these borders to the inside panel(s) so we can have 'separate' grid and preview panels for mail context */
     border-left: none;
-    border-right: none;
-    border-bottom: none; }
+    border-right: none;  border-bottom: none; 
+    border-right: 1px solid;  border-bottom: 1px solid; 
+  }
     #zarafa-mainpanel > .x-tab-panel-bwrap > .x-tab-panel-body > div > .x-panel {
       border: 1px solid #e6e6e6; }
       /* border: none } */
