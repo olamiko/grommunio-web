@@ -882,7 +882,9 @@ body.Safari input[type="radio"] {
 .x-grid3-header {
   background: #ffffff;
   border-bottom: 1px solid #e6e6e6;
-  padding: 0; }
+  padding: 0; 
+  width: 85vw ! important;
+}
 
 #mail-grid .x-grid3-header {
   padding-left: 3px; }
