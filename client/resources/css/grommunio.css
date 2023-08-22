@@ -965,8 +965,9 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
   .x-grid3-hd-row td.sort-asc .x-grid3-hd-inner,
   .x-grid3-hd-row td.sort-desc .x-grid3-hd-inner .x-grid3-hd-btn,
   .x-grid3-hd-row td.sort-asc .x-grid3-hd-inner .x-grid3-hd-btn {
-    border-color: #e6e6e6;
-    background-color: #f8f8f8; }
+    border-color: transparent;
+    background-color: transparent; 
+  }
   .x-grid3-hd-row td.sort-desc:not(.k-unsortable):active .x-grid3-hd-inner,
   .x-grid3-hd-row td.sort-asc:not(.k-unsortable):active .x-grid3-hd-inner,
   .x-grid3-hd-row td.sort-desc:not(.k-unsortable):active .x-grid3-hd-inner .x-grid3-hd-btn,
