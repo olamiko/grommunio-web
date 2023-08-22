@@ -910,7 +910,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 .x-grid3-hd-row {
   /* Icon only columns */ }
   .x-grid3-hd-row td {
-    padding: 6px 0;
+    padding: 6px 20px;
     border-color: #ffffff;
     position: relative; }
     .x-grid3-hd-row td .x-grid3-hd-inner {
