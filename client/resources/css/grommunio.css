@@ -986,10 +986,12 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
         display: inline-block;
         min-width: 20px; }
         .x-grid3-hd-row td.zarafa-icon-column .x-grid3-hd-inner .zarafa-x-grid3-hd-title p .title {
-          display: none; }
+          /* display: none; */
+         }
   .x-grid3-hd-row td.zarafa-icon-column.sort-asc p,
   .x-grid3-hd-row td.zarafa-icon-column.sort-desc p {
-    display: none; }
+    /* display: none;  */
+  }
   .x-grid3-hd-row td.zarafa-icon-column.sort-asc .x-grid3-sort-icon,
   .x-grid3-hd-row td.zarafa-icon-column.sort-desc .x-grid3-sort-icon {
     margin: 0; }
