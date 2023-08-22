@@ -74,6 +74,7 @@ Zarafa.mail.ui.MailGrid = Ext.extend(Zarafa.common.ui.grid.MapiMessageGrid, {
 			config.store = config.model.getStore();
 		}
 		config.store = Ext.StoreMgr.lookup(config.store);
+		console.log(config.store);
 
 		Ext.applyIf(config, {
 			xtype: 'zarafa.mailgrid',
