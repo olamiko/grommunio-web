@@ -229,6 +229,7 @@ Zarafa.plugins.files.data.Utils = {
 			p.css = 'mail_date';
 
 			value = new Date(value);
+			console.log("datetimeRenderer:")
 			return Ext.isDate(value) ? value.format(_('l d/m/Y G:i')) : _('Never');
 		}
 	},

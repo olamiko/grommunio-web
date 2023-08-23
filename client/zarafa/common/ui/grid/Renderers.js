@@ -334,6 +334,7 @@ Zarafa.common.ui.grid.Renderers = {
 	date: function(value, p)
 	{
 		p.css = 'mail_date';
+		console.log("date:")
 
 		if ( !Ext.isDate(value) ){
 			return _('None');
@@ -380,7 +381,7 @@ Zarafa.common.ui.grid.Renderers = {
 	datetime: function(value, p, record, row, column, store, meta)
 	{
 		p.css = 'mail_date';
-
+		console.log(value);
 		if ( meta && meta.css ){
 			p.css += ' ' + meta.css;
 		}
@@ -393,9 +394,10 @@ Zarafa.common.ui.grid.Renderers = {
 			// Add one class that the tooltip can use to recognize a 'nice' date.
 			// Add one class so the tooltip can easily get the timestamp of the date.
 			p.css += ' k-date-nice k-ts-'+value.getTime();
-
+			console.log("getNiceFormat");
 			return value.getNiceFormat();
 		} else {
+			console.log("formatDefaultTime");
 			return value.formatDefaultTime(_('l d/m/Y {0}'));
 		}
 	},
@@ -417,13 +419,15 @@ Zarafa.common.ui.grid.Renderers = {
 		if ( !Ext.isDate(value) ){
 			return _('None');
 		}
-
+		console.log(value)
 		if ( container.getSettingsModel().get('zarafa/v1/main/datetime_display_format') === 'short' ){
 			// Add one class that the tooltip can use to recognize a 'nice' date.
 			// Add one class so the tooltip can easily get the timestamp of the date.
 			p.css += ' k-date-nice k-ts-'+value.getTime();
+			console.log("datetime1")
 			return value.formatDefaultTime(_('d-m-Y {0}'));
 		} else {
+			console.log("datetime2:")
 			return value.formatDefaultTime(_('l d/m/Y {0}'));
 		}
 	},

@@ -72041,6 +72041,7 @@ viewConfig: {
         
             rowBodyText = [
                 '<tr class="x-grid3-row-body-tr" style="{bodyStyle}">',
+                    this.cellTpl,
                     '<td colspan="{cols}" class="x-grid3-body-cell" tabIndex="0" hidefocus="on">',
                         '<div class="x-grid3-row-body">{body}</div>',
                     '</td>',
