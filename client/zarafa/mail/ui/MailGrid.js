@@ -217,7 +217,7 @@ Zarafa.mail.ui.MailGrid = Ext.extend(Zarafa.common.ui.grid.MapiMessageGrid, {
 			rowParams.body += String.format('<div class="grid_compact grid_compact_left grid_compact_subject_cell {0}">{1}</div>', meta.css, value);
 
 			rowParams.body += '</div>';
-
+			console.log(meta);
 			return 'x-grid3-row-expanded ' + cssClass;
 		}
 
