@@ -215,9 +215,9 @@ Zarafa.mail.ui.MailGrid = Ext.extend(Zarafa.common.ui.grid.MapiMessageGrid, {
 			meta = {};
 			value = Zarafa.common.ui.grid.Renderers.subject(record.get('subject'), meta, record);
 			// dateValues = Zarafa.common.ui.grid.Renderers.datetime(record, meta, record);
-			ourDate = Zarafa.common.ui.grid.Renderers.formatDate(record);
-			console.log(record.data.client_submit_time);
-			console.log(record);
+			dateValue = Zarafa.common.ui.grid.Renderers.formatDate(record.data.client_submit_time);
+			// console.log(record.data.client_submit_time);
+			console.log(dateValue);
 
 			// <div class="x-grid3-cell-inner x-grid3-col-3 x-unselectable" unselectable="on" style="margin-bottom: -1.8em;">Tue 15-08</div>
 			rowParams.body += String.format('<div class="grid_compact grid_compact_left grid_compact_subject_cell {0}">{1}</div>', meta.css, value);
