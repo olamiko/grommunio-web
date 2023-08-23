@@ -394,7 +394,7 @@ Zarafa.common.ui.grid.Renderers = {
 			// Add one class that the tooltip can use to recognize a 'nice' date.
 			// Add one class so the tooltip can easily get the timestamp of the date.
 			p.css += ' k-date-nice k-ts-'+value.getTime();
-			console.log("getNiceFormat");
+			console.log(value.getNiceFormat());
 			return value.getNiceFormat();
 		} else {
 			console.log("formatDefaultTime");
