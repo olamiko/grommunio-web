@@ -363,6 +363,23 @@ Zarafa.common.ui.grid.Renderers = {
 
 		return Zarafa.common.ui.grid.Renderers.date(value, p);
 	},
+	formatDate: function(date) {
+		const currentDate = new Date();
+		const targetDate = new Date(date);
+	  
+		const isToday = targetDate.toDateString() === currentDate.toDateString();
+		const isThisYear = targetDate.getFullYear() === currentDate.getFullYear();
+	  
+		if (isToday) {
+		  const hours = targetDate.getHours().toString().padStart(2, "0");
+		  const minutes = targetDate.getMinutes().toString().padStart(2, "0");
+		  return `${hours}:${minutes}`;
+		} else if (!isThisYear) {
+		  return `${targetDate.toLocaleString("default", { month: "long" })} ${targetDate.getDate()}, ${targetDate.getFullYear()}`;
+		} else {
+		  return `${targetDate.toLocaleString("default", { month: "long" })} ${targetDate.getDate()}`;
+		}
+	  },
 
 	/**
 	 * Render the cell as date with time (l d/m/Y G:i) when the user has set the long display format
@@ -394,30 +411,14 @@ Zarafa.common.ui.grid.Renderers = {
 			// Add one class that the tooltip can use to recognize a 'nice' date.
 			// Add one class so the tooltip can easily get the timestamp of the date.
 			p.css += ' k-date-nice k-ts-'+value.getTime();
-			console.log(this.formatDate(value));
+			// console.log(this.formatDate(value));
 			return value.getNiceFormat();
 		} else {
 			console.log("formatDefaultTime");
 			return value.formatDefaultTime(_('l d/m/Y {0}'));
 		}
 	},
-	formatDate: function(date) {
-		const currentDate = new Date();
-		const targetDate = new Date(date);
-	  
-		const isToday = targetDate.toDateString() === currentDate.toDateString();
-		const isThisYear = targetDate.getFullYear() === currentDate.getFullYear();
-	  
-		if (isToday) {
-		  const hours = targetDate.getHours().toString().padStart(2, "0");
-		  const minutes = targetDate.getMinutes().toString().padStart(2, "0");
-		  return `${hours}:${minutes}`;
-		} else if (!isThisYear) {
-		  return `${targetDate.toLocaleString("default", { month: "long" })} ${targetDate.getDate()}, ${targetDate.getFullYear()}`;
-		} else {
-		  return `${targetDate.toLocaleString("default", { month: "long" })} ${targetDate.getDate()}`;
-		}
-	  },
+
 	/**
 	 * Render the cell as date with time (l d/m/Y G:i when the user has set the Long display
 	 * format, or d-m-Y, G:i when the short format has been set) This renderer should be used
