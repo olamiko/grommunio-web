@@ -631,7 +631,7 @@ div.x-btn-group-bc {
   display: none; }
  #zarafa-navigationpanel .x-panel-bwrap {
   margin-top: 1.1em;
-  height: 98vw;
+  height: 76vh
  }
 /* panel collapse button */
 .x-tool.x-tool-toggle.x-tool-collapse-west,
@@ -858,6 +858,11 @@ body.Safari input[type="radio"] {
     display: none !important;
 }
 
+div.x-grid3-col.x-grid3-cell.x-grid3-td-3.mail_date.mail-received.k-date-nice {
+  float: left;
+  margin-left: 15em
+}
+/* x-grid3-col x-grid3-cell x-grid3-td-3 mail_date mail-received k-date-nice */
 
 .zarafa-radiodatetime-datetimefield {
   background-position-y: 24px; }
@@ -1044,7 +1049,10 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
   .x-grid3-row .x-grid3-cell-inner {
     line-height: 100%;
     padding: 9px 7px;
-    position: relative; }
+    position: relative;
+    margin-top: -1.85em;
+    margin-left: 67em;
+  }
   .x-grid3-row .x-grid3-cell-inner.x-grid3-col-categories {
     text-overflow: clip; }
   .x-grid3-row .x-grid3-row-body-tr .zarafa-grid-body-container {
