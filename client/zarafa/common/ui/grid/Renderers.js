@@ -363,7 +363,8 @@ Zarafa.common.ui.grid.Renderers = {
 
 		return Zarafa.common.ui.grid.Renderers.date(value, p);
 	},
-		formatDate: function(date) {
+	
+	formatDate: function(date) {
 		const currentDate = new Date();
 		const targetDate = new Date(date);
 	  
@@ -412,9 +413,9 @@ Zarafa.common.ui.grid.Renderers = {
 			// Add one class so the tooltip can easily get the timestamp of the date.
 			p.css += ' k-date-nice k-ts-'+value.getTime();
 			const ourDate = Zarafa.common.ui.grid.Renderers.formatDate(value);
-			console.log(ourDate);
 			// console.log(this.formatDate(value));
-			return value.getNiceFormat();
+			// return value.getNiceFormat();
+			return ourDate;
 		} else {
 			console.log("formatDefaultTime");
 			return value.formatDefaultTime(_('l d/m/Y {0}'));

@@ -214,7 +214,10 @@ Zarafa.mail.ui.MailGrid = Ext.extend(Zarafa.common.ui.grid.MapiMessageGrid, {
 			// Render the subject
 			meta = {};
 			value = Zarafa.common.ui.grid.Renderers.subject(record.get('subject'), meta, record);
+			dateValue = Zarafa.common.ui.grid.Renderers.datetime(record.get('date'), meta, record);
+			// <div class="x-grid3-cell-inner x-grid3-col-3 x-unselectable" unselectable="on" style="margin-bottom: -1.8em;">Tue 15-08</div>
 			rowParams.body += String.format('<div class="grid_compact grid_compact_left grid_compact_subject_cell {0}">{1}</div>', meta.css, value);
+			rowParams.body += String.format('<div class="x-grid3-cell-inner x-grid3-col-3 x-unselectable" style="margin-bottom: -1.8em; {0}">{1}</div>', meta.css, dateValue);
 
 			rowParams.body += '</div>';
 			console.log(meta);
@@ -354,7 +357,8 @@ Zarafa.mail.ui.MailGrid = Ext.extend(Zarafa.common.ui.grid.MapiMessageGrid, {
 	 * Event handler for the cellclick event of the grid. Will mark/unmark a mail
 	 * as read when the user clicked on the icon column
 	 *
-	 * @param {Zarafa.mail.ui.MailGrid} grid The mail grid
+	 * @param {Zarafa.mail.ui.MailGrid} grid
+	 *  The mail grid
 	 * @param {Number} rowIndex The index number of the row that was clicked
 	 * @param {Number} columnIndex The index number of the column that was clicked
 	 * @param {Ext.EventObject} event The event object
