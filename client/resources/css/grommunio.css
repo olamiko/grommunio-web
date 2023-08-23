@@ -1653,7 +1653,7 @@ ul.x-tab-strip-bottom li {
   border-bottom: none;
   padding-top: 0;
   padding-left: 0;
-  display: none;
+  /* display: none; */
  }
   #zarafa-mainpanel > .x-tab-panel-header ul.x-tab-strip-top li .x-tab-right {
     padding-right: 12px; }
