@@ -376,9 +376,9 @@ Zarafa.common.ui.grid.Renderers = {
 		  const minutes = targetDate.getMinutes().toString().padStart(2, "0");
 		  return `${hours}:${minutes}`;
 		} else if (!isThisYear) {
-		  return `${targetDate.toLocaleString("default", { month: "long" })} ${targetDate.getDate()}, ${targetDate.getFullYear()}`;
+		  return `${targetDate.toLocaleString("default", { month: "short" })} ${targetDate.getDate()}, ${targetDate.getFullYear()}`;
 		} else {
-		  return `${targetDate.toLocaleString("default", { month: "long" })} ${targetDate.getDate()}`;
+		  return `${targetDate.toLocaleString("default", { month: "short" })} ${targetDate.getDate()}`;
 		}
 	  },
 

@@ -1051,7 +1051,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
     padding: 9px 7px;
     position: relative;
     margin-top: -1.85em;
-    margin-left: 67em;
+    margin-left: 66em;
   }
   .x-grid3-row .x-grid3-cell-inner.x-grid3-col-categories {
     text-overflow: clip; }
@@ -1341,6 +1341,9 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
     /* margin-bottom: 3em; */
     margin-top: 0.8em;
     position: fixed;
+  } 
+  .zarafa-child-collapsed .x-grid3-row .x-grid3-cell-inner {
+    margin-left: 70em !important;
   }
   .zarafa-child-collapsed #zarafa-navigationpanel > div {
     width: 4em;
