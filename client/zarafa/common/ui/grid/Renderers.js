@@ -417,7 +417,7 @@ Zarafa.common.ui.grid.Renderers = {
 		} else {
 		  return `${targetDate.toLocaleString("default", { month: "long" })} ${targetDate.getDate()}`;
 		}
-	  }
+	  },
 	/**
 	 * Render the cell as date with time (l d/m/Y G:i when the user has set the Long display
 	 * format, or d-m-Y, G:i when the short format has been set) This renderer should be used
